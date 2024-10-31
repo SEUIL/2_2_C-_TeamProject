@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtUserId = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.summit_loginPage = new System.Windows.Forms.Button();
+            this.signUp_loginPage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -67,47 +67,48 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "비밀번호";
             // 
-            // textBox1
+            // txtUserId
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 21);
-            this.textBox1.TabIndex = 3;
+            this.txtUserId.Location = new System.Drawing.Point(167, 97);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(141, 21);
+            this.txtUserId.TabIndex = 3;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 21);
-            this.textBox2.TabIndex = 4;
+            this.txtPassword.Location = new System.Drawing.Point(167, 157);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(141, 21);
+            this.txtPassword.TabIndex = 4;
             // 
-            // button1
+            // summit_loginPage
             // 
-            this.button1.Location = new System.Drawing.Point(99, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 36);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "확인";
-            this.button1.UseVisualStyleBackColor = true;
+            this.summit_loginPage.Location = new System.Drawing.Point(99, 231);
+            this.summit_loginPage.Name = "summit_loginPage";
+            this.summit_loginPage.Size = new System.Drawing.Size(168, 36);
+            this.summit_loginPage.TabIndex = 5;
+            this.summit_loginPage.Text = "확인";
+            this.summit_loginPage.UseVisualStyleBackColor = true;
+            this.summit_loginPage.Click += new System.EventHandler(this.summit_loginPage_Click);
             // 
-            // button2
+            // signUp_loginPage
             // 
-            this.button2.Location = new System.Drawing.Point(273, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 36);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "회원가입";
-            this.button2.UseVisualStyleBackColor = true;
+            this.signUp_loginPage.Location = new System.Drawing.Point(273, 231);
+            this.signUp_loginPage.Name = "signUp_loginPage";
+            this.signUp_loginPage.Size = new System.Drawing.Size(82, 36);
+            this.signUp_loginPage.TabIndex = 6;
+            this.signUp_loginPage.Text = "회원가입";
+            this.signUp_loginPage.UseVisualStyleBackColor = true;
             // 
             // LoginForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 338);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.signUp_loginPage);
+            this.Controls.Add(this.summit_loginPage);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUserId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,10 +124,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtUserId;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button summit_loginPage;
+        private System.Windows.Forms.Button signUp_loginPage;
     }
 }
 
