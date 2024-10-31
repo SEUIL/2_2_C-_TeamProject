@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Oracle\11gR2\app\oracle\product\11.2.0\server\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,31 +50,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="calenderForm1.cs">
+    <Compile Include="Forms\AddForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="calenderForm1.Designer.cs">
+    <Compile Include="Forms\AddForm1.Designer.cs">
+      <DependentUpon>AddForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\calenderForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\calenderForm1.Designer.cs">
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm1.cs">
+    <Compile Include="Forms\LoginForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm1.Designer.cs">
+    <Compile Include="Forms\LoginForm1.Designer.cs">
       <DependentUpon>LoginForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUpForm1.cs">
+    <Compile Include="Forms\SignUpForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUpForm1.Designer.cs">
+    <Compile Include="Forms\SignUpForm1.Designer.cs">
       <DependentUpon>SignUpForm1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="calenderForm1.resx">
+    <Compile Include="Forms\SearchForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchForm1.Designer.cs">
+      <DependentUpon>SearchForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AddForm1.resx">
+      <DependentUpon>AddForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\calenderForm1.resx">
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm1.resx">
+    <EmbeddedResource Include="Forms\LoginForm1.resx">
       <DependentUpon>LoginForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchForm1.resx">
+      <DependentUpon>SearchForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,7 +103,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SignUpForm1.resx">
+    <EmbeddedResource Include="Forms\SignUpForm1.resx">
       <DependentUpon>SignUpForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

@@ -10,3 +10,5 @@ C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo
 C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.csproj.CoreCompileInputs.cache
 C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.exe
 C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.pdb
+C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\bin\Debug\Oracle.DataAccess.dll
+C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.csproj.Up2Date

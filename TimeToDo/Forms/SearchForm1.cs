@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TimeToDo
 {
-    public partial class LoginForm1 : Form
+    public partial class SearchForm1 : Form
     {
-        public LoginForm1()
+        public SearchForm1()
         {
             InitializeComponent();
         }
