@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBClass.cs" />
     <Compile Include="Forms\AddForm1.cs">
       <SubType>Form</SubType>
     </Compile>
