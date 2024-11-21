@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeToDo.Forms;
 
 namespace TimeToDo
 {
@@ -16,7 +17,8 @@ namespace TimeToDo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm1());
+            //Application.Run(new LoginForm1());
+            Application.Run(new TodoForm());
         }
     }
 }
