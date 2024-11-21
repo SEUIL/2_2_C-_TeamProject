@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 133,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -40,59 +52,98 @@
               "RelativeDocumentMoniker": "DBClass.cs",
               "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\DBClass.cs",
               "RelativeToolTip": "DBClass.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwEQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T01:25:04.691Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "SignUpForm1.cs",
+              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\SignUpForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\SignUpForm1.cs",
+              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\SignUpForm1.cs",
+              "RelativeToolTip": "Forms\\SignUpForm1.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwEEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:48:31.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SignUpForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\SignUpForm1.cs",
               "RelativeDocumentMoniker": "Forms\\SignUpForm1.cs",
               "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\SignUpForm1.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "Forms\\SignUpForm1.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T07:47:08.226Z",
+              "WhenOpened": "2024-11-21T03:48:30.222Z",
               "EditorCaption": " [\uB514\uC790\uC778]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SignUpForm1.cs",
-              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\SignUpForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\SignUpForm1.cs",
-              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\SignUpForm1.cs",
-              "RelativeToolTip": "Forms\\SignUpForm1.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAswD0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T07:47:10.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "LoginForm1.cs",
               "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\LoginForm1.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm1.cs",
               "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\LoginForm1.cs",
               "RelativeToolTip": "Forms\\LoginForm1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwEUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T02:31:21.074Z",
+              "WhenOpened": "2024-11-21T03:38:18.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "calenderForm1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\calenderForm1.cs",
+              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Forms\\calenderForm1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T00:26:02.545Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "calenderForm1.cs",
+              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\calenderForm1.cs",
+              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs",
+              "RelativeToolTip": "Forms\\calenderForm1.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAqwDkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T00:38:48.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LoginForm1.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\LoginForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm1.cs",
-              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\LoginForm1.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "Forms\\LoginForm1.cs [\uB514\uC790\uC778]",
+              "Title": "AddForm1.cs",
+              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\AddForm1.cs",
+              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs",
+              "RelativeToolTip": "Forms\\AddForm1.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBgAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T08:08:50.33Z",
+              "WhenOpened": "2024-11-21T00:46:47.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddForm1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\AddForm1.cs",
+              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Forms\\AddForm1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T00:37:23.3Z",
               "EditorCaption": " [\uB514\uC790\uC778]"
             }
           ]

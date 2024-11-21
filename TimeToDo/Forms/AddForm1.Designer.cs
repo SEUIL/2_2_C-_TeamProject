@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescription_addForm = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button6 = new System.Windows.Forms.Button();
+            this.date_addForm = new System.Windows.Forms.DateTimePicker();
+            this.btnSummit_addForm = new System.Windows.Forms.Button();
+            this.comboCategory_addForm = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,12 +68,12 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "시간";
             // 
-            // textBox2
+            // txtDescription_addForm
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 21);
-            this.textBox2.TabIndex = 14;
+            this.txtDescription_addForm.Location = new System.Drawing.Point(156, 176);
+            this.txtDescription_addForm.Name = "txtDescription_addForm";
+            this.txtDescription_addForm.Size = new System.Drawing.Size(267, 21);
+            this.txtDescription_addForm.TabIndex = 14;
             // 
             // label4
             // 
@@ -85,40 +85,45 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "일정 상세";
             // 
-            // listBox1
+            // date_addForm
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(156, 96);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(267, 28);
-            this.listBox1.TabIndex = 15;
+            this.date_addForm.Location = new System.Drawing.Point(156, 138);
+            this.date_addForm.Name = "date_addForm";
+            this.date_addForm.Size = new System.Drawing.Size(267, 21);
+            this.date_addForm.TabIndex = 16;
             // 
-            // dateTimePicker1
+            // btnSummit_addForm
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 138);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(267, 21);
-            this.dateTimePicker1.TabIndex = 16;
+            this.btnSummit_addForm.Location = new System.Drawing.Point(199, 223);
+            this.btnSummit_addForm.Name = "btnSummit_addForm";
+            this.btnSummit_addForm.Size = new System.Drawing.Size(90, 37);
+            this.btnSummit_addForm.TabIndex = 17;
+            this.btnSummit_addForm.Text = "확인";
+            this.btnSummit_addForm.UseVisualStyleBackColor = true;
+            this.btnSummit_addForm.Click += new System.EventHandler(this.btnSummit_addForm_Click);
             // 
-            // button6
+            // comboCategory_addForm
             // 
-            this.button6.Location = new System.Drawing.Point(199, 223);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(90, 37);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "확인";
-            this.button6.UseVisualStyleBackColor = true;
+            this.comboCategory_addForm.FormattingEnabled = true;
+            this.comboCategory_addForm.Items.AddRange(new object[] {
+            "공적 일정",
+            "사적 일정",
+            "자기 개발",
+            "취미 생활"});
+            this.comboCategory_addForm.Location = new System.Drawing.Point(156, 98);
+            this.comboCategory_addForm.Name = "comboCategory_addForm";
+            this.comboCategory_addForm.Size = new System.Drawing.Size(267, 20);
+            this.comboCategory_addForm.TabIndex = 18;
             // 
             // AddForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 334);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.comboCategory_addForm);
+            this.Controls.Add(this.btnSummit_addForm);
+            this.Controls.Add(this.date_addForm);
+            this.Controls.Add(this.txtDescription_addForm);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -135,10 +140,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescription_addForm;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DateTimePicker date_addForm;
+        private System.Windows.Forms.Button btnSummit_addForm;
+        private System.Windows.Forms.ComboBox comboCategory_addForm;
     }
 }
