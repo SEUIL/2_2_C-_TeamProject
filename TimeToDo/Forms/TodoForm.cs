@@ -75,4 +75,25 @@ namespace TimeToDo.Forms
                 MessageBox.Show($"일반 오류 발생: {ex.Message}");
             }
         }
-}}
+
+        private void TodoForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 정렬ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
