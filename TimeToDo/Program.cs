@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeToDo.Forms;
 
 namespace TimeToDo
 {
@@ -16,7 +17,15 @@ namespace TimeToDo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm1());
+
+
+            //<<둘 중에 하나 주석처리하기>>
+
+
+            //로그인폼부터 시작하기!
+            //Application.Run(new LoginForm1());
+            //할일폼 보기
+            Application.Run(new TodoForm1());
         }
     }
 }
