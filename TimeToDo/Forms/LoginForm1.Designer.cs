@@ -99,6 +99,7 @@
             this.signUp_loginPage.TabIndex = 6;
             this.signUp_loginPage.Text = "회원가입";
             this.signUp_loginPage.UseVisualStyleBackColor = true;
+            this.signUp_loginPage.Click += new System.EventHandler(this.signUp_loginPage_Click);
             // 
             // LoginForm1
             // 

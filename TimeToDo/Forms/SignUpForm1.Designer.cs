@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSummit = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSummit
             // 
-            this.button1.Location = new System.Drawing.Point(106, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 36);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "확인";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSummit.Location = new System.Drawing.Point(106, 279);
+            this.btnSummit.Name = "btnSummit";
+            this.btnSummit.Size = new System.Drawing.Size(168, 36);
+            this.btnSummit.TabIndex = 12;
+            this.btnSummit.Text = "확인";
+            this.btnSummit.UseVisualStyleBackColor = true;
+            this.btnSummit.Click += new System.EventHandler(this.btnSummit_Click);
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 21);
-            this.textBox2.TabIndex = 11;
+            this.txtPassword.Location = new System.Drawing.Point(160, 156);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(141, 21);
+            this.txtPassword.TabIndex = 11;
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 21);
-            this.textBox1.TabIndex = 10;
+            this.txtId.Location = new System.Drawing.Point(160, 96);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(141, 21);
+            this.txtId.TabIndex = 10;
             // 
             // label3
             // 
@@ -91,12 +92,12 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "회원가입";
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 21);
-            this.textBox3.TabIndex = 14;
+            this.txtEmail.Location = new System.Drawing.Point(160, 218);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(141, 21);
+            this.txtEmail.TabIndex = 14;
             // 
             // label4
             // 
@@ -113,11 +114,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 370);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSummit);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -130,13 +131,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSummit;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
     }
 }
