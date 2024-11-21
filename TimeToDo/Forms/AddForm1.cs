@@ -45,7 +45,7 @@ namespace TimeToDo.Forms
 
                 calenderForm.getListView1.Items.Add(item);
 
-                // 3. DB에 값 삽입
+                /*// 3. DB에 값 삽입
                 string insertQuery = "INSERT INTO Calendar (ID, UserId, Category, Time, Description, Repeats) " +
                                              "VALUES (SEQ_CALENDAR.NEXTVAL, :UserId, :Category, :Time, :Description, NULL)"; var parameters = new Dictionary<string, object>
                 {
@@ -60,6 +60,29 @@ namespace TimeToDo.Forms
                 MessageBox.Show("일정이 추가되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // 현재 창 닫기
+                this.Close();*/
+
+                DBClass dbClass = new DBClass();
+                string insertQuery = "INSERT INTO Calendar (ID, USERSID, Category, Time, Description, Repeats) " +
+                         "VALUES (SEQ_CALENDAR.NEXTVAL, :UserId, :Category, :Time, :Description, NULL)";
+                var parameters = new Dictionary<string, object>
+                {
+                    { ":UserId", Session.LoggedInUserId },
+                    { ":Category", category },
+                    { ":Time", time },
+                    { ":Description", description }
+                };
+
+                int rowsAffected = dbClass.ExecuteNonQuery(insertQuery, parameters);
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("일정이 추가되었습니다.");
+                }
+                else
+                {
+                    MessageBox.Show("일정 추가에 실패했습니다.");
+                }
                 this.Close();
             }
             catch (Exception ex)
