@@ -125,16 +125,7 @@ namespace TimeToDo
             }
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            // 종료 확인 메시지
-            var result = MessageBox.Show("프로그램을 종료하시겠습니까?", "종료 확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit(); // 애플리케이션 종료
-            }
-        }
+        
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -180,7 +171,7 @@ namespace TimeToDo
                 // listView1 초기화
                 listView1.Items.Clear();
 
-                // 데이터베이스에서 해당 날짜에 해당하는 일정 불러오기
+                // 데이터베이스에서 해당 날짜에 해당하는 일정 불러오기 : userId로 불러오는 기능!!
                 string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar " +
                                "WHERE USERSID = :UserId AND TRUNC(Time) = TRUNC(:SelectedDate)";
                 var parameters = new Dictionary<string, object>
@@ -216,6 +207,12 @@ namespace TimeToDo
             TodoForm1 todoForm1 = new TodoForm1();
             todoForm1.Show();
             this.Hide();
+        }
+
+        private void calenderForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            Application.Exit(); // 애플리케이션 종료
         }
     }
 }

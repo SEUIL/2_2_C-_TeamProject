@@ -1,6 +1,24 @@
-*.exe
-*.pdb
-*.cache
-.vs/
-obj/
+
+# 빌드 아티팩트
 bin/
+obj/
+
+# 사용자 환경 관련 파일
+*.user
+*.suo
+
+# VS 관련 파일
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+
+# 디버그 및 릴리스 설정
+*.pdb
+*.exe
+*.dll
+*.cache
+*.log
+
+# 배포되지 말아야 할 환경 파일
+*.config
+*.env

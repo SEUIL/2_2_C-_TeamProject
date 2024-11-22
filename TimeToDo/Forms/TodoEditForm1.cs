@@ -105,7 +105,7 @@ namespace TimeToDo.Forms
                 return false;
             }
 
-            if (dateTimePicker2.Value <= dateTimePicker1.Value)
+            if (dateTimePicker2.Value < dateTimePicker1.Value)
             {
                 MessageBox.Show("마감일은 시작일 이후여야 합니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;

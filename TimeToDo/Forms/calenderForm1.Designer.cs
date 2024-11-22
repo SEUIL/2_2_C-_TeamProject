@@ -41,7 +41,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -158,17 +157,6 @@
             this.btnSearch.Text = "일정 검색";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // BtnExit
-            // 
-            this.BtnExit.BackColor = System.Drawing.Color.LightCoral;
-            this.BtnExit.Location = new System.Drawing.Point(581, 502);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(105, 37);
-            this.BtnExit.TabIndex = 11;
-            this.BtnExit.Text = "프로그램 종료";
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(559, 234);
@@ -181,11 +169,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(427, 509);
+            this.button1.Location = new System.Drawing.Point(559, 502);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(127, 42);
             this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
+            this.button1.Text = "ToDoList 이동";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -196,7 +184,6 @@
             this.ClientSize = new System.Drawing.Size(702, 556);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnDelete);
@@ -208,6 +195,7 @@
             this.Controls.Add(this.calendar);
             this.Name = "calenderForm1";
             this.Text = "calenderForm1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.calenderForm1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,7 +216,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ColumnHeader category;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button button1;
     }

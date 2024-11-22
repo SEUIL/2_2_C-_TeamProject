@@ -198,13 +198,10 @@ namespace TimeToDo.Forms
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            // 종료 확인 메시지
-            var result = MessageBox.Show("프로그램을 종료하시겠습니까?", "종료 확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit(); // 애플리케이션 종료
-            }
+            calenderForm1 calenderForm1 = new calenderForm1();
+            calenderForm1.Show();
+            this.Hide();
+            
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
@@ -260,6 +257,11 @@ namespace TimeToDo.Forms
             editForm.ShowDialog();
         }
 
-
+        private void TodoForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+                Application.Exit(); // 애플리케이션 종료
+            
+        }
     }
 }
