@@ -63,13 +63,6 @@
     <Compile Include="Forms\calenderForm1.Designer.cs">
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Forms\editForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\editForm1.Designer.cs">
-      <DependentUpon>editForm1.cs</DependentUpon>
-=======
     <Compile Include="Forms\TodoAddForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +74,6 @@
     </Compile>
     <Compile Include="Forms\TodoForm1.Designer.cs">
       <DependentUpon>TodoForm1.cs</DependentUpon>
->>>>>>> origin/hyunhoCommit
     </Compile>
     <Compile Include="Forms\LoginForm1.cs">
       <SubType>Form</SubType>
@@ -115,16 +107,11 @@
     <EmbeddedResource Include="Forms\calenderForm1.resx">
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Forms\editForm1.resx">
-      <DependentUpon>editForm1.cs</DependentUpon>
-=======
     <EmbeddedResource Include="Forms\TodoAddForm1.resx">
       <DependentUpon>TodoAddForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TodoForm1.resx">
       <DependentUpon>TodoForm1.cs</DependentUpon>
->>>>>>> origin/hyunhoCommit
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm1.resx">
       <DependentUpon>LoginForm1.cs</DependentUpon>

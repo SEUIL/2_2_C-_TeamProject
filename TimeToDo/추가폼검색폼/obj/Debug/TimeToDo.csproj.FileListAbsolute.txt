@@ -14,9 +14,6 @@ C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo
 C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.csproj.Up2Date
 C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.Forms.AddForm1.resources
 C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.SearchForm1.resources
-<<<<<<< HEAD
-C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.Forms.editForm1.resources
-=======
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\bin\Debug\TimeToDo.exe.config
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\bin\Debug\TimeToDo.exe
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\bin\Debug\TimeToDo.pdb
@@ -36,4 +33,3 @@ C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.exe
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.pdb
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.Forms.TodoAddForm1.resources
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.Forms.TodoSearchForm1.resources
->>>>>>> origin/hyunhoCommit
