@@ -73,7 +73,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(24, 291);
+            this.label3.Location = new System.Drawing.Point(24, 306);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 4;
@@ -82,29 +82,18 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "우선순위 없음",
-            "중요",
-            "일반"});
             this.comboBox1.Location = new System.Drawing.Point(119, 436);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 23);
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "우선순위 선택...";
             // 
             // listBox1
             // 
-            this.listBox1.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
-            this.listBox1.Items.AddRange(new object[] {
-            "공적 일정",
-            "사적 일정",
-            "자기 개발",
-            "취미 생활"});
-            this.listBox1.Location = new System.Drawing.Point(119, 291);
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(120, 306);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(211, 89);
+            this.listBox1.Size = new System.Drawing.Size(120, 94);
             this.listBox1.TabIndex = 2;
             // 
             // label4

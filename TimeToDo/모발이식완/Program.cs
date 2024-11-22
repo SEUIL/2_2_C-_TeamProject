@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TimeToDo.Forms;//추가했어
+using TimeToDo.Forms;
 
 namespace TimeToDo
 {
@@ -23,11 +23,9 @@ namespace TimeToDo
 
 
             //로그인폼부터 시작하기!
-            Application.Run(new LoginForm1());
+            //Application.Run(new LoginForm1());
             //할일폼 보기
-            //Application.Run(new TodoForm1());
-            //할일 추가폼 보기
-            //Application.Run(new TodoAddForm1());
+            Application.Run(new TodoForm1());
         }
     }
 }
