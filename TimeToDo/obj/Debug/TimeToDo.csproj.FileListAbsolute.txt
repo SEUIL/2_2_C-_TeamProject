@@ -73,3 +73,8 @@ C:\Users\LG\Downloads\병합된거\obj\Debug\TimeToDo.csproj.CoreCompileInputs.c
 C:\Users\LG\Downloads\병합된거\obj\Debug\TimeToDo.csproj.Up2Date
 C:\Users\LG\Downloads\병합된거\obj\Debug\TimeToDo.exe
 C:\Users\LG\Downloads\병합된거\obj\Debug\TimeToDo.pdb
+C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.Forms.editForm1.resources
+C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.Forms.TodoAddForm1.resources
+C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.Forms.TodoEditForm1.resources
+C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.Forms.TodoForm1.resources
+C:\Users\msi\Desktop\부천대 2학년 2학기\C#\WorkSpace\C#_TeamProj\TimeToDo\obj\Debug\TimeToDo.Forms.TodoSearchForm1.resources

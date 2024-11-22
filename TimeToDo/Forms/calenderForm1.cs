@@ -143,7 +143,7 @@ namespace TimeToDo
                 
                 listView1.Items.Clear();
 
-                string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar WHERE USERID = :UserId";
+                string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar WHERE USERSID = :UserId";
 
                 var parameters = new Dictionary<string, object>
                 {
@@ -182,7 +182,7 @@ namespace TimeToDo
 
                 // 데이터베이스에서 해당 날짜에 해당하는 일정 불러오기
                 string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar " +
-                               "WHERE USERS = :UserId AND TRUNC(Time) = TRUNC(:SelectedDate)";
+                               "WHERE USERSID = :UserId AND TRUNC(Time) = TRUNC(:SelectedDate)";
                 var parameters = new Dictionary<string, object>
                 {
                     { ":UserId", Session.LoggedInUserId },
