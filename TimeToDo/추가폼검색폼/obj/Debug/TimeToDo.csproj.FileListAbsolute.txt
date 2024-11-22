@@ -31,3 +31,5 @@ C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.csproj.Core
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.csproj.Up2Date
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.exe
 C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.pdb
+C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.Forms.TodoAddForm1.resources
+C:\Users\LG\Documents\2_2_C-_TeamProject\TimeToDo\obj\Debug\TimeToDo.Forms.TodoSearchForm1.resources
