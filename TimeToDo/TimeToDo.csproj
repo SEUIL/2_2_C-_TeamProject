@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBClass.cs" />
+    <Compile Include="Forms\editForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\editForm1.Designer.cs">
+      <DependentUpon>editForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,18 @@
     <Compile Include="Forms\calenderForm1.Designer.cs">
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TodoAddForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TodoAddForm1.Designer.cs">
+      <DependentUpon>TodoAddForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TodoEditForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TodoEditForm1.Designer.cs">
+      <DependentUpon>TodoEditForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TodoForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,12 @@
     </Compile>
     <Compile Include="Forms\LoginForm1.Designer.cs">
       <DependentUpon>LoginForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TodoSearchForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TodoSearchForm1.Designer.cs">
+      <DependentUpon>TodoSearchForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,11 +113,20 @@
     <Compile Include="Forms\SearchForm1.Designer.cs">
       <DependentUpon>SearchForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\editForm1.resx">
+      <DependentUpon>editForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddForm1.resx">
       <DependentUpon>AddForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\calenderForm1.resx">
       <DependentUpon>calenderForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TodoAddForm1.resx">
+      <DependentUpon>TodoAddForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TodoEditForm1.resx">
+      <DependentUpon>TodoEditForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TodoForm1.resx">
       <DependentUpon>TodoForm1.cs</DependentUpon>
@@ -103,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SearchForm1.resx">
       <DependentUpon>SearchForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TodoSearchForm1.resx">
+      <DependentUpon>TodoSearchForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

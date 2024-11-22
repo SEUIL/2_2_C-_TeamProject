@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Oracle.DataAccess.Client;
 
 namespace TimeToDo
 {
@@ -34,47 +33,18 @@ namespace TimeToDo
                 return;
             }
 
-            /*try
-            {
-                string insertQuery = "INSERT INTO Users (USERID, PASSWORD, EMAIL) VALUES (:userId, :password, :email)";
-                db.DB_Open(insertQuery);
-
-                using (OracleCommand command = new OracleCommand(insertQuery, db.Connection))
-                {
-                    command.Parameters.Add("userId", OracleDbType.Varchar2).Value = userId;
-                    command.Parameters.Add("password", OracleDbType.Varchar2).Value = password;
-                    command.Parameters.Add("email", OracleDbType.Varchar2).Value = email;
-
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("회원가입이 완료되었습니다.");
-                        ClearTextBoxes();
-
-                        // 회원가입 완료 후 LoginForm1으로 이동
-                        LoginForm1 loginForm = new LoginForm1();
-                        loginForm.Show();
-                        this.Close(); // 현재 창 닫기
-                    }
-                    else
-                    {
-                        MessageBox.Show("회원가입에 실패했습니다. 다시 시도해 주세요.");
-                    }
-                }
-            }*/
-            try
+            /*try 
             {
                 // 1. INSERT 쿼리 작성
                 string insertQuery = "INSERT INTO Users (USERID, PASSWORD, EMAIL) VALUES (:userId, :password, :email)";
 
                 // 2. 매개변수 설정
                 var parameters = new Dictionary<string, object>
-        {
-            { ":userId", userId },
-            { ":password", password },
-            { ":email", email }
-        };
+                {
+                    { ":userId", userId },
+                    { ":password", password },
+                    { ":email", email }
+                };
 
                 // 3. DBClass를 사용하여 쿼리 실행
                 db.DB_Open(insertQuery, parameters);
@@ -87,6 +57,35 @@ namespace TimeToDo
                 LoginForm1 loginForm = new LoginForm1();
                 loginForm.Show();
                 this.Close(); // 현재 창 닫기
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("오류 발생: " + ex.Message);
+            }*/
+            try
+            {
+                string insertQuery = "INSERT INTO Users (USERID, PASSWORD, EMAIL) VALUES (:userId, :password, :email)";
+                var parameters = new Dictionary<string, object>
+                {
+                    { ":userId", userId },
+                    { ":password", password },
+                    { ":email", email }
+                };
+
+                int rowsAffected = db.ExecuteNonQuery(insertQuery, parameters);
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("회원가입이 완료되었습니다.");
+                    ClearTextBoxes();
+
+                    LoginForm1 loginForm = new LoginForm1();
+                    loginForm.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("회원가입에 실패했습니다.");
+                }
             }
             catch (Exception ex)
             {

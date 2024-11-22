@@ -37,12 +37,13 @@
             this.repeats = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventCalendar = new System.Windows.Forms.Label();
             this.addEvent = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // calendar
@@ -52,6 +53,7 @@
             this.calendar.Location = new System.Drawing.Point(18, 38);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 0;
+            this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
             // 
             // label1
             // 
@@ -118,23 +120,25 @@
             this.addEvent.UseVisualStyleBackColor = true;
             this.addEvent.Click += new System.EventHandler(this.addEvent_Click);
             // 
-            // button2
+            // btnEdit
             // 
-            this.button2.Location = new System.Drawing.Point(102, 502);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 37);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "일정 편집";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(102, 502);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(81, 37);
+            this.btnEdit.TabIndex = 5;
+            this.btnEdit.Text = "일정 편집";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.Location = new System.Drawing.Point(189, 502);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 37);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "일정 삭제";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(189, 502);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(81, 37);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "일정 삭제";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button5
             // 
@@ -167,25 +171,36 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(609, 234);
+            this.btnRefresh.Location = new System.Drawing.Point(559, 234);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(77, 32);
+            this.btnRefresh.Size = new System.Drawing.Size(127, 32);
             this.btnRefresh.TabIndex = 12;
-            this.btnRefresh.Text = "새로고침";
+            this.btnRefresh.Text = "전체 일정 불러오기";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(427, 509);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // calenderForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 556);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.addEvent);
             this.Controls.Add(this.eventCalendar);
             this.Controls.Add(this.listView1);
@@ -208,12 +223,13 @@
         private System.Windows.Forms.ColumnHeader descriptionEvent;
         private System.Windows.Forms.ColumnHeader repeats;
         private System.Windows.Forms.Button addEvent;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ColumnHeader category;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button button1;
     }
 }
