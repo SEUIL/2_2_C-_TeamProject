@@ -46,9 +46,9 @@ namespace TimeToDo.Forms
                 }
 
                 // SQL 쿼리 작성 (Task 열에서 키워드 검색)
-                string query = "SELECT Task, Category, Priority, TodoDate, Deadline " +
-                               "FROM Todolist " +
-                               "WHERE USERID = :UserId AND Task LIKE :Keyword";
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED FROM Todolist WHERE USERID = :UserId AND Task LIKE :Keyword";
+
+                
 
                 var parameters = new Dictionary<string, object>
                 {
@@ -87,6 +87,15 @@ namespace TimeToDo.Forms
                 item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : ""); // 네 번째 열
                 item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : ""); // 다섯 번째 열
                 item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : ""); // 여섯 번째 열
+
+                if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                {
+                    item.Checked = true; // 완료된 항목
+                }
+                else
+                {
+                    item.Checked = false; // 미완료 항목
+                }
 
                 listView2.Items.Add(item); // ListView에 항목 추가
             }

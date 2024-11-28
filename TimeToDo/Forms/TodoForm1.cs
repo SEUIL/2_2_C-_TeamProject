@@ -20,7 +20,7 @@ namespace TimeToDo.Forms
             InitializeComponent();
             dbClass = new DBClass(); // DBClass 객체 초기화
             InitializeListView();
-
+            listView.ItemChecked += listView_ItemChecked;
 
         }
 
@@ -51,7 +51,8 @@ namespace TimeToDo.Forms
                 // ListView 초기화
                 listView.Items.Clear();
 
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId";
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED FROM Todolist WHERE USERID = :UserId";
+
 
                 var parameters = new Dictionary<string, object>
         {
@@ -79,6 +80,15 @@ namespace TimeToDo.Forms
                     item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
                     item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
                     item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
 
                     item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
 
@@ -260,6 +270,352 @@ namespace TimeToDo.Forms
             editForm.ShowDialog();
         }
 
+        private void 공적일정ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+
+                // Parameter 추가
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId },
+            { ":Category", "공적 일정" }
+        };
+
+                // 데이터베이스에서 데이터 가져오기
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    // ListView에 항목 추가
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"공적일정을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 사적일정ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+
+                // Parameter 추가
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId },
+            { ":Category", "사적 일정" }
+        };
+
+                // 데이터베이스에서 데이터 가져오기
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    // ListView에 항목 추가
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"사적 일정을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 자기개발ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+
+                // Parameter 추가
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId },
+            { ":Category", "자기 개발" }
+        };
+
+                // 데이터베이스에서 데이터 가져오기
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    // ListView에 항목 추가
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"자기 개발을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 취미생활ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+
+                // Parameter 추가
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId },
+            { ":Category", "취미 생활" }
+        };
+
+                // 데이터베이스에서 데이터 가져오기
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    // ListView에 항목 추가
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"취미 생활을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 일반ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadFilteredDataByPriority("일반");
+        }
+
+        private void LoadFilteredDataByPriority(string priority)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // Query 작성 (Priority 값에 따라 필터링)
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Priority = :Priority";
+
+                // Parameter 추가
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId },
+            { ":Priority", priority }
+        };
+
+                // 데이터베이스에서 데이터 가져오기
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show($"{priority} 중요도의 데이터가 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    // ListView에 항목 추가
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+
+                    listView.Items.Add(item);
+                }
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"데이터를 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 중요ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadFilteredDataByPriority("중요");
+        }
+
+        private void listView_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            try
+            {
+                if (e.Item.Tag == null || !int.TryParse(e.Item.Tag.ToString(), out int todoId))
+                {
+                    MessageBox.Show("ID 값이 잘못되었습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // 체크 상태에 따라 is_completed 값 설정
+                int isCompleted = e.Item.Checked ? 1 : 0;
+
+                // 데이터베이스 업데이트 쿼리
+                string query = "UPDATE Todolist SET IS_COMPLETED = :IsCompleted WHERE ID = :Id";
+                var parameters = new Dictionary<string, object>
+        {
+            { ":IsCompleted", isCompleted },
+            { ":Id", todoId }
+        };
+
+                dbClass.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"완료 상태를 업데이트하는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 완료ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // 완료된 항목만 가져오기
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED FROM Todolist WHERE USERID = :UserId AND IS_COMPLETED = 1";
+
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId }
+        };
+
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("완료된 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+                    item.Checked = true;
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+                    // 완료 상태 설정
+                    
+
+                    
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"완료 항목을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 미완료ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // 미완료 항목만 가져오기
+                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED FROM Todolist WHERE USERID = :UserId AND IS_COMPLETED = 0";
+
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId }
+        };
+
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("미완료된 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+                    item.Checked = false;
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"미완료 항목을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 }
