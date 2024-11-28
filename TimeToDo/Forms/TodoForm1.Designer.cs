@@ -162,20 +162,12 @@
             // 
             // BtnExit
             // 
-<<<<<<< HEAD
             this.BtnExit.BackColor = System.Drawing.Color.LightCoral;
-=======
-            this.BtnExit.BackColor = System.Drawing.Color.White;
->>>>>>> 0e2d765 (백업본 다시 커밋)
             this.BtnExit.Location = new System.Drawing.Point(720, 337);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(105, 37);
             this.BtnExit.TabIndex = 13;
-<<<<<<< HEAD
             this.BtnExit.Text = "프로그램 종료";
-=======
-            this.BtnExit.Text = "캘린더 이동";
->>>>>>> 0e2d765 (백업본 다시 커밋)
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
@@ -192,10 +184,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TodoForm1";
             this.Text = "Form1";
-<<<<<<< HEAD
-=======
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TodoForm1_FormClosing);
->>>>>>> 0e2d765 (백업본 다시 커밋)
             this.groupBox1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

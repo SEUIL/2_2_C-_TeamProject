@@ -1,6 +1,0 @@
-*.exe
-*.pdb
-*.cache
-.vs/
-obj/
-bin/
