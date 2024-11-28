@@ -1,6 +1,5 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\",
   "Documents": [
     {
@@ -8,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\designform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\lg\\documents\\2_2_c-_teamproject\\timetodo\\forms\\designform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\forms\\designform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\designform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -70,25 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\signupform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-  "WorkspaceRootPath": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\msi\\desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\c#\\workspace\\c#_teamproj\\timetodo\\forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
->>>>>>> CommitSteal
     }
   ],
   "DocumentGroupContainers": [
@@ -103,25 +83,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
               "Title": "DesignForm1.cs",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DesignForm1.cs",
               "RelativeDocumentMoniker": "Forms\\DesignForm1.cs",
               "ToolTip": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DesignForm1.cs",
               "RelativeToolTip": "Forms\\DesignForm1.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAACYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAowCMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T15:24:49.179Z",
-=======
-              "Title": "AddForm1.cs",
-              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\AddForm1.cs",
-              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs",
-              "RelativeToolTip": "Forms\\AddForm1.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:22:14.489Z",
->>>>>>> CommitSteal
               "EditorCaption": ""
             },
             {
@@ -133,8 +102,7 @@
               "ToolTip": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DesignForm1.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "Forms\\DesignForm1.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T14:01:42.904Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2024-11-28T14:01:42.904Z"
             },
             {
               "$type": "Document",
@@ -164,23 +132,15 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "AddForm1.cs [\uB514\uC790\uC778]",
-<<<<<<< HEAD
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\AddForm1.cs",
               "RelativeDocumentMoniker": "Forms\\AddForm1.cs",
               "ToolTip": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\AddForm1.cs [\uB514\uC790\uC778]",
-=======
-              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\AddForm1.cs",
-              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\AddForm1.cs [\uB514\uC790\uC778]",
->>>>>>> CommitSteal
               "RelativeToolTip": "Forms\\AddForm1.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:22:13.353Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2024-11-21T00:37:23.3Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 5,
               "Title": "editForm1.cs",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\editForm1.cs",
@@ -316,30 +276,6 @@
               "ViewState": "AgIAADUAAAAAAAAAAAAQwEcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T03:48:31.536Z"
-=======
-              "DocumentIndex": 2,
-              "Title": "calenderForm1.cs",
-              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\calenderForm1.cs",
-              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs",
-              "RelativeToolTip": "Forms\\calenderForm1.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAFAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:19:39.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "calenderForm1.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\calenderForm1.cs",
-              "ToolTip": "C:\\Users\\msi\\Desktop\\\uBD80\uCC9C\uB300 2\uD559\uB144 2\uD559\uAE30\\C#\\WorkSpace\\C#_TeamProj\\TimeToDo\\Forms\\calenderForm1.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "Forms\\calenderForm1.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:18:07.095Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
->>>>>>> CommitSteal
             }
           ]
         }

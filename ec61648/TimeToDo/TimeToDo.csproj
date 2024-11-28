@@ -51,15 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBClass.cs" />
-<<<<<<< HEAD
     <Compile Include="Forms\DesignForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DesignForm1.Designer.cs">
       <DependentUpon>DesignForm1.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> 0e2d765 (백업본 다시 커밋)
     <Compile Include="Forms\editForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,12 +119,9 @@
     <Compile Include="Forms\SearchForm1.Designer.cs">
       <DependentUpon>SearchForm1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="Forms\DesignForm1.resx">
       <DependentUpon>DesignForm1.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> 0e2d765 (백업본 다시 커밋)
     <EmbeddedResource Include="Forms\editForm1.resx">
       <DependentUpon>editForm1.cs</DependentUpon>
     </EmbeddedResource>

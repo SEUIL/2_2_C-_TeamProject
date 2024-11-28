@@ -21,20 +21,12 @@ namespace TimeToDo
 
             //<<둘 중에 하나 주석처리하기>>
 
-<<<<<<< HEAD
             Application.Run(new DesignForm1());
             //로그인폼부터 시작하기!
             //Application.Run(new LoginForm1());
             //할일폼 보기
             //Application.Run(new TodoForm1());
 
-=======
-
-            //로그인폼부터 시작하기!
-            Application.Run(new LoginForm1());
-            //할일폼 보기
-            //Application.Run(new TodoForm1());
->>>>>>> 0e2d765 (백업본 다시 커밋)
         }
     }
 }
