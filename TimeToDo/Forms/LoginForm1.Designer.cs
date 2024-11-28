@@ -115,10 +115,8 @@
             this.Controls.Add(this.label1);
             this.Name = "LoginForm1";
             this.Text = "LoginForm1";
-<<<<<<< HEAD
-=======
+
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm1_FormClosing);
->>>>>>> 0e2d765 (백업본 다시 커밋)
             this.ResumeLayout(false);
             this.PerformLayout();
 
