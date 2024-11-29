@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,8 +27,13 @@ namespace TimeToDo
 
             listView1.View = View.Details;
             listView1.FullRowSelect = true;
+            this.Load += new System.EventHandler(this.CalendarForm1_Load);
         }
-
+        private void CalendarForm1_Load(object sender, EventArgs e)
+        {
+            // 로그인된 사용자 이름 설정
+            username.Text = $"{Session.LoggedInUserId}";
+        }
         private void addEvent_Click(object sender, EventArgs e)
         {
             AddForm1 addForm1 = new AddForm1(this);
