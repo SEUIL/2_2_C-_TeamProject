@@ -43,6 +43,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.username = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // calendar
@@ -177,11 +178,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // username
+            // 
+            this.username.AutoSize = true;
+            this.username.Location = new System.Drawing.Point(12, 9);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(38, 12);
+            this.username.TabIndex = 14;
+            this.username.Text = "label2";
+            // 
             // calenderForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 556);
+            this.Controls.Add(this.username);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
@@ -216,7 +227,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ColumnHeader category;
         private System.Windows.Forms.Button btnSearch;
+
+        private System.Windows.Forms.Button BtnExit;
+
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label username;
     }
 }

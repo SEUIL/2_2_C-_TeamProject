@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,7 +38,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,12 +46,26 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.listView2);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(10, 10);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(642, 524);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(562, 419);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "검색으로 찾기";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Location = new System.Drawing.Point(368, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 30);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "검색";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // listView2
             // 
@@ -64,9 +78,10 @@
             this.columnHeader5,
             this.columnHeader6});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(6, 64);
+            this.listView2.Location = new System.Drawing.Point(5, 51);
+            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(622, 440);
+            this.listView2.Size = new System.Drawing.Size(545, 353);
             this.listView2.TabIndex = 9;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -104,28 +119,20 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("나눔바른펜", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(6, 24);
+            this.textBox1.Location = new System.Drawing.Point(5, 19);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 33);
+            this.textBox1.Size = new System.Drawing.Size(358, 28);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "검색어 입력...\r\n";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(420, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 38);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "검색";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // TodoSearchForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 544);
+            this.ClientSize = new System.Drawing.Size(585, 435);
             this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TodoSearchForm1";
             this.Text = "TodoSearchForm1";
             this.groupBox2.ResumeLayout(false);
