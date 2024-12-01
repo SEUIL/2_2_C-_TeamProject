@@ -157,6 +157,7 @@
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "일정 검색";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnRefresh
             // 

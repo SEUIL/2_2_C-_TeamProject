@@ -32,7 +32,7 @@ namespace TimeToDo
         private void CalendarForm1_Load(object sender, EventArgs e)
         {
             // 로그인된 사용자 이름 설정
-            username.Text = $"{Session.LoggedInUserId}";
+            username.Text = $"접속한 사용자 : {Session.LoggedInUserId}";
         }
         private void addEvent_Click(object sender, EventArgs e)
         {
@@ -229,6 +229,12 @@ namespace TimeToDo
             this.Hide();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e) //캘린더 검색기능
+        {
+            SearchForm1 searchForm1 = new SearchForm1();
+            searchForm1.ShowDialog();
+
+        }
 
         private void calenderForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -236,5 +242,6 @@ namespace TimeToDo
             Application.Exit(); // 애플리케이션 종료
         }
 
+        
     }
 }

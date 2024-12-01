@@ -52,7 +52,6 @@ INCREMENT BY 1;
 
 
 
-
 -- 디버깅용 코드
 SELECT * FROM Users; -- 테이블 데이터 확인
 DROP Table USERS --테이블 삭제
@@ -63,5 +62,41 @@ SELECT * FROM Calendar; -- 테이블 데이터 확인
 DROP Table calendar; --테이블 삭제
 DELETE FROM calendar; --테이블 테이터 삭제 
 DROP SEQUENCE SEQ_CALENDAR; --시퀀스 삭제
-DESCRIBE Calendar; -- 테이블 구조확인 
+DESC calendar; -- 테이블 구조확인 
 SELECT SEQUENCE_NAME FROM USER_SEQUENCES;
+
+DROP Table Todolist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 디버깅중 searchForm1
+SELECT category, time, description, repeats
+FROM Calendar
+WHERE usersId = :userId
+AND description LIKE :searchKeyword
+AND time BETWEEN :startDate AND :endDate;
+
+SELECT category, time, description, repeats
+FROM Calendar
+WHERE USERSID = 'test'
+  AND description LIKE '%1111%'
+  AND time BETWEEN TO_DATE('2024-11-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS') 
+                 AND TO_DATE('2024-11-30 23:59:59', 'YYYY-MM-DD HH24:MI:SS');
+        
+
+
+

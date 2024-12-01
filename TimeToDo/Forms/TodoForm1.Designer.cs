@@ -1,4 +1,7 @@
-﻿namespace TimeToDo.Forms
+﻿using System;
+using System.Windows.Forms;
+
+namespace TimeToDo.Forms
 {
     partial class TodoForm1
     {
@@ -45,12 +48,12 @@
             this.중요도ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.일반ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.중요ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.완료여부ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.완료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.미완료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -170,28 +173,28 @@
             // 공적일정ToolStripMenuItem1
             // 
             this.공적일정ToolStripMenuItem1.Name = "공적일정ToolStripMenuItem1";
-            this.공적일정ToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.공적일정ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.공적일정ToolStripMenuItem1.Text = "공적일정";
             this.공적일정ToolStripMenuItem1.Click += new System.EventHandler(this.공적일정ToolStripMenuItem1_Click);
             // 
             // 사적일정ToolStripMenuItem
             // 
             this.사적일정ToolStripMenuItem.Name = "사적일정ToolStripMenuItem";
-            this.사적일정ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.사적일정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.사적일정ToolStripMenuItem.Text = "사적일정";
             this.사적일정ToolStripMenuItem.Click += new System.EventHandler(this.사적일정ToolStripMenuItem_Click);
             // 
             // 자기개발ToolStripMenuItem
             // 
             this.자기개발ToolStripMenuItem.Name = "자기개발ToolStripMenuItem";
-            this.자기개발ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.자기개발ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.자기개발ToolStripMenuItem.Text = "자기개발";
             this.자기개발ToolStripMenuItem.Click += new System.EventHandler(this.자기개발ToolStripMenuItem_Click);
             // 
             // 취미생활ToolStripMenuItem
             // 
             this.취미생활ToolStripMenuItem.Name = "취미생활ToolStripMenuItem";
-            this.취미생활ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.취미생활ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.취미생활ToolStripMenuItem.Text = "취미생활";
             this.취미생활ToolStripMenuItem.Click += new System.EventHandler(this.취미생활ToolStripMenuItem_Click);
             // 
@@ -207,37 +210,16 @@
             // 일반ToolStripMenuItem
             // 
             this.일반ToolStripMenuItem.Name = "일반ToolStripMenuItem";
-            this.일반ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.일반ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.일반ToolStripMenuItem.Text = "일반";
             this.일반ToolStripMenuItem.Click += new System.EventHandler(this.일반ToolStripMenuItem_Click);
             // 
             // 중요ToolStripMenuItem
             // 
             this.중요ToolStripMenuItem.Name = "중요ToolStripMenuItem";
-            this.중요ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.중요ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.중요ToolStripMenuItem.Text = "중요";
             this.중요ToolStripMenuItem.Click += new System.EventHandler(this.중요ToolStripMenuItem_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(701, 292);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(139, 29);
-            this.btnRefresh.TabIndex = 12;
-            this.btnRefresh.Text = "전체 할 일 불러오기";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnLoadTodoList_Click);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackColor = System.Drawing.Color.White;
-            this.BtnExit.Location = new System.Drawing.Point(720, 337);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(105, 37);
-            this.BtnExit.TabIndex = 13;
-            this.BtnExit.Text = "캘린더 이동";
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // 완료여부ToolStripMenuItem
             // 
@@ -262,6 +244,27 @@
             this.미완료ToolStripMenuItem.Text = "미완료";
             this.미완료ToolStripMenuItem.Click += new System.EventHandler(this.미완료ToolStripMenuItem_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(720, 293);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(105, 29);
+            this.btnRefresh.TabIndex = 12;
+            this.btnRefresh.Text = "전체 불러오기";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnLoadTodoList_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackColor = System.Drawing.Color.White;
+            this.BtnExit.Location = new System.Drawing.Point(720, 337);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(105, 37);
+            this.BtnExit.TabIndex = 13;
+            this.BtnExit.Text = "캘린더 이동";
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // TodoForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -283,6 +286,8 @@
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
         private System.Windows.Forms.Button SearchButton;
