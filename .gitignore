@@ -6,6 +6,7 @@ obj/
 # 사용자 환경 관련 파일
 *.user
 *.suo
+*.settings
 
 # VS 관련 파일
 .vs/
