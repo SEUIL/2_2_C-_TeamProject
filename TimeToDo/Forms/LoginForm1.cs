@@ -107,6 +107,14 @@ namespace TimeToDo
             signUpForm.Show();
             this.Hide(); // LoginForm1을 숨김
         }
+
+        private void LoginForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+                Application.Exit(); // 애플리케이션 종료
+            
+        }
+
     }
 }
 

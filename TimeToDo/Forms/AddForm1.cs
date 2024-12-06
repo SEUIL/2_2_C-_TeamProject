@@ -39,7 +39,7 @@ namespace TimeToDo.Forms
                 }
 
                 // DB에 값 삽입
-                string insertQuery = "INSERT INTO Calendar (ID, USERID, Category, Time, Description, Repeats) " +
+                string insertQuery = "INSERT INTO Calendar (ID, USERSID, Category, Time, Description, Repeats) " +
                                      "VALUES (SEQ_CALENDAR.NEXTVAL, :UserId, :Category, :Time, :Description, NULL) RETURNING ID INTO :InsertedID";
 
                 var parameters = new Dictionary<string, object>

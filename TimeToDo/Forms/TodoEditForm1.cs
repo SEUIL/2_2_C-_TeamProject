@@ -24,7 +24,7 @@ namespace TimeToDo.Forms
             // 매개변수 초기화
             _todoId = todoId;
             _parentForm = parentForm;
-            _oracleConnection = new OracleConnection("User Id=Calendar; Password=1234; Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))");
+            _oracleConnection = new OracleConnection("User Id=Calendar; Password=1234; Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1522))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))");
 
             // 기존 데이터를 UI에 로드
             textBox1.Text = task;
@@ -105,7 +105,7 @@ namespace TimeToDo.Forms
                 return false;
             }
 
-            if (dateTimePicker2.Value <= dateTimePicker1.Value)
+            if (dateTimePicker2.Value < dateTimePicker1.Value)
             {
                 MessageBox.Show("마감일은 시작일 이후여야 합니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;

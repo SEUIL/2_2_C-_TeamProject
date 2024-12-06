@@ -1,4 +1,7 @@
-﻿namespace TimeToDo.Forms
+﻿using System;
+using System.Windows.Forms;
+
+namespace TimeToDo.Forms
 {
     partial class TodoForm1
     {
@@ -37,7 +40,17 @@
             this.Check = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.필터ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.정렬ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.공적일정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.공적일정ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.사적일정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.자기개발ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.취미생활ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.중요도ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.일반ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.중요ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.완료여부ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.완료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.미완료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
@@ -127,8 +140,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.필터ToolStripMenuItem,
-            this.정렬ToolStripMenuItem});
+            this.필터ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -138,36 +150,118 @@
             // 
             // 필터ToolStripMenuItem
             // 
+            this.필터ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.공적일정ToolStripMenuItem,
+            this.중요도ToolStripMenuItem,
+            this.완료여부ToolStripMenuItem});
             this.필터ToolStripMenuItem.Name = "필터ToolStripMenuItem";
             this.필터ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.필터ToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.필터ToolStripMenuItem.Text = "필터(F)";
             // 
-            // 정렬ToolStripMenuItem
+            // 공적일정ToolStripMenuItem
             // 
-            this.정렬ToolStripMenuItem.Name = "정렬ToolStripMenuItem";
-            this.정렬ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.정렬ToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.정렬ToolStripMenuItem.Text = "정렬(S)";
+            this.공적일정ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.공적일정ToolStripMenuItem1,
+            this.사적일정ToolStripMenuItem,
+            this.자기개발ToolStripMenuItem,
+            this.취미생활ToolStripMenuItem});
+            this.공적일정ToolStripMenuItem.Name = "공적일정ToolStripMenuItem";
+            this.공적일정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.공적일정ToolStripMenuItem.Text = "카테고리";
+            // 
+            // 공적일정ToolStripMenuItem1
+            // 
+            this.공적일정ToolStripMenuItem1.Name = "공적일정ToolStripMenuItem1";
+            this.공적일정ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.공적일정ToolStripMenuItem1.Text = "공적일정";
+            this.공적일정ToolStripMenuItem1.Click += new System.EventHandler(this.공적일정ToolStripMenuItem1_Click);
+            // 
+            // 사적일정ToolStripMenuItem
+            // 
+            this.사적일정ToolStripMenuItem.Name = "사적일정ToolStripMenuItem";
+            this.사적일정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.사적일정ToolStripMenuItem.Text = "사적일정";
+            this.사적일정ToolStripMenuItem.Click += new System.EventHandler(this.사적일정ToolStripMenuItem_Click);
+            // 
+            // 자기개발ToolStripMenuItem
+            // 
+            this.자기개발ToolStripMenuItem.Name = "자기개발ToolStripMenuItem";
+            this.자기개발ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.자기개발ToolStripMenuItem.Text = "자기개발";
+            this.자기개발ToolStripMenuItem.Click += new System.EventHandler(this.자기개발ToolStripMenuItem_Click);
+            // 
+            // 취미생활ToolStripMenuItem
+            // 
+            this.취미생활ToolStripMenuItem.Name = "취미생활ToolStripMenuItem";
+            this.취미생활ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.취미생활ToolStripMenuItem.Text = "취미생활";
+            this.취미생활ToolStripMenuItem.Click += new System.EventHandler(this.취미생활ToolStripMenuItem_Click);
+            // 
+            // 중요도ToolStripMenuItem
+            // 
+            this.중요도ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.일반ToolStripMenuItem,
+            this.중요ToolStripMenuItem});
+            this.중요도ToolStripMenuItem.Name = "중요도ToolStripMenuItem";
+            this.중요도ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.중요도ToolStripMenuItem.Text = "중요도";
+            // 
+            // 일반ToolStripMenuItem
+            // 
+            this.일반ToolStripMenuItem.Name = "일반ToolStripMenuItem";
+            this.일반ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.일반ToolStripMenuItem.Text = "일반";
+            this.일반ToolStripMenuItem.Click += new System.EventHandler(this.일반ToolStripMenuItem_Click);
+            // 
+            // 중요ToolStripMenuItem
+            // 
+            this.중요ToolStripMenuItem.Name = "중요ToolStripMenuItem";
+            this.중요ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.중요ToolStripMenuItem.Text = "중요";
+            this.중요ToolStripMenuItem.Click += new System.EventHandler(this.중요ToolStripMenuItem_Click);
+            // 
+            // 완료여부ToolStripMenuItem
+            // 
+            this.완료여부ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.완료ToolStripMenuItem,
+            this.미완료ToolStripMenuItem});
+            this.완료여부ToolStripMenuItem.Name = "완료여부ToolStripMenuItem";
+            this.완료여부ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.완료여부ToolStripMenuItem.Text = "완료여부";
+            // 
+            // 완료ToolStripMenuItem
+            // 
+            this.완료ToolStripMenuItem.Name = "완료ToolStripMenuItem";
+            this.완료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.완료ToolStripMenuItem.Text = "완료";
+            this.완료ToolStripMenuItem.Click += new System.EventHandler(this.완료ToolStripMenuItem_Click);
+            // 
+            // 미완료ToolStripMenuItem
+            // 
+            this.미완료ToolStripMenuItem.Name = "미완료ToolStripMenuItem";
+            this.미완료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.미완료ToolStripMenuItem.Text = "미완료";
+            this.미완료ToolStripMenuItem.Click += new System.EventHandler(this.미완료ToolStripMenuItem_Click);
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(701, 292);
+            this.btnRefresh.Location = new System.Drawing.Point(720, 293);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(139, 29);
+            this.btnRefresh.Size = new System.Drawing.Size(105, 29);
             this.btnRefresh.TabIndex = 12;
-            this.btnRefresh.Text = "전체 할 일 불러오기";
+            this.btnRefresh.Text = "전체 불러오기";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnLoadTodoList_Click);
             // 
             // BtnExit
             // 
-            this.BtnExit.BackColor = System.Drawing.Color.LightCoral;
+            this.BtnExit.BackColor = System.Drawing.Color.White;
             this.BtnExit.Location = new System.Drawing.Point(720, 337);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(105, 37);
             this.BtnExit.TabIndex = 13;
-            this.BtnExit.Text = "프로그램 종료";
+            this.BtnExit.Text = "캘린더 이동";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
@@ -184,6 +278,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TodoForm1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TodoForm1_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -191,6 +286,8 @@
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
         private System.Windows.Forms.Button SearchButton;
@@ -202,9 +299,19 @@
         private System.Windows.Forms.ColumnHeader Check;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 필터ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 정렬ToolStripMenuItem;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.ToolStripMenuItem 공적일정ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 공적일정ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 사적일정ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 자기개발ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 취미생활ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 중요도ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 일반ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 중요ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 완료여부ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 완료ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 미완료ToolStripMenuItem;
     }
 }

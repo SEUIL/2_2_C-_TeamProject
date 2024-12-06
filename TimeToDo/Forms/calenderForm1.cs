@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,8 +27,13 @@ namespace TimeToDo
 
             listView1.View = View.Details;
             listView1.FullRowSelect = true;
+            this.Load += new System.EventHandler(this.CalendarForm1_Load);
         }
-
+        private void CalendarForm1_Load(object sender, EventArgs e)
+        {
+            // 로그인된 사용자 이름 설정
+            username.Text = $"접속한 사용자 : {Session.LoggedInUserId}";
+        }
         private void addEvent_Click(object sender, EventArgs e)
         {
             AddForm1 addForm1 = new AddForm1(this);
@@ -125,6 +131,7 @@ namespace TimeToDo
             }
         }
 
+
         private void BtnExit_Click(object sender, EventArgs e)
         {
             // 종료 확인 메시지
@@ -136,6 +143,9 @@ namespace TimeToDo
             }
         }
 
+        
+
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             try
@@ -143,7 +153,7 @@ namespace TimeToDo
                 
                 listView1.Items.Clear();
 
-                string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar WHERE USERID = :UserId";
+                string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar WHERE USERSID = :UserId";
 
                 var parameters = new Dictionary<string, object>
                 {
@@ -180,9 +190,10 @@ namespace TimeToDo
                 // listView1 초기화
                 listView1.Items.Clear();
 
-                // 데이터베이스에서 해당 날짜에 해당하는 일정 불러오기
+                // 데이터베이스에서 해당 날짜에 해당하는 일정 불러오기 : userId로 불러오는 기능!!
+
                 string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar " +
-                               "WHERE USERS = :UserId AND TRUNC(Time) = TRUNC(:SelectedDate)";
+                               "WHERE USERSID = :UserId AND TRUNC(Time) = TRUNC(:SelectedDate)";
                 var parameters = new Dictionary<string, object>
                 {
                     { ":UserId", Session.LoggedInUserId },
@@ -217,5 +228,20 @@ namespace TimeToDo
             todoForm1.Show();
             this.Hide();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e) //캘린더 검색기능
+        {
+            SearchForm1 searchForm1 = new SearchForm1();
+            searchForm1.ShowDialog();
+
+        }
+
+        private void calenderForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            Application.Exit(); // 애플리케이션 종료
+        }
+
+        
     }
 }
