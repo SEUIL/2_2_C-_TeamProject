@@ -12,7 +12,7 @@ CREATE TABLE Calendar (
     Category VARCHAR2(100),          -- 카테고리
     Time TIMESTAMP,                  -- 일정 시간
     Description VARCHAR2(500),       -- 일정 상세
-    Repeats VARCHAR2(100) NULL,      -- 반복 (NULL 허용)
+    Repeats VARCHAR2(100),      -- 반복 (NULL 허용) 
     FOREIGN KEY (USERSID) REFERENCES Users(USERID) ON DELETE CASCADE
 );
 --캘린더 테이블 만들때 PK ID값 자동증가 (테이블 만들때 같이 하면됌)
@@ -66,21 +66,6 @@ DESC calendar; -- 테이블 구조확인
 SELECT SEQUENCE_NAME FROM USER_SEQUENCES;
 
 DROP Table Todolist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 -- 디버깅중 searchForm1

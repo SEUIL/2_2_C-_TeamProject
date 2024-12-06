@@ -39,11 +39,16 @@
             this.addEvent = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.moveTodolist = new System.Windows.Forms.Button();
             this.username = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // calendar
@@ -76,6 +81,7 @@
             this.listView1.Location = new System.Drawing.Point(15, 269);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(671, 227);
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -140,15 +146,6 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(276, 502);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 37);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "반복 설정";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(18, 212);
@@ -169,15 +166,15 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // button1
+            // moveTodolist
             // 
-            this.button1.Location = new System.Drawing.Point(559, 502);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 42);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "ToDoList 이동";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.moveTodolist.Location = new System.Drawing.Point(559, 502);
+            this.moveTodolist.Name = "moveTodolist";
+            this.moveTodolist.Size = new System.Drawing.Size(127, 42);
+            this.moveTodolist.TabIndex = 13;
+            this.moveTodolist.Text = "ToDoList 이동";
+            this.moveTodolist.UseVisualStyleBackColor = true;
+            this.moveTodolist.Click += new System.EventHandler(this.moveTodolist_Click);
             // 
             // username
             // 
@@ -188,16 +185,62 @@
             this.username.TabIndex = 14;
             this.username.Text = "label2";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 15F);
+            this.label2.Location = new System.Drawing.Point(786, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "앞으로의 일정";
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(698, 39);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(388, 500);
+            this.listView2.TabIndex = 17;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "카테고리";
+            this.columnHeader1.Width = 76;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "시간";
+            this.columnHeader2.Width = 73;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "일정 상세";
+            this.columnHeader3.Width = 148;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "반복";
+            this.columnHeader4.Width = 85;
+            // 
             // calenderForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 556);
+            this.ClientSize = new System.Drawing.Size(1098, 561);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.username);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.moveTodolist);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.addEvent);
@@ -225,14 +268,19 @@
         private System.Windows.Forms.Button addEvent;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ColumnHeader category;
         private System.Windows.Forms.Button btnSearch;
 
         private System.Windows.Forms.Button BtnExit;
 
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button moveTodolist;
         private System.Windows.Forms.Label username;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
