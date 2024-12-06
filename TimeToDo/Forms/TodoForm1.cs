@@ -41,70 +41,6 @@ namespace TimeToDo.Forms
 
 
 
-        
-
-
-        private void btnLoadTodoList_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // ListView 초기화
-                listView.Items.Clear();
-
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED FROM Todolist WHERE USERID = :UserId";
-
-
-                var parameters = new Dictionary<string, object>
-        {
-            { ":UserId", Session.LoggedInUserId }
-        };
-
-                // 데이터베이스에서 데이터 가져오기
-                DBClass dbClass = new DBClass();
-                DataSet dataSet = dbClass.DB_Open(query, parameters);
-                if (dataSet.Tables[0].Rows.Count == 0)
-                {
-                    
-                    return; // 데이터가 없으면 로직 종료
-                }
-
-
-
-
-                foreach (DataRow row in dataSet.Tables[0].Rows)
-                {
-                    // ListView에 항목 추가
-                    ListViewItem item = new ListViewItem(""); // ID 추가
-                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
-                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
-                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
-                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
-                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
-
-                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
-                    {
-                        item.Checked = true; // 완료된 항목
-                    }
-                    else
-                    {
-                        item.Checked = false; // 미완료 항목
-                    }
-
-                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
-
-                    listView.Items.Add(item);
-                }
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"투두리스트 데이터를 로드하는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
 
         // 날짜 변환 메서드
         private string ConvertToDateString(object dateObj)
@@ -274,19 +210,31 @@ namespace TimeToDo.Forms
                 // ListView 초기화
                 listView.Items.Clear();
 
-                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+                // DateTimePicker에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
+
+                // Query 작성 (Category가 '공적 일정'이고 선택된 날짜 이후의 항목만 가져오기)
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                     FROM Todolist 
+                     WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate";
 
                 // Parameter 추가
                 var parameters = new Dictionary<string, object>
-        {
-            { ":UserId", Session.LoggedInUserId },
-            { ":Category", "공적 일정" }
-        };
+    {
+        { ":UserId", Session.LoggedInUserId },
+        { ":Category", "공적 일정" },
+        { ":SelectedDate", selectedDate }
+    };
 
                 // 데이터베이스에서 데이터 가져오기
                 DBClass dbClass = new DBClass();
                 DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("선택한 날짜 이후의 '공적 일정' 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
@@ -305,8 +253,9 @@ namespace TimeToDo.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"공적일정을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"공적 일정을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void 사적일정ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -316,19 +265,31 @@ namespace TimeToDo.Forms
                 // ListView 초기화
                 listView.Items.Clear();
 
-                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+                // DateTimePicker에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
+
+                // Query 작성 (Category가 '사적 일정'이고 선택된 날짜 이후의 항목만 가져오기)
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                     FROM Todolist 
+                     WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate";
 
                 // Parameter 추가
                 var parameters = new Dictionary<string, object>
-        {
-            { ":UserId", Session.LoggedInUserId },
-            { ":Category", "사적 일정" }
-        };
+    {
+        { ":UserId", Session.LoggedInUserId },
+        { ":Category", "사적 일정" },
+        { ":SelectedDate", selectedDate }
+    };
 
                 // 데이터베이스에서 데이터 가져오기
                 DBClass dbClass = new DBClass();
                 DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("선택한 날짜 이후의 '사적 일정' 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
@@ -349,6 +310,7 @@ namespace TimeToDo.Forms
             {
                 MessageBox.Show($"사적 일정을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void 자기개발ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -358,19 +320,31 @@ namespace TimeToDo.Forms
                 // ListView 초기화
                 listView.Items.Clear();
 
-                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+                // DateTimePicker에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
+
+                // Query 작성 (Category가 '자기 개발'이고 선택된 날짜 이후의 항목만 가져오기)
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                     FROM Todolist 
+                     WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate";
 
                 // Parameter 추가
                 var parameters = new Dictionary<string, object>
-        {
-            { ":UserId", Session.LoggedInUserId },
-            { ":Category", "자기 개발" }
-        };
+    {
+        { ":UserId", Session.LoggedInUserId },
+        { ":Category", "자기 개발" },
+        { ":SelectedDate", selectedDate }
+    };
 
                 // 데이터베이스에서 데이터 가져오기
                 DBClass dbClass = new DBClass();
                 DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("선택한 날짜 이후의 '자기 개발' 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
@@ -391,6 +365,7 @@ namespace TimeToDo.Forms
             {
                 MessageBox.Show($"자기 개발을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void 취미생활ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -400,19 +375,31 @@ namespace TimeToDo.Forms
                 // ListView 초기화
                 listView.Items.Clear();
 
-                // Query 작성 (Category가 '공적일정'인 항목만 가져오기)
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Category = :Category";
+                // DateTimePicker에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
+
+                // Query 작성 (Category가 '취미 생활'이고 선택된 날짜 이후의 항목만 가져오기)
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                     FROM Todolist 
+                     WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate";
 
                 // Parameter 추가
                 var parameters = new Dictionary<string, object>
-        {
-            { ":UserId", Session.LoggedInUserId },
-            { ":Category", "취미 생활" }
-        };
+    {
+        { ":UserId", Session.LoggedInUserId },
+        { ":Category", "취미 생활" },
+        { ":SelectedDate", selectedDate }
+    };
 
                 // 데이터베이스에서 데이터 가져오기
                 DBClass dbClass = new DBClass();
                 DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("선택한 날짜 이후의 '취미 생활' 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
@@ -433,6 +420,7 @@ namespace TimeToDo.Forms
             {
                 MessageBox.Show($"취미 생활을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void 일반ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -447,15 +435,21 @@ namespace TimeToDo.Forms
                 // ListView 초기화
                 listView.Items.Clear();
 
-                // Query 작성 (Priority 값에 따라 필터링)
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline FROM Todolist WHERE USERID = :UserId AND Priority = :Priority";
+                // DateTimePicker에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
+
+                // Query 작성 (Priority와 선택된 날짜 이후 필터링)
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                     FROM Todolist 
+                     WHERE USERID = :UserId AND Priority = :Priority AND TodoDate >= :SelectedDate";
 
                 // Parameter 추가
                 var parameters = new Dictionary<string, object>
-        {
-            { ":UserId", Session.LoggedInUserId },
-            { ":Priority", priority }
-        };
+    {
+        { ":UserId", Session.LoggedInUserId },
+        { ":Priority", priority }, // 전달된 Priority 값
+        { ":SelectedDate", selectedDate } // 선택된 날짜
+    };
 
                 // 데이터베이스에서 데이터 가져오기
                 DBClass dbClass = new DBClass();
@@ -463,7 +457,7 @@ namespace TimeToDo.Forms
 
                 if (dataSet.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show($"{priority} 중요도의 데이터가 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"{priority} 중요도 및 선택된 날짜 이후의 데이터가 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
@@ -481,13 +475,12 @@ namespace TimeToDo.Forms
 
                     listView.Items.Add(item);
                 }
-
-                
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"데이터를 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void 중요ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -531,12 +524,18 @@ namespace TimeToDo.Forms
                 // ListView 초기화
                 listView.Items.Clear();
 
-                // 완료된 항목만 가져오기
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED FROM Todolist WHERE USERID = :UserId AND IS_COMPLETED = 1";
+                // DateTimePicker에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
+
+                // 완료된 항목 중 선택된 날짜 이후의 데이터만 가져오기
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED 
+                         FROM Todolist 
+                         WHERE USERID = :UserId AND IS_COMPLETED = 1 AND TodoDate >= :SelectedDate";
 
                 var parameters = new Dictionary<string, object>
         {
-            { ":UserId", Session.LoggedInUserId }
+            { ":UserId", Session.LoggedInUserId },
+            { ":SelectedDate", selectedDate }
         };
 
                 DBClass dbClass = new DBClass();
@@ -544,24 +543,22 @@ namespace TimeToDo.Forms
 
                 if (dataSet.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show("완료된 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("선택한 날짜 이후 완료된 항목이 없습니다.", "정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
+                    // ListView에 항목 추가
                     ListViewItem item = new ListViewItem(""); // ID 추가
                     item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
                     item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
                     item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
                     item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
                     item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
-                    item.Checked = true;
+                    item.Checked = true; // 완료 상태로 설정
                     item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
-                    // 완료 상태 설정
-                    
 
-                    
                     listView.Items.Add(item);
                 }
             }
@@ -621,12 +618,74 @@ namespace TimeToDo.Forms
 
         private void TodoForm1_Load(object sender, EventArgs e)
         {
+            // DateTimePicker의 초기 값 설정
+            dateTimePicker1.Value = DateTime.Today;
+
+            // 초기 값 기준으로 투두 리스트 로드
+            LoadTodoList();
 
         }
-
-        private void 중요도ToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void LoadTodoList()
         {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
 
+                // DateTimePicker1에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value;
+
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED 
+                     FROM Todolist 
+                     WHERE USERID = :UserId AND TodoDate >= :SelectedDate";
+
+                var parameters = new Dictionary<string, object>
+                {
+                    { ":UserId", Session.LoggedInUserId },
+                    { ":SelectedDate", selectedDate }
+                };
+
+                // 데이터베이스에서 데이터 가져오기
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    return; // 데이터가 없으면 로직 종료
+                }
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    // ListView에 항목 추가
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
+
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"투두리스트 데이터를 로드하는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            LoadTodoList();
         }
     }
 }
