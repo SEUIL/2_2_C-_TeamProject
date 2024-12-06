@@ -42,6 +42,7 @@ namespace TimeToDo.Forms
                 if (string.IsNullOrWhiteSpace(keyword))
                 {
                     MessageBox.Show("검색어를 입력해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    listView2.Items.Clear();
                     return;
                 }
 
@@ -52,6 +53,7 @@ namespace TimeToDo.Forms
                 if (startDate > endDate)
                 {
                     MessageBox.Show("시작 날짜는 종료 날짜보다 앞서야 합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    listView2.Items.Clear();
                     return;
                 }
 
@@ -77,6 +79,7 @@ namespace TimeToDo.Forms
                 if (dataSet.Tables[0].Rows.Count == 0)
                 {
                     MessageBox.Show("검색 결과가 없습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listView2.Items.Clear();
                     return;
                 }
 
