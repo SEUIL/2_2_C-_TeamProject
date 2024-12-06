@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\Oracle\11gR2\app\oracle\product\11.2.0\server\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
+      <HintPath>C:\oraclexe\app\oracle\product\11.2.0\server\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,7 +57,6 @@
     <Compile Include="Forms\DesignForm1.Designer.cs">
       <DependentUpon>DesignForm1.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\editForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +119,6 @@
     <Compile Include="Forms\SearchForm1.Designer.cs">
       <DependentUpon>SearchForm1.cs</DependentUpon>
     </Compile>
-
     <EmbeddedResource Include="Forms\DesignForm1.resx">
       <DependentUpon>DesignForm1.cs</DependentUpon>
     </EmbeddedResource>
