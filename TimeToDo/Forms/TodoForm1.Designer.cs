@@ -49,6 +49,7 @@ namespace TimeToDo.Forms
             this.취미생활ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.EditButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -63,7 +64,7 @@ namespace TimeToDo.Forms
             this.listView.Location = new System.Drawing.Point(23, 105);
             this.listView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(994, 535);
+            this.listView.Size = new System.Drawing.Size(872, 535);
             this.listView.TabIndex = 9;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -83,7 +84,7 @@ namespace TimeToDo.Forms
             this.menuStrip1.Location = new System.Drawing.Point(23, 75);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(993, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(985, 28);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -105,7 +106,7 @@ namespace TimeToDo.Forms
             this.일반ToolStripMenuItem1,
             this.중요ToolStripMenuItem1});
             this.중요도ToolStripMenuItem1.Name = "중요도ToolStripMenuItem1";
-            this.중요도ToolStripMenuItem1.Size = new System.Drawing.Size(83, 26);
+            this.중요도ToolStripMenuItem1.Size = new System.Drawing.Size(83, 24);
             this.중요도ToolStripMenuItem1.Text = "중요도별";
             this.중요도ToolStripMenuItem1.Click += new System.EventHandler(this.중요도ToolStripMenuItem1_Click);
             // 
@@ -115,7 +116,7 @@ namespace TimeToDo.Forms
             this.미완료ToolStripMenuItem1,
             this.완료ToolStripMenuItem1});
             this.완료여부ToolStripMenuItem1.Name = "완료여부ToolStripMenuItem1";
-            this.완료여부ToolStripMenuItem1.Size = new System.Drawing.Size(98, 26);
+            this.완료여부ToolStripMenuItem1.Size = new System.Drawing.Size(98, 24);
             this.완료여부ToolStripMenuItem1.Text = "완료여부별";
             // 
             // 카테고리별ToolStripMenuItem
@@ -126,7 +127,7 @@ namespace TimeToDo.Forms
             this.자기계발ToolStripMenuItem,
             this.취미생활ToolStripMenuItem});
             this.카테고리별ToolStripMenuItem.Name = "카테고리별ToolStripMenuItem";
-            this.카테고리별ToolStripMenuItem.Size = new System.Drawing.Size(98, 26);
+            this.카테고리별ToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.카테고리별ToolStripMenuItem.Text = "카테고리별";
             // 
             // 일반ToolStripMenuItem1
@@ -179,7 +180,7 @@ namespace TimeToDo.Forms
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(942, 79);
+            this.SearchButton.Location = new System.Drawing.Point(918, 93);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(75, 22);
@@ -193,46 +194,58 @@ namespace TimeToDo.Forms
             this.AddButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.AddButton.Font = new System.Drawing.Font("Noto Sans KR Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.AddButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddButton.Location = new System.Drawing.Point(649, 74);
+            this.AddButton.Location = new System.Drawing.Point(901, 141);
             this.AddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(88, 31);
+            this.AddButton.Size = new System.Drawing.Size(116, 44);
             this.AddButton.TabIndex = 2;
             this.AddButton.Text = "추가";
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(691, 76);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(208, 25);
+            this.dateTimePicker1.TabIndex = 14;
+            // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(743, 81);
+            this.EditButton.BackColor = System.Drawing.Color.SlateGray;
+            this.EditButton.Font = new System.Drawing.Font("Noto Sans KR Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.EditButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EditButton.Location = new System.Drawing.Point(901, 210);
             this.EditButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(75, 22);
-            this.EditButton.TabIndex = 3;
+            this.EditButton.Size = new System.Drawing.Size(116, 44);
+            this.EditButton.TabIndex = 15;
             this.EditButton.Text = "수정";
-            this.EditButton.UseVisualStyleBackColor = true;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            this.EditButton.UseVisualStyleBackColor = false;
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(837, 81);
+            this.DeleteButton.BackColor = System.Drawing.Color.Red;
+            this.DeleteButton.Font = new System.Drawing.Font("Noto Sans KR Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.DeleteButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DeleteButton.Location = new System.Drawing.Point(901, 286);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(75, 22);
-            this.DeleteButton.TabIndex = 4;
+            this.DeleteButton.Size = new System.Drawing.Size(116, 44);
+            this.DeleteButton.TabIndex = 16;
             this.DeleteButton.Text = "삭제";
-            this.DeleteButton.UseVisualStyleBackColor = true;
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            this.DeleteButton.UseVisualStyleBackColor = false;
             // 
             // TodoForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 658);
+            this.ClientSize = new System.Drawing.Size(1031, 658);
             this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.SearchButton);
-            this.Controls.Add(this.EditButton);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.menuStrip1);
@@ -271,6 +284,7 @@ namespace TimeToDo.Forms
         private ToolStripMenuItem 취미생활ToolStripMenuItem;
         private Button SearchButton;
         private Button AddButton;
+        private DateTimePicker dateTimePicker1;
         private Button EditButton;
         private Button DeleteButton;
     }
