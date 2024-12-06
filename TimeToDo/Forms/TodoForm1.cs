@@ -8,7 +8,7 @@ using static TimeToDo.LoginForm1;
 
 namespace TimeToDo.Forms
 {
-    public partial class TodoForm1 : Form
+    public partial class TodoForm1 : MetroFramework.Forms.MetroForm
     {
         private DBClass dbClass;
         public void AddItemToListView(ListViewItem item)
@@ -619,5 +619,14 @@ namespace TimeToDo.Forms
             Application.Exit(); // 애플리케이션 종료
         }
 
+        private void TodoForm1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 중요도ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
