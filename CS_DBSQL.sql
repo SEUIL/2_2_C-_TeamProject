@@ -1,26 +1,26 @@
--- ìœ ì € í…Œì´ë¸” ìž‘ì„±
+-- À¯Àú Å×ÀÌºí ÀÛ¼º
 CREATE TABLE USERS ( 
     USERID VARCHAR2(50) PRIMARY KEY,  
     PASSWORD VARCHAR2(50) NOT NULL,   
     EMAIL VARCHAR2(100)               
 );
 
---ìº˜ë¦°ë” í…Œì´ë¸” ìž‘ì„±
+--Ä¶¸°´õ Å×ÀÌºí ÀÛ¼º
 CREATE TABLE Calendar (
-    Id NUMBER PRIMARY KEY,           -- ìº˜ë¦°ë” ID
-    USERSID VARCHAR2(50) NOT NULL,   -- ì‚¬ìš©ìž ID (Users í…Œì´ë¸”ì˜ FK)
-    Category VARCHAR2(100),          -- ì¹´í…Œê³ ë¦¬
-    Time TIMESTAMP,                  -- ì¼ì • ì‹œê°„
-    Description VARCHAR2(500),       -- ì¼ì • ìƒì„¸
-    Repeats VARCHAR2(100) NULL,      -- ë°˜ë³µ (NULL í—ˆìš©)
+    Id NUMBER PRIMARY KEY,           -- Ä¶¸°´õ ID
+    USERSID VARCHAR2(50) NOT NULL,   -- »ç¿ëÀÚ ID (Users Å×ÀÌºíÀÇ FK)
+    Category VARCHAR2(100),          -- Ä«Å×°í¸®
+    Time TIMESTAMP,                  -- ÀÏÁ¤ ½Ã°£
+    Description VARCHAR2(500),       -- ÀÏÁ¤ »ó¼¼
+    Repeats VARCHAR2(100) NULL,      -- ¹Ýº¹ (NULL Çã¿ë)
     FOREIGN KEY (USERSID) REFERENCES Users(USERID) ON DELETE CASCADE
 );
---ìº˜ë¦°ë” í…Œì´ë¸” ë§Œë“¤ë•Œ PK IDê°’ ìžë™ì¦ê°€ (í…Œì´ë¸” ë§Œë“¤ë•Œ ê°™ì´ í•˜ë©´ëŒ)
+--Ä¶¸°´õ Å×ÀÌºí ¸¸µé¶§ PK ID°ª ÀÚµ¿Áõ°¡ (Å×ÀÌºí ¸¸µé¶§ °°ÀÌ ÇÏ¸é‰Î)
 CREATE SEQUENCE SEQ_CALENDAR
 START WITH 1
 INCREMENT BY 1;
 
--- SEQ_CALENDAR.NEXTVALì„ Id í•„ë“œì— ìžë™ìœ¼ë¡œ í• ë‹¹í•˜ê¸° ìœ„í•´ BEFORE INSERT íŠ¸ë¦¬ê±°ë¥¼ ìƒì„±
+-- SEQ_CALENDAR.NEXTVALÀ» Id ÇÊµå¿¡ ÀÚµ¿À¸·Î ÇÒ´çÇÏ±â À§ÇØ BEFORE INSERT Æ®¸®°Å¸¦ »ý¼º
 CREATE OR REPLACE TRIGGER trg_BI_Calendar
 BEFORE INSERT ON Calendar
 FOR EACH ROW
@@ -52,17 +52,17 @@ INCREMENT BY 1;
 
 
 
--- ë””ë²„ê¹…ìš© ì½”ë“œ
-SELECT * FROM Users; -- í…Œì´ë¸” ë°ì´í„° í™•ì¸
-DROP Table USERS --í…Œì´ë¸” ì‚­ì œ
-DELETE FROM users; --í…Œì´ë¸” í…Œì´í„° ì‚­ì œ 
-DESCRIBE Users; -- í…Œì´ë¸” êµ¬ì¡°í™•ì¸ 
+-- µð¹ö±ë¿ë ÄÚµå
+SELECT * FROM Users; -- Å×ÀÌºí µ¥ÀÌÅÍ È®ÀÎ
+DROP Table USERS --Å×ÀÌºí »èÁ¦
+DELETE FROM users; --Å×ÀÌºí Å×ÀÌÅÍ »èÁ¦ 
+DESCRIBE Users; -- Å×ÀÌºí ±¸Á¶È®ÀÎ 
 
-SELECT * FROM Calendar; -- í…Œì´ë¸” ë°ì´í„° í™•ì¸
-DROP Table calendar; --í…Œì´ë¸” ì‚­ì œ
-DELETE FROM calendar; --í…Œì´ë¸” í…Œì´í„° ì‚­ì œ 
-DROP SEQUENCE SEQ_CALENDAR; --ì‹œí€€ìŠ¤ ì‚­ì œ
-DESC calendar; -- í…Œì´ë¸” êµ¬ì¡°í™•ì¸ 
+SELECT * FROM Calendar; -- Å×ÀÌºí µ¥ÀÌÅÍ È®ÀÎ
+DROP Table calendar; --Å×ÀÌºí »èÁ¦
+DELETE FROM calendar; --Å×ÀÌºí Å×ÀÌÅÍ »èÁ¦ 
+DROP SEQUENCE SEQ_CALENDAR; --½ÃÄö½º »èÁ¦
+DESC calendar; -- Å×ÀÌºí ±¸Á¶È®ÀÎ 
 SELECT SEQUENCE_NAME FROM USER_SEQUENCES;
 
 DROP Table Todolist
@@ -83,7 +83,7 @@ DROP Table Todolist
 
 
 
--- ë””ë²„ê¹…ì¤‘ searchForm1
+-- µð¹ö±ëÁß searchForm1
 SELECT category, time, description, repeats
 FROM Calendar
 WHERE usersId = :userId

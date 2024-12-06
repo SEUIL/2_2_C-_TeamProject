@@ -6,7 +6,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TimeToDo.Forms
 {
-    public partial class TodoSearchForm1 : Form
+    public partial class TodoSearchForm1 : MetroFramework.Forms.MetroForm
     {
         private string userId; // 현재 로그인된 사용자 ID
         private DBClass dbClass; // DB 클래스 객체 초기화
