@@ -45,16 +45,31 @@ namespace TimeToDo.Forms
                     return;
                 }
 
-                // SQL 쿼리 작성 (Task 열에서 키워드 검색)
-                string query = "SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED FROM Todolist WHERE USERID = :UserId AND Task LIKE :Keyword";
+                // DateTimePicker에서 선택한 날짜 가져오기
+                DateTime startDate = dateTimePicker1.Value.Date; // 시작 날짜
+                DateTime endDate = dateTimePicker2.Value.Date; // 종료 날짜
 
-                
+                if (startDate > endDate)
+                {
+                    MessageBox.Show("시작 날짜는 종료 날짜보다 앞서야 합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // SQL 쿼리 작성 (Task 열에서 키워드 검색 + 날짜 범위 조건)
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED 
+                     FROM Todolist 
+                     WHERE USERID = :UserId 
+                       AND Task LIKE :Keyword 
+                       AND TodoDate BETWEEN :StartDate AND :EndDate
+                       ORDER BY TodoDate ASC";
 
                 var parameters = new Dictionary<string, object>
-                {
-                    { ":UserId", userId }, // 문자열로 처리
-                    { ":Keyword", $"%{keyword}%" } // 키워드 포함 검색
-                };
+    {
+        { ":UserId", userId }, // 유저 ID
+        { ":Keyword", $"%{keyword}%" }, // 키워드 포함 검색
+        { ":StartDate", startDate }, // 시작 날짜
+        { ":EndDate", endDate } // 종료 날짜
+    };
 
                 // 데이터베이스에서 검색 결과 가져오기
                 DataSet dataSet = dbClass.DB_Open(query, parameters);
@@ -72,6 +87,7 @@ namespace TimeToDo.Forms
             {
                 MessageBox.Show($"검색 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void PopulateListView(DataTable searchResults)
