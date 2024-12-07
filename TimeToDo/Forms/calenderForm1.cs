@@ -235,69 +235,6 @@ namespace TimeToDo
             }
         }
 
-
-        private void calendar_DateChanged(object sender, DateRangeEventArgs e)//캘린더에서 선택된 날짜 가져오기
-        {
-            try
-            {
-                // 선택된 날짜 가져오기
-                DateTime selectedDate = calendar.SelectionRange.Start;
-
-                // listView1 초기화
-                listView1.Items.Clear();
-
-                // 데이터베이스에서 해당 날짜에 해당하는 일정 불러오기 : userId로 불러오는 기능!!
-
-                string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar " +
-                               "WHERE USERSID = :UserId AND TRUNC(Time) = TRUNC(:SelectedDate)";
-                var parameters = new Dictionary<string, object>
-                {
-                    { ":UserId", Session.LoggedInUserId },
-                    { ":SelectedDate", selectedDate }
-                };
-
-                DBClass db = new DBClass();
-                DataSet dataSet = db.DB_Open(query, parameters);
-
-                // 가져온 데이터를 listView1에 추가
-                foreach (DataRow row in dataSet.Tables[0].Rows)
-                {
-                    ListViewItem item = new ListViewItem(row["Category"].ToString());
-                    item.SubItems.Add(Convert.ToDateTime(row["Time"]).ToString("yyyy-MM-dd"));
-                    item.SubItems.Add(row["Description"].ToString());
-                    item.SubItems.Add(row["Repeats"] != DBNull.Value ? row["Repeats"].ToString() : "Null");
-                    item.Tag = row["Id"].ToString(); // Primary Key 저장
-
-                    listView1.Items.Add(item);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("날짜에 해당하는 일정을 불러오는 중 오류가 발생했습니다: " + ex.Message,
-                                "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e) //캘린더 검색기능
-        {
-            SearchForm1 searchForm1 = new SearchForm1();
-            searchForm1.ShowDialog();
-
-        }
-
-        private void moveTodolist_Click(object sender, EventArgs e)//todolist이동
-        {
-            TodoForm1 todoForm1 = new TodoForm1();
-            todoForm1.Show();
-            this.Hide();
-        }
-
-        private void calenderForm1_FormClosing(object sender, FormClosingEventArgs e)//프로그램 종료기능
-        {
-            
-            Application.Exit(); // 애플리케이션 종료
-        }
-
         private void LoadUpcomingEvents()//앞으로의 일정(listView2) 불러오기기능
         {
             try
@@ -391,7 +328,68 @@ namespace TimeToDo
             }
         }
 
-        // ColumnClick 이벤트 핸들러
+        private void calendar_DateChanged(object sender, DateRangeEventArgs e)//캘린더에서 선택된 날짜 가져오기
+        {
+            try
+            {
+                // 선택된 날짜 가져오기
+                DateTime selectedDate = calendar.SelectionRange.Start;
+
+                // listView1 초기화
+                listView1.Items.Clear();
+
+                // 데이터베이스에서 해당 날짜에 해당하는 일정 불러오기 : userId로 불러오는 기능!!
+
+                string query = "SELECT Id, Category, Time, Description, Repeats FROM Calendar " +
+                               "WHERE USERSID = :UserId AND TRUNC(Time) = TRUNC(:SelectedDate)";
+                var parameters = new Dictionary<string, object>
+                {
+                    { ":UserId", Session.LoggedInUserId },
+                    { ":SelectedDate", selectedDate }
+                };
+
+                DBClass db = new DBClass();
+                DataSet dataSet = db.DB_Open(query, parameters);
+
+                // 가져온 데이터를 listView1에 추가
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    ListViewItem item = new ListViewItem(row["Category"].ToString());
+                    item.SubItems.Add(Convert.ToDateTime(row["Time"]).ToString("yyyy-MM-dd"));
+                    item.SubItems.Add(row["Description"].ToString());
+                    item.SubItems.Add(row["Repeats"] != DBNull.Value ? row["Repeats"].ToString() : "Null");
+                    item.Tag = row["Id"].ToString(); // Primary Key 저장
+
+                    listView1.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("날짜에 해당하는 일정을 불러오는 중 오류가 발생했습니다: " + ex.Message,
+                                "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e) //캘린더 검색기능
+        {
+            SearchForm1 searchForm1 = new SearchForm1();
+            searchForm1.ShowDialog();
+
+        }
+
+        private void moveTodolist_Click(object sender, EventArgs e)//todolist이동
+        {
+            TodoForm1 todoForm1 = new TodoForm1();
+            todoForm1.Show();
+            this.Hide();
+        }
+
+        private void calenderForm1_FormClosing(object sender, FormClosingEventArgs e)//프로그램 종료기능
+        {
+            
+            Application.Exit(); // 애플리케이션 종료
+        }
+
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)//열 정렬기능
         {
             // 클릭한 열 번호를 가져옴

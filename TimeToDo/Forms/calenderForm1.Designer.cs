@@ -189,7 +189,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 15F);
-            this.label2.Location = new System.Drawing.Point(786, 9);
+            this.label2.Location = new System.Drawing.Point(820, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 20);
             this.label2.TabIndex = 16;
