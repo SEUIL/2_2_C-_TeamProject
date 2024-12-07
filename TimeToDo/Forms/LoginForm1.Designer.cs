@@ -74,12 +74,12 @@
             // 
             // summit_loginPage
             // 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             this.summit_loginPage.Location = new System.Drawing.Point(113, 289);
             this.summit_loginPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-=======
+//=======
             this.summit_loginPage.Location = new System.Drawing.Point(86, 227);
->>>>>>> origin/seuil_ver02
+//>>>>>>> origin/seuil_ver02
             this.summit_loginPage.Name = "summit_loginPage";
             this.summit_loginPage.Size = new System.Drawing.Size(192, 45);
             this.summit_loginPage.TabIndex = 5;
@@ -89,12 +89,12 @@
             // 
             // signUp_loginPage
             // 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             this.signUp_loginPage.Location = new System.Drawing.Point(312, 289);
             this.signUp_loginPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-=======
+//=======
             this.signUp_loginPage.Location = new System.Drawing.Point(260, 227);
->>>>>>> origin/seuil_ver02
+//>>>>>>> origin/seuil_ver02
             this.signUp_loginPage.Name = "signUp_loginPage";
             this.signUp_loginPage.Size = new System.Drawing.Size(94, 45);
             this.signUp_loginPage.TabIndex = 6;
@@ -106,11 +106,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+//<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(498, 422);
-=======
+//=======
             this.ClientSize = new System.Drawing.Size(400, 314);
->>>>>>> origin/seuil_ver02
+//>>>>>>> origin/seuil_ver02
             this.Controls.Add(this.signUp_loginPage);
             this.Controls.Add(this.summit_loginPage);
             this.Controls.Add(this.txtPassword);
@@ -119,12 +119,12 @@
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginForm1";
-<<<<<<< HEAD
+//<<<<<<< HEAD
             this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
             this.Text = "로그인";
-=======
+//=======
             this.Text = "LoginForm1";
->>>>>>> origin/seuil_ver02
+//>>>>>>> origin/seuil_ver02
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
