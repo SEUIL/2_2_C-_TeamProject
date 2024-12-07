@@ -32,36 +32,6 @@ namespace TimeToDo
                 MessageBox.Show("모든 필드를 입력해 주세요.");
                 return;
             }
-
-            /*try 
-            {
-                // 1. INSERT 쿼리 작성
-                string insertQuery = "INSERT INTO Users (USERID, PASSWORD, EMAIL) VALUES (:userId, :password, :email)";
-
-                // 2. 매개변수 설정
-                var parameters = new Dictionary<string, object>
-                {
-                    { ":userId", userId },
-                    { ":password", password },
-                    { ":email", email }
-                };
-
-                // 3. DBClass를 사용하여 쿼리 실행
-                db.DB_Open(insertQuery, parameters);
-
-                // 4. 성공 메시지
-                MessageBox.Show("회원가입이 완료되었습니다.");
-                ClearTextBoxes();
-
-                // 회원가입 완료 후 LoginForm1으로 이동
-                LoginForm1 loginForm = new LoginForm1();
-                loginForm.Show();
-                this.Close(); // 현재 창 닫기
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("오류 발생: " + ex.Message);
-            }*/
             try
             {
                 string insertQuery = "INSERT INTO Users (USERID, PASSWORD, EMAIL) VALUES (:userId, :password, :email)";
@@ -95,6 +65,20 @@ namespace TimeToDo
             {
                 db.DB_Close();
             }
+        }
+
+        private void SignUpForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoginForm1 loginForm1 = new LoginForm1();
+            loginForm1.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Stinupform_Click(object sender, EventArgs e)
+        {
+            LoginForm1 loginForm1 = new LoginForm1();
+            loginForm1.Show();
+            this.Hide();
         }
     }
 }

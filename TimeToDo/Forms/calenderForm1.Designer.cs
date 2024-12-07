@@ -49,6 +49,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnLogout_CalendarForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // calendar
@@ -85,6 +86,7 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // category
             // 
@@ -179,7 +181,7 @@
             // username
             // 
             this.username.AutoSize = true;
-            this.username.Location = new System.Drawing.Point(12, 9);
+            this.username.Location = new System.Drawing.Point(89, 12);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(38, 12);
             this.username.TabIndex = 14;
@@ -230,11 +232,22 @@
             this.columnHeader4.Text = "반복";
             this.columnHeader4.Width = 85;
             // 
+            // btnLogout_CalendarForm
+            // 
+            this.btnLogout_CalendarForm.Location = new System.Drawing.Point(9, 6);
+            this.btnLogout_CalendarForm.Name = "btnLogout_CalendarForm";
+            this.btnLogout_CalendarForm.Size = new System.Drawing.Size(68, 24);
+            this.btnLogout_CalendarForm.TabIndex = 18;
+            this.btnLogout_CalendarForm.Text = "로그아웃";
+            this.btnLogout_CalendarForm.UseVisualStyleBackColor = true;
+            this.btnLogout_CalendarForm.Click += new System.EventHandler(this.btnLogout_CalendarForm_Click);
+            // 
             // calenderForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 561);
+            this.Controls.Add(this.btnLogout_CalendarForm);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.username);
@@ -282,5 +295,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnLogout_CalendarForm;
     }
 }

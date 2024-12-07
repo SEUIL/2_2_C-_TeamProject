@@ -36,8 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtRepeats_editForm = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboRepeats_editForm = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // comboCategory_editForm
@@ -117,13 +117,6 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "일정 편집";
             // 
-            // txtRepeats_editForm
-            // 
-            this.txtRepeats_editForm.Location = new System.Drawing.Point(162, 217);
-            this.txtRepeats_editForm.Name = "txtRepeats_editForm";
-            this.txtRepeats_editForm.Size = new System.Drawing.Size(267, 21);
-            this.txtRepeats_editForm.TabIndex = 28;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -134,12 +127,27 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "반복";
             // 
+            // comboRepeats_editForm
+            // 
+            this.comboRepeats_editForm.FormattingEnabled = true;
+            this.comboRepeats_editForm.Items.AddRange(new object[] {
+            "반복없음",
+            "매일",
+            "매주",
+            "매달",
+            "매년"});
+            this.comboRepeats_editForm.Location = new System.Drawing.Point(162, 218);
+            this.comboRepeats_editForm.Name = "comboRepeats_editForm";
+            this.comboRepeats_editForm.Size = new System.Drawing.Size(267, 20);
+            this.comboRepeats_editForm.TabIndex = 28;
+            this.comboRepeats_editForm.Text = "매일";
+            // 
             // editForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 348);
-            this.Controls.Add(this.txtRepeats_editForm);
+            this.Controls.Add(this.comboRepeats_editForm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboCategory_editForm);
             this.Controls.Add(this.btnSummit_addForm);
@@ -166,7 +174,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtRepeats_editForm;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboRepeats_editForm;
     }
 }

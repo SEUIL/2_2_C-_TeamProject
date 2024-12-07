@@ -34,7 +34,7 @@ namespace TimeToDo
             listView2.ColumnClick += new ColumnClickEventHandler(listView2_ColumnClick);
         }
 
-        private void CalendarForm1_Load(object sender, EventArgs e)
+        private void CalendarForm1_Load(object sender, EventArgs e)//캘린더 폼 로드
         {
             // 로그인된 사용자 이름 설정
             username.Text = $"접속한 사용자 : {Session.LoggedInUserId}";
@@ -78,7 +78,7 @@ namespace TimeToDo
             string repeats = selectedItem.SubItems[3].Text;
             
 
-            // 이후 작업 진행
+            /*// 이후 작업 진행
             try
             {
                 // 다음 작업 로직 작성
@@ -90,7 +90,7 @@ namespace TimeToDo
             catch (Exception ex)
             {
                 MessageBox.Show($"처리 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
 
 
             // editForm1 호출
@@ -386,8 +386,8 @@ namespace TimeToDo
 
         private void calenderForm1_FormClosing(object sender, FormClosingEventArgs e)//프로그램 종료기능
         {
-            
-            Application.Exit(); // 애플리케이션 종료
+            // 프로그램 종료
+            Application.Exit();
         }
 
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)//열 정렬기능
@@ -473,6 +473,46 @@ namespace TimeToDo
             }
         }
 
-        
+        private void listView1_MouseClick(object sender, MouseEventArgs e)//일정 자세히보기
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (listView1.SelectedItems.Count == 0)
+                {
+                    MessageBox.Show("자세히 볼 일정을 선택해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                ListViewItem selectedItem = listView1.SelectedItems[0];
+                if (selectedItem.Tag == null)
+                {
+                    MessageBox.Show("선택된 항목에 유효한 ID가 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                int selectedId = int.Parse(selectedItem.Tag.ToString()); // Tag에 저장된 Primary Key 사용
+                string category = selectedItem.SubItems[0].Text;
+                string time = selectedItem.SubItems[1].Text;
+                string description = selectedItem.SubItems[2].Text;
+                string repeats = selectedItem.SubItems[3].Text;
+
+                // editForm1 호출
+                DetailForm1 editForm = new DetailForm1(selectedId, category, time, description, repeats);
+
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    // 리스트 새로고침
+                    btnRefresh_Click(sender, e);
+                    LoadUpcomingEvents(); //listView2 최신화
+                }
+            }
+        }
+
+        private void btnLogout_CalendarForm_Click(object sender, EventArgs e)
+        {
+            LoginForm1 loginForm1 = new LoginForm1();
+            loginForm1.Show();
+            this.Hide();
+        }
     }
 }

@@ -83,7 +83,7 @@
             // 
             // summit_loginPage
             // 
-            this.summit_loginPage.Location = new System.Drawing.Point(99, 231);
+            this.summit_loginPage.Location = new System.Drawing.Point(86, 227);
             this.summit_loginPage.Name = "summit_loginPage";
             this.summit_loginPage.Size = new System.Drawing.Size(168, 36);
             this.summit_loginPage.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             // signUp_loginPage
             // 
-            this.signUp_loginPage.Location = new System.Drawing.Point(273, 231);
+            this.signUp_loginPage.Location = new System.Drawing.Point(260, 227);
             this.signUp_loginPage.Name = "signUp_loginPage";
             this.signUp_loginPage.Size = new System.Drawing.Size(82, 36);
             this.signUp_loginPage.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 338);
+            this.ClientSize = new System.Drawing.Size(400, 314);
             this.Controls.Add(this.signUp_loginPage);
             this.Controls.Add(this.summit_loginPage);
             this.Controls.Add(this.txtPassword);
@@ -115,7 +115,6 @@
             this.Controls.Add(this.label1);
             this.Name = "LoginForm1";
             this.Text = "LoginForm1";
-
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

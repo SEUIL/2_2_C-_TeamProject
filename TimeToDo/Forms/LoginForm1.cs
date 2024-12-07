@@ -62,10 +62,6 @@ namespace TimeToDo
         private bool ValidateUser(string userId, string password)
         {
             bool isValidUser = false;
-            /*if (userId.Equals("1234") && password.Equals("1234"))
-            {
-                return isValidUser=true;
-            }*/
 
             try
             {
@@ -110,9 +106,7 @@ namespace TimeToDo
 
         private void LoginForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
-                Application.Exit(); // 애플리케이션 종료
-            
+            Application.Exit(); // 애플리케이션 종료
         }
 
     }
