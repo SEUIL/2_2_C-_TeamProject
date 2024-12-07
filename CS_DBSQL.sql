@@ -7,12 +7,21 @@ CREATE TABLE USERS (
 
 --Ä¶¸°´õ Å×ÀÌºí ÀÛ¼º
 CREATE TABLE Calendar (
+<<<<<<< HEAD
     Id NUMBER PRIMARY KEY,           -- Ä¶¸°´õ ID
     USERSID VARCHAR2(50) NOT NULL,   -- »ç¿ëÀÚ ID (Users Å×ÀÌºíÀÇ FK)
     Category VARCHAR2(100),          -- Ä«Å×°í¸®
     Time TIMESTAMP,                  -- ÀÏÁ¤ ½Ã°£
     Description VARCHAR2(500),       -- ÀÏÁ¤ »ó¼¼
     Repeats VARCHAR2(100) NULL,      -- ¹Ýº¹ (NULL Çã¿ë)
+=======
+    Id NUMBER PRIMARY KEY,           -- ìº˜ë¦°ë” ID
+    USERSID VARCHAR2(50) NOT NULL,   -- ì‚¬ìš©ìž ID (Users í…Œì´ë¸”ì˜ FK)
+    Category VARCHAR2(100),          -- ì¹´í…Œê³ ë¦¬
+    Time TIMESTAMP,                  -- ì¼ì • ì‹œê°„
+    Description VARCHAR2(500),       -- ì¼ì • ìƒì„¸
+    Repeats VARCHAR2(100),      -- ë°˜ë³µ (NULL í—ˆìš©) 
+>>>>>>> origin/seuil_ver02
     FOREIGN KEY (USERSID) REFERENCES Users(USERID) ON DELETE CASCADE
 );
 --Ä¶¸°´õ Å×ÀÌºí ¸¸µé¶§ PK ID°ª ÀÚµ¿Áõ°¡ (Å×ÀÌºí ¸¸µé¶§ °°ÀÌ ÇÏ¸é‰Î)
@@ -30,6 +39,9 @@ BEGIN
     END IF;
 END;
 /
+-- ì‹œí€€ìŠ¤ë¥¼ ì‚­ì œ
+DROP SEQUENCE SEQ_CALENDAR;
+
 
 CREATE TABLE Todolist (
    Id NUMBER PRIMARY KEY,
@@ -64,10 +76,13 @@ DELETE FROM calendar; --Å×ÀÌºí Å×ÀÌÅÍ »èÁ¦
 DROP SEQUENCE SEQ_CALENDAR; --½ÃÄö½º »èÁ¦
 DESC calendar; -- Å×ÀÌºí ±¸Á¶È®ÀÎ 
 SELECT SEQUENCE_NAME FROM USER_SEQUENCES;
+ALTER SEQUENCE SEQ_CALENDAR RESTART START WITH 1; -- SEQUENCE ê°’ì„ ë¦¬ì…‹í•˜ëŠ” ë°©ë²•
+
 
 DROP Table Todolist
 
 
+<<<<<<< HEAD
 
 
 
@@ -84,6 +99,9 @@ DROP Table Todolist
 
 
 -- µð¹ö±ëÁß searchForm1
+=======
+-- ë””ë²„ê¹…ì¤‘ searchForm1
+>>>>>>> origin/seuil_ver02
 SELECT category, time, description, repeats
 FROM Calendar
 WHERE usersId = :userId

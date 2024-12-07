@@ -66,6 +66,12 @@
     <Compile Include="Forms\DesignForm1.Designer.cs">
       <DependentUpon>DesignForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DetailForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailForm1.Designer.cs">
+      <DependentUpon>DetailForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\editForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <EmbeddedResource Include="Forms\DesignForm1.resx">
       <DependentUpon>DesignForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailForm1.resx">
+      <DependentUpon>DetailForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\editForm1.resx">
       <DependentUpon>editForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,9 +189,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

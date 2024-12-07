@@ -36,6 +36,8 @@
             this.date_addForm = new System.Windows.Forms.DateTimePicker();
             this.btnSummit_addForm = new System.Windows.Forms.Button();
             this.comboCategory_addForm = new System.Windows.Forms.ComboBox();
+            this.comboRepeats_addForm = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -94,7 +96,7 @@
             // 
             // btnSummit_addForm
             // 
-            this.btnSummit_addForm.Location = new System.Drawing.Point(199, 223);
+            this.btnSummit_addForm.Location = new System.Drawing.Point(195, 254);
             this.btnSummit_addForm.Name = "btnSummit_addForm";
             this.btnSummit_addForm.Size = new System.Drawing.Size(90, 37);
             this.btnSummit_addForm.TabIndex = 17;
@@ -115,11 +117,38 @@
             this.comboCategory_addForm.Size = new System.Drawing.Size(267, 20);
             this.comboCategory_addForm.TabIndex = 18;
             // 
+            // comboRepeats_addForm
+            // 
+            this.comboRepeats_addForm.FormattingEnabled = true;
+            this.comboRepeats_addForm.Items.AddRange(new object[] {
+            "반복없음",
+            "매일",
+            "매주",
+            "매달",
+            "매년"});
+            this.comboRepeats_addForm.Location = new System.Drawing.Point(156, 215);
+            this.comboRepeats_addForm.Name = "comboRepeats_addForm";
+            this.comboRepeats_addForm.Size = new System.Drawing.Size(267, 20);
+            this.comboRepeats_addForm.TabIndex = 20;
+            this.comboRepeats_addForm.Text = "매일";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("굴림", 13F);
+            this.label5.Location = new System.Drawing.Point(51, 217);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 18);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "반복 여부";
+            // 
             // AddForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 334);
+            this.Controls.Add(this.comboRepeats_addForm);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.comboCategory_addForm);
             this.Controls.Add(this.btnSummit_addForm);
             this.Controls.Add(this.date_addForm);
@@ -145,5 +174,7 @@
         private System.Windows.Forms.DateTimePicker date_addForm;
         private System.Windows.Forms.Button btnSummit_addForm;
         private System.Windows.Forms.ComboBox comboCategory_addForm;
+        private System.Windows.Forms.ComboBox comboRepeats_addForm;
+        private System.Windows.Forms.Label label5;
     }
 }

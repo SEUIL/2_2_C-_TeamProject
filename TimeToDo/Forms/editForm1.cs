@@ -34,7 +34,7 @@ namespace TimeToDo.Forms
             comboCategory_editForm.Text = selectedCategory;
             date_editForm.Value = DateTime.Parse(selectedTime);
             txtDescription_editForm.Text = selectedDescription;
-            txtRepeats_editForm.Text = selectedRepeats;
+            comboRepeats_editForm.Text = selectedRepeats;
         }
 
         private void btnSummit_addForm_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace TimeToDo.Forms
                 string updatedCategory = comboCategory_editForm.Text;
                 DateTime updatedTime = date_editForm.Value;
                 string updatedDescription = txtDescription_editForm.Text;
-                string updatedRepeats = txtRepeats_editForm.Text;
+                string updatedRepeats = comboRepeats_editForm.Text;
 
                 // DB 업데이트 쿼리
                 string updateQuery = "UPDATE Calendar SET Category = :Category, Time = :Time, Description = :Description, Repeats = :Repeats WHERE Id = :Id";
