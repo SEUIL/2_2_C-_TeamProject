@@ -100,14 +100,14 @@ namespace TimeToDo.Forms
             // 일반ToolStripMenuItem1
             // 
             this.일반ToolStripMenuItem1.Name = "일반ToolStripMenuItem1";
-            this.일반ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.일반ToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
             this.일반ToolStripMenuItem1.Text = "중요";
             this.일반ToolStripMenuItem1.Click += new System.EventHandler(this.중요ToolStripMenuItem_Click);
             // 
             // 중요ToolStripMenuItem1
             // 
             this.중요ToolStripMenuItem1.Name = "중요ToolStripMenuItem1";
-            this.중요ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.중요ToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
             this.중요ToolStripMenuItem1.Text = "일반";
             this.중요ToolStripMenuItem1.Click += new System.EventHandler(this.일반ToolStripMenuItem_Click);
             // 
@@ -123,14 +123,14 @@ namespace TimeToDo.Forms
             // 미완료ToolStripMenuItem1
             // 
             this.미완료ToolStripMenuItem1.Name = "미완료ToolStripMenuItem1";
-            this.미완료ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.미완료ToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.미완료ToolStripMenuItem1.Text = "미완료";
             this.미완료ToolStripMenuItem1.Click += new System.EventHandler(this.미완료ToolStripMenuItem_Click);
             // 
             // 완료ToolStripMenuItem1
             // 
             this.완료ToolStripMenuItem1.Name = "완료ToolStripMenuItem1";
-            this.완료ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.완료ToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.완료ToolStripMenuItem1.Text = "완료";
             this.완료ToolStripMenuItem1.Click += new System.EventHandler(this.완료ToolStripMenuItem_Click);
             // 
@@ -156,14 +156,14 @@ namespace TimeToDo.Forms
             // 
             this.사적일정ToolStripMenuItem.Name = "사적일정ToolStripMenuItem";
             this.사적일정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.사적일정ToolStripMenuItem.Text = "사적 일정";
+            this.사적일정ToolStripMenuItem.Text = "사적일정";
             this.사적일정ToolStripMenuItem.Click += new System.EventHandler(this.사적일정ToolStripMenuItem_Click);
             // 
             // 자기계발ToolStripMenuItem
             // 
             this.자기계발ToolStripMenuItem.Name = "자기계발ToolStripMenuItem";
             this.자기계발ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.자기계발ToolStripMenuItem.Text = "자기계발";
+            this.자기계발ToolStripMenuItem.Text = "자기개발";
             this.자기계발ToolStripMenuItem.Click += new System.EventHandler(this.자기개발ToolStripMenuItem_Click);
             // 
             // 취미생활ToolStripMenuItem
