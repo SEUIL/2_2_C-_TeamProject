@@ -81,5 +81,10 @@ namespace TimeToDo.Forms
         {
             LoadChildForm(new HomeForm1());
         }
+
+        private void DesignForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); // 애플리케이션 종료
+        }
     }
 }
