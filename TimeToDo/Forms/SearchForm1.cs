@@ -12,7 +12,7 @@ using static TimeToDo.LoginForm1;
 
 namespace TimeToDo
 {
-    public partial class SearchForm1 : Form
+    public partial class SearchForm1 : MetroFramework.Forms.MetroForm
     {
 
         private string userId; // 현재 로그인된 사용자 ID

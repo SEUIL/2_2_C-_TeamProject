@@ -12,7 +12,7 @@ using static TimeToDo.LoginForm1;
 
 namespace TimeToDo.Forms
 {
-    public partial class AddForm1 : Form
+    public partial class AddForm1 : MetroFramework.Forms.MetroForm
     {
         private calenderForm1 calenderForm;
         private DBClass dbClass = new DBClass();

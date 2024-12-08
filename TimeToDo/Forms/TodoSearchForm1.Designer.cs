@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,6 +46,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.listView2);
             this.groupBox2.Controls.Add(this.textBox1);
@@ -54,6 +60,30 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "검색으로 찾기";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(188, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 15);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "~";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(213, 54);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(174, 21);
+            this.dateTimePicker2.TabIndex = 27;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(11, 54);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(171, 21);
+            this.dateTimePicker1.TabIndex = 26;
             // 
             // button1
             // 
@@ -78,13 +108,14 @@
             this.columnHeader5,
             this.columnHeader6});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(5, 51);
+            this.listView2.Location = new System.Drawing.Point(5, 77);
             this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(545, 353);
+            this.listView2.Size = new System.Drawing.Size(545, 327);
             this.listView2.TabIndex = 9;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listView2_ItemChecked);
             // 
             // columnHeader1
             // 
@@ -130,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 435);
+            this.ClientSize = new System.Drawing.Size(609, 435);
             this.Controls.Add(this.groupBox2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TodoSearchForm1";
@@ -152,6 +183,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
     }
 }

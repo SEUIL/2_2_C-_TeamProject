@@ -6,7 +6,7 @@ using Oracle.DataAccess.Client;
 
 namespace TimeToDo
 {
-    public partial class LoginForm1 : Form
+    public partial class LoginForm1 : MetroFramework.Forms.MetroForm
     {
         public static class Session //로그인시 FK 전달용 세션
         {

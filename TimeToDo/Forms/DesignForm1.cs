@@ -12,7 +12,7 @@ namespace TimeToDo.Forms
 {
    
 
-    public partial class DesignForm1 : Form
+    public partial class DesignForm1 : MetroFramework.Forms.MetroForm
     {
         //슬라이딩 메뉴의 최대, 최소 폭 크기
         const int MAX_SLIDING_WIDTH = 200;
