@@ -28,117 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtDescription_addForm = new System.Windows.Forms.TextBox();
+            this.date_addForm = new System.Windows.Forms.DateTimePicker();
+            this.btnSummit_addForm = new System.Windows.Forms.Button();
+            this.comboCategory_addForm = new System.Windows.Forms.ComboBox();
+            this.comboRepeats_addForm = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button6 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 20F);
-            this.label1.Location = new System.Drawing.Point(180, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 27);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "일정 추가";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 13F);
-            this.label2.Location = new System.Drawing.Point(51, 96);
+            this.label2.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(3, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.Size = new System.Drawing.Size(94, 32);
             this.label2.TabIndex = 9;
             this.label2.Text = "카테고리";
+            // 
+            // txtDescription_addForm
+            // 
+            this.txtDescription_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtDescription_addForm.Location = new System.Drawing.Point(3, 36);
+            this.txtDescription_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescription_addForm.Name = "txtDescription_addForm";
+            this.txtDescription_addForm.Size = new System.Drawing.Size(305, 29);
+            this.txtDescription_addForm.TabIndex = 14;
+            // 
+            // date_addForm
+            // 
+            this.date_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.date_addForm.Location = new System.Drawing.Point(3, 105);
+            this.date_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date_addForm.Name = "date_addForm";
+            this.date_addForm.Size = new System.Drawing.Size(305, 29);
+            this.date_addForm.TabIndex = 16;
+            // 
+            // btnSummit_addForm
+            // 
+            this.btnSummit_addForm.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSummit_addForm.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSummit_addForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSummit_addForm.Location = new System.Drawing.Point(231, 401);
+            this.btnSummit_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSummit_addForm.Name = "btnSummit_addForm";
+            this.btnSummit_addForm.Size = new System.Drawing.Size(103, 46);
+            this.btnSummit_addForm.TabIndex = 17;
+            this.btnSummit_addForm.Text = "확인";
+            this.btnSummit_addForm.UseVisualStyleBackColor = false;
+            this.btnSummit_addForm.Click += new System.EventHandler(this.btnSummit_addForm_Click);
+            // 
+            // comboCategory_addForm
+            // 
+            this.comboCategory_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboCategory_addForm.FormattingEnabled = true;
+            this.comboCategory_addForm.Items.AddRange(new object[] {
+            "공적 일정",
+            "사적 일정",
+            "자기 개발",
+            "취미 생활"});
+            this.comboCategory_addForm.Location = new System.Drawing.Point(3, 174);
+            this.comboCategory_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboCategory_addForm.Name = "comboCategory_addForm";
+            this.comboCategory_addForm.Size = new System.Drawing.Size(305, 29);
+            this.comboCategory_addForm.TabIndex = 18;
+            // 
+            // comboRepeats_addForm
+            // 
+            this.comboRepeats_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboRepeats_addForm.FormattingEnabled = true;
+            this.comboRepeats_addForm.Items.AddRange(new object[] {
+            "반복없음",
+            "매일",
+            "매주",
+            "매달",
+            "매년"});
+            this.comboRepeats_addForm.Location = new System.Drawing.Point(3, 237);
+            this.comboRepeats_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboRepeats_addForm.Name = "comboRepeats_addForm";
+            this.comboRepeats_addForm.Size = new System.Drawing.Size(305, 29);
+            this.comboRepeats_addForm.TabIndex = 20;
+            this.comboRepeats_addForm.Text = "매일";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(3, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 32);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "시간";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 13F);
-            this.label3.Location = new System.Drawing.Point(51, 141);
+            this.label3.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 18);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "시간";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(156, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 21);
-            this.textBox2.TabIndex = 14;
+            this.label3.Size = new System.Drawing.Size(100, 32);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "일정 상세";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 13F);
-            this.label4.Location = new System.Drawing.Point(51, 179);
+            this.label4.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(3, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 18);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "일정 상세";
+            this.label4.Size = new System.Drawing.Size(100, 32);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "반복 여부";
             // 
-            // listBox1
+            // flowLayoutPanel1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(156, 96);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(267, 28);
-            this.listBox1.TabIndex = 15;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 138);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(267, 21);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(199, 223);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(90, 37);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "확인";
-            this.button6.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.Controls.Add(this.label3);
+            this.flowLayoutPanel1.Controls.Add(this.txtDescription_addForm);
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.date_addForm);
+            this.flowLayoutPanel1.Controls.Add(this.label2);
+            this.flowLayoutPanel1.Controls.Add(this.comboCategory_addForm);
+            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.comboRepeats_addForm);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 78);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(311, 316);
+            this.flowLayoutPanel1.TabIndex = 24;
             // 
             // AddForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 334);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(369, 476);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.btnSummit_addForm);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddForm1";
-            this.Text = "AddForm1";
+            this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "일정 추가";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDescription_addForm;
+        private System.Windows.Forms.DateTimePicker date_addForm;
+        private System.Windows.Forms.Button btnSummit_addForm;
+        private System.Windows.Forms.ComboBox comboCategory_addForm;
+        private System.Windows.Forms.ComboBox comboRepeats_addForm;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

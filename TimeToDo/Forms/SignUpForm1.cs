@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
-using Oracle.DataAccess.Client;
 
 namespace TimeToDo
 {
-    public partial class SignUpForm1 : Form
+    public partial class SignUpForm1 : MetroFramework.Forms.MetroForm
     {
         private DBClass db;
 
@@ -32,34 +32,29 @@ namespace TimeToDo
                 MessageBox.Show("모든 필드를 입력해 주세요.");
                 return;
             }
-
             try
             {
                 string insertQuery = "INSERT INTO Users (USERID, PASSWORD, EMAIL) VALUES (:userId, :password, :email)";
-                db.DB_Open(insertQuery);
-
-                using (OracleCommand command = new OracleCommand(insertQuery, db.Connection))
+                var parameters = new Dictionary<string, object>
                 {
-                    command.Parameters.Add("userId", OracleDbType.Varchar2).Value = userId;
-                    command.Parameters.Add("password", OracleDbType.Varchar2).Value = password;
-                    command.Parameters.Add("email", OracleDbType.Varchar2).Value = email;
+                    { ":userId", userId },
+                    { ":password", password },
+                    { ":email", email }
+                };
 
-                    int rowsAffected = command.ExecuteNonQuery();
+                int rowsAffected = db.ExecuteNonQuery(insertQuery, parameters);
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("회원가입이 완료되었습니다.");
+                    ClearTextBoxes();
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("회원가입이 완료되었습니다.");
-                        ClearTextBoxes();
-
-                        // 회원가입 완료 후 LoginForm1으로 이동
-                        LoginForm1 loginForm = new LoginForm1();
-                        loginForm.Show();
-                        this.Close(); // 현재 창 닫기
-                    }
-                    else
-                    {
-                        MessageBox.Show("회원가입에 실패했습니다. 다시 시도해 주세요.");
-                    }
+                    LoginForm1 loginForm = new LoginForm1();
+                    loginForm.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("회원가입에 실패했습니다.");
                 }
             }
             catch (Exception ex)
@@ -70,6 +65,25 @@ namespace TimeToDo
             {
                 db.DB_Close();
             }
+        }
+
+        private void SignUpForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoginForm1 loginForm1 = new LoginForm1();
+            loginForm1.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Stinupform_Click(object sender, EventArgs e)
+        {
+            LoginForm1 loginForm1 = new LoginForm1();
+            loginForm1.Show();
+            this.Hide();
+        }
+
+        private void SignUpForm1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
