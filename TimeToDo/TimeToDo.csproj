@@ -33,9 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\Oracle\11gR2\app\oracle\product\11.2.0\server\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
+      <HintPath>C:\oraclexe\app\oracle\product\11.2.0\server\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,6 +60,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBClass.cs" />
+    <Compile Include="Forms\DesignForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DesignForm1.Designer.cs">
+      <DependentUpon>DesignForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailForm1.Designer.cs">
+      <DependentUpon>DetailForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\editForm1.cs" />
+    <Compile Include="Forms\editForm1.Designer.cs">
+      <DependentUpon>editForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,17 +88,39 @@
     <Compile Include="Forms\calenderForm1.Designer.cs">
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HomeForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HomeForm1.Designer.cs">
+      <DependentUpon>HomeForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TodoAddForm1.cs" />
+    <Compile Include="Forms\TodoAddForm1.Designer.cs">
+      <DependentUpon>TodoAddForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TodoEditForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TodoEditForm1.Designer.cs">
+      <DependentUpon>TodoEditForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TodoForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TodoForm1.Designer.cs">
+      <DependentUpon>TodoForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm1.Designer.cs">
       <DependentUpon>LoginForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TodoForm.cs">
+    <Compile Include="Forms\TodoSearchForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TodoForm.Designer.cs">
-      <DependentUpon>TodoForm.cs</DependentUpon>
+    <Compile Include="Forms\TodoSearchForm1.Designer.cs">
+      <DependentUpon>TodoSearchForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,11 +136,32 @@
     <Compile Include="Forms\SearchForm1.Designer.cs">
       <DependentUpon>SearchForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\DesignForm1.resx">
+      <DependentUpon>DesignForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailForm1.resx">
+      <DependentUpon>DetailForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\editForm1.resx">
+      <DependentUpon>editForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddForm1.resx">
       <DependentUpon>AddForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\calenderForm1.resx">
       <DependentUpon>calenderForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomeForm1.resx">
+      <DependentUpon>HomeForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TodoAddForm1.resx">
+      <DependentUpon>TodoAddForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TodoEditForm1.resx">
+      <DependentUpon>TodoEditForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TodoForm1.resx">
+      <DependentUpon>TodoForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm1.resx">
       <DependentUpon>LoginForm1.cs</DependentUpon>
@@ -101,8 +169,8 @@
     <EmbeddedResource Include="Forms\SearchForm1.resx">
       <DependentUpon>SearchForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TodoForm.resx">
-      <DependentUpon>TodoForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\TodoSearchForm1.resx">
+      <DependentUpon>TodoSearchForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +184,7 @@
     <EmbeddedResource Include="Forms\SignUpForm1.resx">
       <DependentUpon>SignUpForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,9 +194,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
