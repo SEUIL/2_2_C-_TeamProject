@@ -6,8 +6,13 @@ using Oracle.DataAccess.Client;
 
 namespace TimeToDo
 {
-    public partial class LoginForm1 : Form
+    public partial class LoginForm1 : MetroFramework.Forms.MetroForm
     {
+        public static class Session //로그인시 FK 전달용 세션
+        {
+            public static String LoggedInUserId { get; set; } // 로그인한 사용자 ID를 저장
+        }
+
         private DBClass db;
 
         public LoginForm1()
@@ -35,10 +40,17 @@ namespace TimeToDo
             }
 
             // 로그인 검증 함수 호출
-            if (ValidateUser(userId, password))
+            if (ValidateUser(userId, password)) //로그인 성공
             {
                 MessageBox.Show("로그인 성공!");
                 // 로그인 성공 시 다음 화면으로 이동하거나 필요한 작업 수행
+
+                Session.LoggedInUserId = userId; // 로그인한 사용자 ID 저장
+
+                // calendarForm으로 이동
+                calenderForm1 calenderForm1 = new calenderForm1();
+                calenderForm1.Show();
+                this.Hide();
             }
             else
             {
@@ -50,10 +62,6 @@ namespace TimeToDo
         private bool ValidateUser(string userId, string password)
         {
             bool isValidUser = false;
-            /*if (userId.Equals("1234") && password.Equals("1234"))
-            {
-                return isValidUser=true;
-            }*/
 
             try
             {
@@ -95,56 +103,13 @@ namespace TimeToDo
             signUpForm.Show();
             this.Hide(); // LoginForm1을 숨김
         }
-    }
-}
 
-
-/*private bool ValidateUser(string userId, string password)
-{
-bool isValidUser = false;
-if (userId.Equals("1234") && password.Equals("1234"))
-{
-    isValidUser = true;
-    return isValidUser;
-} //계속 오류나서 일단 로그인 하드코딩
-
-try
-{
-    // 대소문자를 무시하고 비교하기 위해 UPPER() 함수 사용
-    string query = "SELECT * FROM Users WHERE USERID = :userId AND PASSWORD = :password";
-
-    using (OracleCommand command = new OracleCommand(query, db.Connection))
-    {
-        // 매개변수 설정
-        command.Parameters.Add("userId", OracleDbType.Varchar2, 50).Value = userId;
-        command.Parameters.Add("password", OracleDbType.Varchar2, 50).Value = password;
-
-        // 연결이 닫혀 있는 경우에만 엽니다.
-        if (db.Connection.State == ConnectionState.Closed)
+        private void LoginForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            db.Connection.Open();
+            Application.Exit(); // 애플리케이션 종료
         }
 
-        using (OracleDataReader reader = command.ExecuteReader())
-        {
-            // 결과가 있으면 해당 사용자 정보가 존재한다는 뜻
-            if (reader.Read())
-            {
-                isValidUser = true;
-            }
-        }
     }
 }
-catch (Exception ex)
-{
-    MessageBox.Show("LoginForm1 오류 발생: " + ex.Message);
-}
-finally
-{
-    if (db.Connection.State == ConnectionState.Open)
-    {
-        db.Connection.Close();
-    }
-}
-return isValidUser;
-}*/
+
+

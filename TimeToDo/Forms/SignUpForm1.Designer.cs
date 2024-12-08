@@ -31,18 +31,20 @@
             this.btnSummit = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnBack_Stinupform = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSummit
             // 
-            this.btnSummit.Location = new System.Drawing.Point(106, 279);
+            this.btnSummit.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSummit.Location = new System.Drawing.Point(218, 273);
+            this.btnSummit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSummit.Name = "btnSummit";
-            this.btnSummit.Size = new System.Drawing.Size(168, 36);
+            this.btnSummit.Size = new System.Drawing.Size(104, 45);
             this.btnSummit.TabIndex = 12;
             this.btnSummit.Text = "확인";
             this.btnSummit.UseVisualStyleBackColor = true;
@@ -50,80 +52,92 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(160, 156);
+            this.txtPassword.Font = new System.Drawing.Font("Noto Sans KR Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPassword.Location = new System.Drawing.Point(161, 159);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(141, 21);
+            this.txtPassword.Size = new System.Drawing.Size(161, 29);
             this.txtPassword.TabIndex = 11;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(160, 96);
+            this.txtId.Font = new System.Drawing.Font("Noto Sans KR Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtId.Location = new System.Drawing.Point(161, 107);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(141, 21);
+            this.txtId.Size = new System.Drawing.Size(161, 29);
             this.txtId.TabIndex = 10;
             // 
-            // label3
+            // txtEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 13F);
-            this.label3.Location = new System.Drawing.Point(55, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "비밀번호";
+            this.txtEmail.Font = new System.Drawing.Font("Noto Sans KR Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtEmail.Location = new System.Drawing.Point(161, 217);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(161, 29);
+            this.txtEmail.TabIndex = 14;
             // 
-            // label2
+            // btnBack_Stinupform
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 13F);
-            this.label2.Location = new System.Drawing.Point(55, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "아이디";
+            this.btnBack_Stinupform.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
+            this.btnBack_Stinupform.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnBack_Stinupform.Location = new System.Drawing.Point(53, 273);
+            this.btnBack_Stinupform.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBack_Stinupform.Name = "btnBack_Stinupform";
+            this.btnBack_Stinupform.Size = new System.Drawing.Size(159, 45);
+            this.btnBack_Stinupform.TabIndex = 15;
+            this.btnBack_Stinupform.Text = "로그인으로 돌아가기\r\n";
+            this.btnBack_Stinupform.UseVisualStyleBackColor = true;
+            this.btnBack_Stinupform.Click += new System.EventHandler(this.btnBack_Stinupform_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Noto Sans KR Medium", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(39, 104);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 32);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "ID";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 20F);
-            this.label1.Location = new System.Drawing.Point(119, 31);
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR Medium", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(39, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 27);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "회원가입";
+            this.label1.Size = new System.Drawing.Size(48, 32);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "PW";
             // 
-            // txtEmail
+            // label2
             // 
-            this.txtEmail.Location = new System.Drawing.Point(160, 218);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(141, 21);
-            this.txtEmail.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 13F);
-            this.label4.Location = new System.Drawing.Point(55, 221);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "이메일";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Noto Sans KR Medium", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(39, 214);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 32);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "email";
             // 
             // SignUpForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 370);
+            this.ClientSize = new System.Drawing.Size(377, 345);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnBack_Stinupform);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSummit);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SignUpForm1";
-            this.Text = "SignUpForm1";
+            this.Text = "회원가입";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm1_FormClosing);
+            this.Load += new System.EventHandler(this.SignUpForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,10 +148,10 @@
         private System.Windows.Forms.Button btnSummit;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnBack_Stinupform;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

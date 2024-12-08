@@ -72,7 +72,13 @@
     <Compile Include="Forms\DetailForm1.Designer.cs">
       <DependentUpon>DetailForm1.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Forms\editForm1.cs" />
+=======
+    <Compile Include="Forms\editForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> 27b9157b30db86ed7f131c98af099253fe425f0e
     <Compile Include="Forms\editForm1.Designer.cs">
       <DependentUpon>editForm1.cs</DependentUpon>
     </Compile>
@@ -94,7 +100,13 @@
     <Compile Include="Forms\HomeForm1.Designer.cs">
       <DependentUpon>HomeForm1.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Forms\TodoAddForm1.cs" />
+=======
+    <Compile Include="Forms\TodoAddForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> 27b9157b30db86ed7f131c98af099253fe425f0e
     <Compile Include="Forms\TodoAddForm1.Designer.cs">
       <DependentUpon>TodoAddForm1.cs</DependentUpon>
     </Compile>
