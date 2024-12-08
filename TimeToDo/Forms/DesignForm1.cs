@@ -1,78 +1,85 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TimeToDo.Forms
 {
-   
-
     public partial class DesignForm1 : MetroFramework.Forms.MetroForm
     {
-        //슬라이딩 메뉴의 최대, 최소 폭 크기
-        const int MAX_SLIDING_WIDTH = 200;
-        const int MIN_SLIDING_WIDTH = 50;
-        //슬라이딩 메뉴가 보이는/접히는 속도 조절
-        const int STEP_SLIDING = 10;
-        //최초 슬라이딩 메뉴 크기
-        int _posSliding = 200;
+        //사이드메뉴 열고닫고
+        private const int MAX_SLIDING_WIDTH = 200;
+        private const int MIN_SLIDING_WIDTH = 50;
+        private const int STEP_SLIDING = 10;
+        private int _posSliding = 200; // 초기 폭 크기
+        private bool _isMenuExpanded = true; // 메뉴 상태
+
         public DesignForm1()
         {
-            InitializeComponent();
+            InitializeComponent(); // Designer.cs에서 정의된 구성 요소를 초기화합니다.
         }
 
+        // 사이드 메뉴 슬라이딩 이벤트
         private void SideCloseCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (SideCloseCheck.Checked == true)
-            {
-                //슬라이딩 메뉴가 접혔을 때, 메뉴 버튼의 표시
-            
-                HomeBtn.Text = "홈";
-                CalendarBtn.Text = "일정";
-                TodoBtn.Text = "할 일";
-                SideCloseCheck.Text = ">";
-            }
-            else
-            {
-                //슬라이딩 메뉴가 보였을 때, 메뉴 버튼의 표시
-                HomeBtn.Text = "홈";
-                CalendarBtn.Text = "일정 관리";
-                TodoBtn.Text = "할 일 관리";
-                SideCloseCheck.Text = "<";
-            }
-
-            //타이머 시작
-            Sliding.Start();
+            // 메뉴 상태 전환
+            _isMenuExpanded = !_isMenuExpanded;
+            Sliding.Start(); // 타이머 시작
         }
 
         private void Sliding_Tick(object sender, EventArgs e)
         {
-            if (SideCloseCheck.Checked == true)
+            // 메뉴 확장 또는 축소 동작
+            if (_isMenuExpanded)
             {
-                //슬라이딩 메뉴를 숨기는 동작
-                _posSliding -= STEP_SLIDING;
-                if (_posSliding <= MIN_SLIDING_WIDTH)
+                // 메뉴를 펼치는 동작
+                _posSliding += STEP_SLIDING;
+                if (_posSliding >= MAX_SLIDING_WIDTH)
+                {
+                    _posSliding = MAX_SLIDING_WIDTH;
                     Sliding.Stop();
+                    SideCloseCheck.Text = "<"; // 접기 상태 표시
+                    TodoBtn.Text = "할 일 관리";
+                    CalendarBtn.Text = "일정 관리";
+                }
             }
             else
             {
-                //슬라이딩 메뉴를 보이는 동작
-                _posSliding += STEP_SLIDING;
-                if (_posSliding >= MAX_SLIDING_WIDTH)
+                // 메뉴를 접는 동작
+                _posSliding -= STEP_SLIDING;
+                if (_posSliding <= MIN_SLIDING_WIDTH)
+                {
+                    _posSliding = MIN_SLIDING_WIDTH;
                     Sliding.Stop();
+                    SideCloseCheck.Text = ">"; // 펼치기 상태 표시
+                    TodoBtn.Text = "할 일";
+                    CalendarBtn.Text = "일정";
+
+                }
             }
 
+            // SideMenu 폭 업데이트
             SideMenu.Width = _posSliding;
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        // 자식 폼 로드 메서드
+        private void LoadChildForm(Form childForm)
         {
+            // 기존 자식 폼 제거
+            childFormPanel.Controls.Clear();
 
+            // 새 자식 폼 설정
+            childForm.TopLevel = false;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childFormPanel.Controls.Add(childForm);
+
+            // 자식 폼 표시
+            childForm.Show();
+        }
+
+        // 홈 버튼 클릭 시 자식 폼 로드
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+            LoadChildForm(new HomeForm1());
         }
     }
 }

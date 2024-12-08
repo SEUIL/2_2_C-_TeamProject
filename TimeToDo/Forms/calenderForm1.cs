@@ -15,7 +15,7 @@ using static TimeToDo.LoginForm1;
 namespace TimeToDo
 {
 
-    public partial class calenderForm1 : Form
+    public partial class calenderForm1 : MetroFramework.Forms.MetroForm
     {
         public ListView getListView1
         {

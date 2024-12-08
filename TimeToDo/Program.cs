@@ -22,7 +22,7 @@ namespace TimeToDo
             //<<둘 중에 하나 주석처리하기>>
             //Application.Run(new DesignForm1());
             //로그인폼부터 시작하기!
-            Application.Run(new LoginForm1());
+            //Application.Run(new LoginForm1());
             //할일폼 보기
             //Application.Run(new TodoForm1());
 
@@ -32,6 +32,7 @@ namespace TimeToDo
             //Application.Run(new LoginForm1());
             //할일폼 보기
             //Application.Run(new TodoForm1());
+            Application.Run(new DesignForm1());
         }
     }
 }

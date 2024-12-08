@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace TimeToDo
 {
-    public partial class SignUpForm1 : Form
+    public partial class SignUpForm1 : MetroFramework.Forms.MetroForm
     {
         private DBClass db;
 
@@ -79,6 +79,11 @@ namespace TimeToDo
             LoginForm1 loginForm1 = new LoginForm1();
             loginForm1.Show();
             this.Hide();
+        }
+
+        private void SignUpForm1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -90,6 +90,12 @@
     <Compile Include="Forms\calenderForm1.Designer.cs">
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HomeForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HomeForm1.Designer.cs">
+      <DependentUpon>HomeForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TodoAddForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\calenderForm1.resx">
       <DependentUpon>calenderForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomeForm1.resx">
+      <DependentUpon>HomeForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TodoAddForm1.resx">
       <DependentUpon>TodoAddForm1.cs</DependentUpon>
