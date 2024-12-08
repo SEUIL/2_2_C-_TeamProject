@@ -61,25 +61,19 @@ namespace TimeToDo.Forms
         }
 
         // 자식 폼 로드 메서드
-        private void LoadChildForm(Form childForm)
+        private void LoadChildControl(Control childControl)
         {
-            // 기존 자식 폼 제거
             childFormPanel.Controls.Clear();
 
-            // 새 자식 폼 설정
-            childForm.TopLevel = false;
-            childForm.Dock = DockStyle.Fill;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childFormPanel.Controls.Add(childForm);
-
-            // 자식 폼 표시
-            childForm.Show();
+            childControl.Dock = DockStyle.Fill;
+            childFormPanel.Controls.Add(childControl);
         }
+
 
         // 홈 버튼 클릭 시 자식 폼 로드
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-            LoadChildForm(new HomeForm1());
+            LoadChildControl(new HomeForm1());
         }
 
         private void DesignForm1_FormClosing(object sender, FormClosingEventArgs e)

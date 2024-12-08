@@ -72,11 +72,9 @@
     <Compile Include="Forms\DetailForm1.Designer.cs">
       <DependentUpon>DetailForm1.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\editForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="Forms\editForm1.Designer.cs">
       <DependentUpon>editForm1.cs</DependentUpon>
     </Compile>
@@ -93,16 +91,14 @@
       <DependentUpon>calenderForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HomeForm1.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\HomeForm1.Designer.cs">
       <DependentUpon>HomeForm1.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\TodoAddForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="Forms\TodoAddForm1.Designer.cs">
       <DependentUpon>TodoAddForm1.cs</DependentUpon>
     </Compile>

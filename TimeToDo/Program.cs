@@ -29,10 +29,10 @@ namespace TimeToDo
 
 
             //로그인폼부터 시작하기!
-            Application.Run(new LoginForm1());
+            //Application.Run(new LoginForm1());
             //할일폼 보기
             //Application.Run(new TodoForm1());
-            //Application.Run(new DesignForm1());
+            Application.Run(new DesignForm1());
         }
     }
 }
