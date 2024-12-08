@@ -70,15 +70,26 @@ namespace TimeToDo.Forms
         }
 
 
-        // 홈 버튼 클릭 시 자식 폼 로드
+        //자식 폼 로드
         private void HomeBtn_Click(object sender, EventArgs e)
         {
             LoadChildControl(new HomeForm1());
         }
+        //private void CalendarBtn_Click(object sender, EventArgs e)
+        //{
+        //    LoadChildControl(new CalendarForm1());
+        //}
+        private void TodoBtn_Click(object sender, EventArgs e)
+        {
+            LoadChildControl(new TodoForm1());
+        }
+
 
         private void DesignForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit(); // 애플리케이션 종료
         }
+
+       
     }
 }

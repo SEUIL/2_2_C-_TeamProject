@@ -109,7 +109,7 @@
       <DependentUpon>TodoEditForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TodoForm1.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\TodoForm1.Designer.cs">
       <DependentUpon>TodoForm1.cs</DependentUpon>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -8,8 +9,62 @@ using static TimeToDo.LoginForm1;
 
 namespace TimeToDo.Forms
 {
-    public partial class TodoForm1 : MetroFramework.Forms.MetroForm
+    public partial class TodoForm1 : MetroFramework.Controls.MetroUserControl
     {
+        private Form parentForm; // 부모 폼 참조
+
+        public TodoForm1(Form parent)
+        {
+            InitializeComponent();
+        }
+
+
+        //
+        //폼모부
+        //
+
+
+        protected override void OnLocationChanged(EventArgs e)
+        {
+            base.OnLocationChanged(e);
+
+            if (parentForm == null) return;
+
+            // 부모 폼의 화면 좌표 기준으로 위치 제한
+            Rectangle parentBounds = parentForm.Bounds; // 부모 폼의 화면 좌표 (절대 좌표)
+            Rectangle screenBounds = Screen.FromControl(parentForm).WorkingArea; // 화면 작업 영역
+
+            // 부모 폼과 화면 작업 영역의 교집합 계산
+            Rectangle allowedBounds = Rectangle.Intersect(parentBounds, screenBounds);
+
+            // 자식 폼이 부모 폼 영역을 벗어나지 않도록 조정
+            int newX = Math.Max(allowedBounds.Left, Math.Min(this.Left, allowedBounds.Right - this.Width));
+            int newY = Math.Max(allowedBounds.Top, Math.Min(this.Top, allowedBounds.Bottom - this.Height));
+
+            this.Location = new Point(newX, newY);
+        }
+
+        private void CenterToParent()
+        {
+            if (parentForm == null) return;
+
+            // 부모 폼의 화면 좌표 기준으로 중앙 위치 계산
+            Rectangle parentBounds = parentForm.Bounds;
+            this.Location = new Point(
+                parentBounds.Left + (parentBounds.Width - this.Width) / 2,
+                parentBounds.Top + (parentBounds.Height - this.Height) / 2
+            );
+        }
+
+
+
+
+
+
+
+        //
+        //DB
+        //
         private DBClass dbClass;
         public void AddItemToListView(ListViewItem item)
         {
@@ -692,6 +747,11 @@ catch (Exception ex)
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             LoadTodoList();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
