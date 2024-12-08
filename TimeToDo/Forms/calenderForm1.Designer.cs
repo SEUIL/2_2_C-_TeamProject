@@ -120,9 +120,9 @@
             // 
             // addEvent
             // 
-            this.addEvent.Location = new System.Drawing.Point(15, 502);
+            this.addEvent.Location = new System.Drawing.Point(15, 514);
             this.addEvent.Name = "addEvent";
-            this.addEvent.Size = new System.Drawing.Size(81, 37);
+            this.addEvent.Size = new System.Drawing.Size(81, 25);
             this.addEvent.TabIndex = 4;
             this.addEvent.Text = "일정 추가";
             this.addEvent.UseVisualStyleBackColor = true;
@@ -130,9 +130,9 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(102, 502);
+            this.btnEdit.Location = new System.Drawing.Point(102, 514);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(81, 37);
+            this.btnEdit.Size = new System.Drawing.Size(81, 25);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "일정 편집";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -140,9 +140,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(189, 502);
+            this.btnDelete.Location = new System.Drawing.Point(189, 514);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(81, 37);
+            this.btnDelete.Size = new System.Drawing.Size(81, 25);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "일정 삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -150,9 +150,9 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(18, 212);
+            this.btnSearch.Location = new System.Drawing.Point(15, 235);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(78, 34);
+            this.btnSearch.Size = new System.Drawing.Size(78, 28);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "일정 검색";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -160,9 +160,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(559, 234);
+            this.btnRefresh.Location = new System.Drawing.Point(559, 238);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(127, 32);
+            this.btnRefresh.Size = new System.Drawing.Size(127, 28);
             this.btnRefresh.TabIndex = 12;
             this.btnRefresh.Text = "전체 일정 불러오기";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             // 
             // moveTodolist
             // 
-            this.moveTodolist.Location = new System.Drawing.Point(559, 502);
+            this.moveTodolist.Location = new System.Drawing.Point(559, 514);
             this.moveTodolist.Name = "moveTodolist";
-            this.moveTodolist.Size = new System.Drawing.Size(127, 42);
+            this.moveTodolist.Size = new System.Drawing.Size(127, 25);
             this.moveTodolist.TabIndex = 13;
             this.moveTodolist.Text = "ToDoList 이동";
             this.moveTodolist.UseVisualStyleBackColor = true;
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 561);
+            this.ClientSize = new System.Drawing.Size(1099, 550);
             this.Controls.Add(this.btnLogout_CalendarForm);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.label2);

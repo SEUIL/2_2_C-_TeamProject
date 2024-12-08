@@ -24,3 +24,13 @@ obj/
 *.config
 *.env
 *.htm
+
+# NuGet Packages
+*.nupkg
+packages/
+TimeToDo/fonts/
+
+!TimeToDo/notosansdemo.html
+!TimeToDo/Content/notosans.css
+TimeToDo/notosansdemo.html
+TimeToDo/Content/notosans.css

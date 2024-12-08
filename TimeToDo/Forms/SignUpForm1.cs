@@ -69,16 +69,38 @@ namespace TimeToDo
 
         private void SignUpForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            LoginForm1 loginForm1 = new LoginForm1();
-            loginForm1.Show();
-            this.Hide();
+            // "돌아가기" 버튼과 동일한 로직을 사용
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is LoginForm1)
+                {
+                    form.Show();
+                    return;
+                }
+            }
+
+            // LoginForm1이 열려있지 않으면 새로 생성 (예외 처리)
+            LoginForm1 loginForm = new LoginForm1();
+            loginForm.Show();
         }
 
         private void btnBack_Stinupform_Click(object sender, EventArgs e)
         {
-            LoginForm1 loginForm1 = new LoginForm1();
-            loginForm1.Show();
-            this.Hide();
+            // 현재 열린 LoginForm1을 다시 표시
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is LoginForm1)
+                {
+                    form.Show();
+                    this.Close(); // 현재 SignUpForm1 닫기
+                    return;
+                }
+            }
+
+            // LoginForm1이 열려있지 않으면 새로 생성 (예외 처리)
+            LoginForm1 loginForm = new LoginForm1();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

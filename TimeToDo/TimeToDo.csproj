@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\oraclexe\app\oracle\product\11.2.0\server\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
@@ -170,6 +179,35 @@
     <EmbeddedResource Include="Forms\SignUpForm1.resx">
       <DependentUpon>SignUpForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="fonts\notokr-black.eot" />
+    <None Include="fonts\notokr-black.ttf" />
+    <None Include="fonts\notokr-black.woff" />
+    <None Include="fonts\notokr-black.woff2" />
+    <None Include="fonts\notokr-bold.eot" />
+    <None Include="fonts\notokr-bold.ttf" />
+    <None Include="fonts\notokr-bold.woff" />
+    <None Include="fonts\notokr-bold.woff2" />
+    <None Include="fonts\notokr-demilight.eot" />
+    <None Include="fonts\notokr-demilight.ttf" />
+    <None Include="fonts\notokr-demilight.woff" />
+    <None Include="fonts\notokr-demilight.woff2" />
+    <None Include="fonts\notokr-light.eot" />
+    <None Include="fonts\notokr-light.ttf" />
+    <None Include="fonts\notokr-light.woff" />
+    <None Include="fonts\notokr-light.woff2" />
+    <None Include="fonts\notokr-medium.eot" />
+    <None Include="fonts\notokr-medium.ttf" />
+    <None Include="fonts\notokr-medium.woff" />
+    <None Include="fonts\notokr-medium.woff2" />
+    <None Include="fonts\notokr-regular.eot" />
+    <None Include="fonts\notokr-regular.ttf" />
+    <None Include="fonts\notokr-regular.woff" />
+    <None Include="fonts\notokr-regular.woff2" />
+    <None Include="fonts\notokr-thin.eot" />
+    <None Include="fonts\notokr-thin.ttf" />
+    <None Include="fonts\notokr-thin.woff" />
+    <None Include="fonts\notokr-thin.woff2" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,6 +217,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\notosans.css" />
+    <Content Include="fonts\notokr-black.svg" />
+    <Content Include="fonts\notokr-bold.svg" />
+    <Content Include="fonts\notokr-demilight.svg" />
+    <Content Include="fonts\notokr-light.svg" />
+    <Content Include="fonts\notokr-medium.svg" />
+    <Content Include="fonts\notokr-regular.svg" />
+    <Content Include="fonts\notokr-thin.svg" />
+    <Content Include="notosansdemo.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
