@@ -60,9 +60,9 @@ namespace TimeToDo.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 309);
+            this.label1.Location = new System.Drawing.Point(15, 305);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.Size = new System.Drawing.Size(38, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -158,6 +158,7 @@ namespace TimeToDo.Forms
             this.Padding = new System.Windows.Forms.Padding(18, 60, 18, 16);
             this.Text = "TimeManager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DesignForm1_FormClosing);
+            this.Load += new System.EventHandler(this.DesignForm1_Load);
             this.SideMenu.ResumeLayout(false);
             this.SideMenu.PerformLayout();
             this.ResumeLayout(false);

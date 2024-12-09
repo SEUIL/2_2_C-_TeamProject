@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static TimeToDo.LoginForm1;
 
 namespace TimeToDo.Forms
 {
@@ -90,6 +92,14 @@ namespace TimeToDo.Forms
         private void CalendarBtn_Click(object sender, EventArgs e)
         {
             LoadChildControl(new calenderForm1());
+        }
+
+        private void DesignForm1_Load(object sender, EventArgs e)
+        {
+            // 로그인된 사용자 이름 설정
+            label1.Text = $"접속한 사용자 : {Session.LoggedInUserId}";
+
+      
         }
     }
 }
