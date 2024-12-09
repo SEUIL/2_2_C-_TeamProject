@@ -181,6 +181,7 @@ namespace TimeToDo.Forms
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Size = new System.Drawing.Size(1049, 733);
             this.childFormPanel.TabIndex = 1;
+            this.Controls.Add(this.username);
             // 
             // DesignForm1
             // 

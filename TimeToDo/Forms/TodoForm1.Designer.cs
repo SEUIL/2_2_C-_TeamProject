@@ -33,6 +33,11 @@ namespace TimeToDo.Forms
         {
             this.listView = new System.Windows.Forms.ListView();
             this.Check = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Task = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Priority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TodoDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Deadline = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.중요도ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.일반ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +57,6 @@ namespace TimeToDo.Forms
             this.EditButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Task = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Priority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TodoDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Deadline = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,10 +72,10 @@ namespace TimeToDo.Forms
             this.Deadline});
             this.listView.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(19, 51);
+            this.listView.Location = new System.Drawing.Point(22, 64);
             this.listView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(764, 429);
+            this.listView.Size = new System.Drawing.Size(873, 535);
             this.listView.TabIndex = 9;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -84,191 +84,6 @@ namespace TimeToDo.Forms
             // 
             this.Check.Text = "";
             this.Check.Width = 34;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.중요도ToolStripMenuItem1,
-            this.완료여부ToolStripMenuItem1,
-            this.카테고리별ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1032, 29);
-            this.menuStrip1.TabIndex = 11;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 중요도ToolStripMenuItem1
-            // 
-            this.중요도ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.일반ToolStripMenuItem1,
-            this.중요ToolStripMenuItem1});
-            this.중요도ToolStripMenuItem1.Name = "중요도ToolStripMenuItem1";
-            this.중요도ToolStripMenuItem1.Size = new System.Drawing.Size(64, 21);
-            this.중요도ToolStripMenuItem1.Text = "중요도별";
-            // 
-            // 일반ToolStripMenuItem1
-            // 
-            this.일반ToolStripMenuItem1.Name = "일반ToolStripMenuItem1";
-            this.일반ToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
-            this.일반ToolStripMenuItem1.Text = "중요";
-            this.일반ToolStripMenuItem1.Click += new System.EventHandler(this.중요ToolStripMenuItem_Click);
-            // 
-            // 중요ToolStripMenuItem1
-            // 
-            this.중요ToolStripMenuItem1.Name = "중요ToolStripMenuItem1";
-            this.중요ToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
-            this.중요ToolStripMenuItem1.Text = "일반";
-            this.중요ToolStripMenuItem1.Click += new System.EventHandler(this.일반ToolStripMenuItem_Click);
-            // 
-            // 완료여부ToolStripMenuItem1
-            // 
-            this.완료여부ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.미완료ToolStripMenuItem1,
-            this.완료ToolStripMenuItem1});
-            this.완료여부ToolStripMenuItem1.Name = "완료여부ToolStripMenuItem1";
-            this.완료여부ToolStripMenuItem1.Size = new System.Drawing.Size(75, 21);
-            this.완료여부ToolStripMenuItem1.Text = "완료여부별";
-            // 
-            // 미완료ToolStripMenuItem1
-            // 
-            this.미완료ToolStripMenuItem1.Name = "미완료ToolStripMenuItem1";
-            this.미완료ToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
-            this.미완료ToolStripMenuItem1.Text = "미완료";
-            this.미완료ToolStripMenuItem1.Click += new System.EventHandler(this.미완료ToolStripMenuItem_Click);
-            // 
-            // 완료ToolStripMenuItem1
-            // 
-            this.완료ToolStripMenuItem1.Name = "완료ToolStripMenuItem1";
-            this.완료ToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
-            this.완료ToolStripMenuItem1.Text = "완료";
-            this.완료ToolStripMenuItem1.Click += new System.EventHandler(this.완료ToolStripMenuItem_Click);
-            // 
-            // 카테고리별ToolStripMenuItem
-            // 
-            this.카테고리별ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.공적일정ToolStripMenuItem,
-            this.사적일정ToolStripMenuItem,
-            this.자기계발ToolStripMenuItem,
-            this.취미생활ToolStripMenuItem});
-            this.카테고리별ToolStripMenuItem.Name = "카테고리별ToolStripMenuItem";
-            this.카테고리별ToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
-            this.카테고리별ToolStripMenuItem.Text = "카테고리별";
-            // 
-            // 공적일정ToolStripMenuItem
-            // 
-            this.공적일정ToolStripMenuItem.Name = "공적일정ToolStripMenuItem";
-            this.공적일정ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.공적일정ToolStripMenuItem.Text = "공적일정";
-            this.공적일정ToolStripMenuItem.Click += new System.EventHandler(this.공적일정ToolStripMenuItem1_Click);
-            // 
-            // 사적일정ToolStripMenuItem
-            // 
-            this.사적일정ToolStripMenuItem.Name = "사적일정ToolStripMenuItem";
-            this.사적일정ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.사적일정ToolStripMenuItem.Text = "사적일정";
-            this.사적일정ToolStripMenuItem.Click += new System.EventHandler(this.사적일정ToolStripMenuItem_Click);
-            // 
-            // 자기계발ToolStripMenuItem
-            // 
-            this.자기계발ToolStripMenuItem.Name = "자기계발ToolStripMenuItem";
-            this.자기계발ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.자기계발ToolStripMenuItem.Text = "자기개발";
-            this.자기계발ToolStripMenuItem.Click += new System.EventHandler(this.자기개발ToolStripMenuItem_Click);
-            // 
-            // 취미생활ToolStripMenuItem
-            // 
-            this.취미생활ToolStripMenuItem.Name = "취미생활ToolStripMenuItem";
-            this.취미생활ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.취미생활ToolStripMenuItem.Text = "취미생활";
-            this.취미생활ToolStripMenuItem.Click += new System.EventHandler(this.취미생활ToolStripMenuItem_Click);
-            // ㅁ1
-            // BtnExit
-            // 
-            //this.BtnExit.BackColor = System.Drawing.Color.White;
-            //this.BtnExit.Location = new System.Drawing.Point(788, 457);
-            //this.BtnExit.Name = "BtnExit";
-            //this.BtnExit.Size = new System.Drawing.Size(105, 22);
-            //this.BtnExit.TabIndex = 13;
-            //this.BtnExit.Text = "캘린더 이동";
-            //this.BtnExit.UseVisualStyleBackColor = false;
-            //this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // SearchButton
-            // 
-            this.SearchButton.Location = new System.Drawing.Point(825, 6);
-            this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(66, 18);
-            this.SearchButton.TabIndex = 6;
-            this.SearchButton.Text = "검색하기";
-            this.SearchButton.UseVisualStyleBackColor = true;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AddButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddButton.Location = new System.Drawing.Point(788, 66);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(102, 35);
-            this.AddButton.TabIndex = 2;
-            this.AddButton.Text = "추가";
-            this.AddButton.UseVisualStyleBackColor = false;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(602, 25);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(182, 25);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // EditButton
-            // 
-            this.EditButton.BackColor = System.Drawing.Color.SlateGray;
-            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.EditButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EditButton.Location = new System.Drawing.Point(788, 128);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(102, 35);
-            this.EditButton.TabIndex = 15;
-            this.EditButton.Text = "수정";
-            this.EditButton.UseVisualStyleBackColor = false;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.BackColor = System.Drawing.Color.Red;
-            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DeleteButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DeleteButton.Location = new System.Drawing.Point(788, 194);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(102, 35);
-            this.DeleteButton.TabIndex = 16;
-            this.DeleteButton.Text = "삭제";
-            this.DeleteButton.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Font = new System.Drawing.Font("Noto Sans KR Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(501, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 17);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "시작 기준 날짜 : ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Task
             // 
@@ -295,9 +110,183 @@ namespace TimeToDo.Forms
             this.Deadline.Text = "Deadline";
             this.Deadline.Width = 120;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.중요도ToolStripMenuItem1,
+            this.완료여부ToolStripMenuItem1,
+            this.카테고리별ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1030, 29);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 중요도ToolStripMenuItem1
+            // 
+            this.중요도ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.일반ToolStripMenuItem1,
+            this.중요ToolStripMenuItem1});
+            this.중요도ToolStripMenuItem1.Name = "중요도ToolStripMenuItem1";
+            this.중요도ToolStripMenuItem1.Size = new System.Drawing.Size(80, 25);
+            this.중요도ToolStripMenuItem1.Text = "중요도별";
+            // 
+            // 일반ToolStripMenuItem1
+            // 
+            this.일반ToolStripMenuItem1.Name = "일반ToolStripMenuItem1";
+            this.일반ToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
+            this.일반ToolStripMenuItem1.Text = "중요";
+            this.일반ToolStripMenuItem1.Click += new System.EventHandler(this.중요ToolStripMenuItem_Click);
+            // 
+            // 중요ToolStripMenuItem1
+            // 
+            this.중요ToolStripMenuItem1.Name = "중요ToolStripMenuItem1";
+            this.중요ToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
+            this.중요ToolStripMenuItem1.Text = "일반";
+            this.중요ToolStripMenuItem1.Click += new System.EventHandler(this.일반ToolStripMenuItem_Click);
+            // 
+            // 완료여부ToolStripMenuItem1
+            // 
+            this.완료여부ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.미완료ToolStripMenuItem1,
+            this.완료ToolStripMenuItem1});
+            this.완료여부ToolStripMenuItem1.Name = "완료여부ToolStripMenuItem1";
+            this.완료여부ToolStripMenuItem1.Size = new System.Drawing.Size(94, 25);
+            this.완료여부ToolStripMenuItem1.Text = "완료여부별";
+            // 
+            // 미완료ToolStripMenuItem1
+            // 
+            this.미완료ToolStripMenuItem1.Name = "미완료ToolStripMenuItem1";
+            this.미완료ToolStripMenuItem1.Size = new System.Drawing.Size(136, 26);
+            this.미완료ToolStripMenuItem1.Text = "미완료";
+            this.미완료ToolStripMenuItem1.Click += new System.EventHandler(this.미완료ToolStripMenuItem_Click);
+            // 
+            // 완료ToolStripMenuItem1
+            // 
+            this.완료ToolStripMenuItem1.Name = "완료ToolStripMenuItem1";
+            this.완료ToolStripMenuItem1.Size = new System.Drawing.Size(136, 26);
+            this.완료ToolStripMenuItem1.Text = "완료";
+            this.완료ToolStripMenuItem1.Click += new System.EventHandler(this.완료ToolStripMenuItem_Click);
+            // 
+            // 카테고리별ToolStripMenuItem
+            // 
+            this.카테고리별ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.공적일정ToolStripMenuItem,
+            this.사적일정ToolStripMenuItem,
+            this.자기계발ToolStripMenuItem,
+            this.취미생활ToolStripMenuItem});
+            this.카테고리별ToolStripMenuItem.Name = "카테고리별ToolStripMenuItem";
+            this.카테고리별ToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
+            this.카테고리별ToolStripMenuItem.Text = "카테고리별";
+            // 
+            // 공적일정ToolStripMenuItem
+            // 
+            this.공적일정ToolStripMenuItem.Name = "공적일정ToolStripMenuItem";
+            this.공적일정ToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.공적일정ToolStripMenuItem.Text = "공적일정";
+            this.공적일정ToolStripMenuItem.Click += new System.EventHandler(this.공적일정ToolStripMenuItem1_Click);
+            // 
+            // 사적일정ToolStripMenuItem
+            // 
+            this.사적일정ToolStripMenuItem.Name = "사적일정ToolStripMenuItem";
+            this.사적일정ToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.사적일정ToolStripMenuItem.Text = "사적일정";
+            this.사적일정ToolStripMenuItem.Click += new System.EventHandler(this.사적일정ToolStripMenuItem_Click);
+            // 
+            // 자기계발ToolStripMenuItem
+            // 
+            this.자기계발ToolStripMenuItem.Name = "자기계발ToolStripMenuItem";
+            this.자기계발ToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.자기계발ToolStripMenuItem.Text = "자기개발";
+            this.자기계발ToolStripMenuItem.Click += new System.EventHandler(this.자기개발ToolStripMenuItem_Click);
+            // 
+            // 취미생활ToolStripMenuItem
+            // 
+            this.취미생활ToolStripMenuItem.Name = "취미생활ToolStripMenuItem";
+            this.취미생활ToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.취미생활ToolStripMenuItem.Text = "취미생활";
+            this.취미생활ToolStripMenuItem.Click += new System.EventHandler(this.취미생활ToolStripMenuItem_Click);
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(943, 8);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(75, 22);
+            this.SearchButton.TabIndex = 6;
+            this.SearchButton.Text = "검색하기";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AddButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AddButton.Location = new System.Drawing.Point(901, 82);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(117, 44);
+            this.AddButton.TabIndex = 2;
+            this.AddButton.Text = "추가";
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(688, 31);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(207, 29);
+            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // EditButton
+            // 
+            this.EditButton.BackColor = System.Drawing.Color.SlateGray;
+            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.EditButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EditButton.Location = new System.Drawing.Point(901, 160);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(117, 44);
+            this.EditButton.TabIndex = 15;
+            this.EditButton.Text = "수정";
+            this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.BackColor = System.Drawing.Color.Red;
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.DeleteButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DeleteButton.Location = new System.Drawing.Point(901, 242);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(117, 44);
+            this.DeleteButton.TabIndex = 16;
+            this.DeleteButton.Text = "삭제";
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(573, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 21);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "시작 기준 날짜 : ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // TodoForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.label1);
@@ -310,7 +299,7 @@ namespace TimeToDo.Forms
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TodoForm1";
-            this.Size = new System.Drawing.Size(903, 501);
+            this.Size = new System.Drawing.Size(1030, 625);
             this.Load += new System.EventHandler(this.TodoForm1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
