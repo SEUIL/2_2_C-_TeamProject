@@ -39,6 +39,8 @@ namespace TimeToDo.Forms
                     SideCloseCheck.Text = "<"; // 접기 상태 표시
                     TodoBtn.Text = "할 일 관리";
                     CalendarBtn.Text = "일정 관리";
+                    panel1.Visible = true;
+                    panel1.Size = new System.Drawing.Size(200, 80);
                 }
             }
             else
@@ -52,6 +54,7 @@ namespace TimeToDo.Forms
                     SideCloseCheck.Text = ">"; // 펼치기 상태 표시
                     TodoBtn.Text = "할 일";
                     CalendarBtn.Text = "일정";
+                    panel1.Visible = false;
 
                 }
             }
@@ -81,15 +84,16 @@ namespace TimeToDo.Forms
             LoadChildControl(new TodoForm1());
         }
 
-
-        private void DesignForm1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit(); // 애플리케이션 종료
-        }
-
         private void CalendarBtn_Click(object sender, EventArgs e)
         {
             LoadChildControl(new calenderForm1());
+        }
+
+
+        // 애플리케이션 종료
+        private void DesignForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); 
         }
     }
 }

@@ -53,9 +53,8 @@
             // 
             // calendar
             // 
-            this.calendar.CalendarDimensions = new System.Drawing.Size(2, 1);
             this.calendar.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.calendar.Location = new System.Drawing.Point(11, 68);
+            this.calendar.Location = new System.Drawing.Point(11, 118);
             this.calendar.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 0;
@@ -134,7 +133,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(339, 290);
+            this.btnSearch.Location = new System.Drawing.Point(404, 118);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(89, 42);
@@ -228,16 +227,16 @@
             this.label1.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(17, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 36);
+            this.label1.Size = new System.Drawing.Size(160, 36);
             this.label1.TabIndex = 19;
-            this.label1.Text = "달력";
+            this.label1.Text = "달력에서 선택";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(250, 296);
+            this.label3.Location = new System.Drawing.Point(453, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 36);
             this.label3.TabIndex = 20;

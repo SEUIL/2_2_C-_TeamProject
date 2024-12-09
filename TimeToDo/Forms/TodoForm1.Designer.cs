@@ -184,7 +184,7 @@ namespace TimeToDo.Forms
             this.취미생활ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.취미생활ToolStripMenuItem.Text = "취미생활";
             this.취미생활ToolStripMenuItem.Click += new System.EventHandler(this.취미생활ToolStripMenuItem_Click);
-            // 
+            // ㅁ1
             // BtnExit
             // 
             //this.BtnExit.BackColor = System.Drawing.Color.White;
