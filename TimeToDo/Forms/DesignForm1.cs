@@ -1,10 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static TimeToDo.LoginForm1;
 
 namespace TimeToDo.Forms
 {
     public partial class DesignForm1 : MetroFramework.Forms.MetroForm
     {
+        private void DesignForm1_Load(object sender, EventArgs e)
+        {
+            // 로그인된 사용자 이름 설정
+            username.Text = $"환영합니다 {Session.LoggedInUserId}!";
+        }
+
+
         //사이드메뉴 열고닫고
         private const int MAX_SLIDING_WIDTH = 200;
         private const int MIN_SLIDING_WIDTH = 50;
@@ -89,11 +98,13 @@ namespace TimeToDo.Forms
             LoadChildControl(new calenderForm1());
         }
 
-
         // 애플리케이션 종료
         private void DesignForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
+
         }
+
+       
     }
 }

@@ -59,6 +59,15 @@ namespace TimeToDo.Forms
             this.SideMenu.Size = new System.Drawing.Size(200, 733);
             this.SideMenu.TabIndex = 0;
             // 
+            // label1
+            // 
+            //this.label1.AutoSize = true;
+            //this.label1.Location = new System.Drawing.Point(15, 305);
+            //this.label1.Name = "label1";
+            //this.label1.Size = new System.Drawing.Size(38, 12);
+            //this.label1.TabIndex = 0;
+            //this.label1.Text = "label1";
+            // 
             // TodoBtn
             // 
             this.TodoBtn.Dock = System.Windows.Forms.DockStyle.Top;
@@ -154,7 +163,7 @@ namespace TimeToDo.Forms
             this.username.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.username.ForeColor = System.Drawing.SystemColors.GrayText;
             this.username.Location = new System.Drawing.Point(3, 13);
-            this.username.Name = "username";
+            this.username.Name = "label1";
             this.username.Size = new System.Drawing.Size(119, 26);
             this.username.TabIndex = 23;
             this.username.Text = "여기다가 이름";
@@ -186,6 +195,7 @@ namespace TimeToDo.Forms
             this.Padding = new System.Windows.Forms.Padding(21, 75, 21, 20);
             this.Text = "TimeManager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DesignForm1_FormClosing);
+            this.Load += new System.EventHandler(this.DesignForm1_Load);
             this.SideMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
