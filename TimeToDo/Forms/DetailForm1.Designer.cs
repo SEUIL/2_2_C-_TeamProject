@@ -32,12 +32,12 @@
             this.btnDelete_detailForm = new System.Windows.Forms.Button();
             this.btnEdit_detailForm = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDescription_deatilForm = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.date_detailForm = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.comboCategory_detailForm = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.date_detailForm = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescription_deatilForm = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboRepeats_detailForm = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
@@ -87,49 +87,10 @@
             this.flowLayoutPanel1.Controls.Add(this.label8);
             this.flowLayoutPanel1.Controls.Add(this.comboRepeats_detailForm);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 78);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 69);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(398, 316);
             this.flowLayoutPanel1.TabIndex = 41;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(3, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 26);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "일정 상세";
-            // 
-            // txtDescription_deatilForm
-            // 
-            this.txtDescription_deatilForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtDescription_deatilForm.Location = new System.Drawing.Point(3, 176);
-            this.txtDescription_deatilForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDescription_deatilForm.Name = "txtDescription_deatilForm";
-            this.txtDescription_deatilForm.Size = new System.Drawing.Size(305, 29);
-            this.txtDescription_deatilForm.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(3, 73);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.label6.Size = new System.Drawing.Size(46, 36);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "시간";
-            // 
-            // date_detailForm
-            // 
-            this.date_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.date_detailForm.Location = new System.Drawing.Point(3, 113);
-            this.date_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.date_detailForm.Name = "date_detailForm";
-            this.date_detailForm.Size = new System.Drawing.Size(205, 29);
-            this.date_detailForm.TabIndex = 16;
             // 
             // label7
             // 
@@ -156,6 +117,45 @@
             this.comboCategory_detailForm.Name = "comboCategory_detailForm";
             this.comboCategory_detailForm.Size = new System.Drawing.Size(205, 29);
             this.comboCategory_detailForm.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(3, 73);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label6.Size = new System.Drawing.Size(46, 36);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "시간";
+            // 
+            // date_detailForm
+            // 
+            this.date_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.date_detailForm.Location = new System.Drawing.Point(3, 113);
+            this.date_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date_detailForm.Name = "date_detailForm";
+            this.date_detailForm.Size = new System.Drawing.Size(205, 29);
+            this.date_detailForm.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(3, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 26);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "일정 상세";
+            // 
+            // txtDescription_deatilForm
+            // 
+            this.txtDescription_deatilForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtDescription_deatilForm.Location = new System.Drawing.Point(3, 176);
+            this.txtDescription_deatilForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescription_deatilForm.Name = "txtDescription_deatilForm";
+            this.txtDescription_deatilForm.Size = new System.Drawing.Size(305, 29);
+            this.txtDescription_deatilForm.TabIndex = 14;
             // 
             // label8
             // 

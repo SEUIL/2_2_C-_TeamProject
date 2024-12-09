@@ -17,5 +17,10 @@ namespace TimeToDo.Forms
             this.BackColor = Color.LightBlue;
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

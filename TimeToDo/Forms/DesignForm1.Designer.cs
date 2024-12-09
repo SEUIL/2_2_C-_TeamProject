@@ -37,8 +37,8 @@ namespace TimeToDo.Forms
             this.HomeBtn = new System.Windows.Forms.Button();
             this.SideCloseCheck = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.logoutBtn = new System.Windows.Forms.Button();
             this.username = new System.Windows.Forms.Label();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.Sliding = new System.Windows.Forms.Timer(this.components);
             this.childFormPanel = new System.Windows.Forms.Panel();
             this.SideMenu.SuspendLayout();
@@ -56,7 +56,7 @@ namespace TimeToDo.Forms
             this.SideMenu.Location = new System.Drawing.Point(21, 75);
             this.SideMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SideMenu.Name = "SideMenu";
-            this.SideMenu.Size = new System.Drawing.Size(200, 733);
+            this.SideMenu.Size = new System.Drawing.Size(200, 652);
             this.SideMenu.TabIndex = 0;
             // 
             // TodoBtn
@@ -117,7 +117,7 @@ namespace TimeToDo.Forms
             this.SideCloseCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SideCloseCheck.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SideCloseCheck.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SideCloseCheck.Location = new System.Drawing.Point(0, 683);
+            this.SideCloseCheck.Location = new System.Drawing.Point(0, 602);
             this.SideCloseCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SideCloseCheck.Name = "SideCloseCheck";
             this.SideCloseCheck.Size = new System.Drawing.Size(200, 50);
@@ -139,17 +139,6 @@ namespace TimeToDo.Forms
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 0;
             // 
-            // logoutBtn
-            // 
-            this.logoutBtn.Location = new System.Drawing.Point(17, 58);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(75, 22);
-            this.logoutBtn.TabIndex = 0;
-            this.logoutBtn.Text = "로그아웃";
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
-            // 
             // username
             // 
             this.username.AutoSize = true;
@@ -162,6 +151,17 @@ namespace TimeToDo.Forms
             this.username.TabIndex = 23;
             this.username.Text = "여기다가 이름";
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Location = new System.Drawing.Point(17, 58);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(75, 22);
+            this.logoutBtn.TabIndex = 0;
+            this.logoutBtn.Text = "로그아웃";
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
             // Sliding
             // 
             this.Sliding.Interval = 10;
@@ -173,14 +173,14 @@ namespace TimeToDo.Forms
             this.childFormPanel.Location = new System.Drawing.Point(221, 75);
             this.childFormPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.childFormPanel.Name = "childFormPanel";
-            this.childFormPanel.Size = new System.Drawing.Size(1049, 733);
+            this.childFormPanel.Size = new System.Drawing.Size(1049, 652);
             this.childFormPanel.TabIndex = 1;
             // 
             // DesignForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 828);
+            this.ClientSize = new System.Drawing.Size(1291, 747);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.SideMenu);
