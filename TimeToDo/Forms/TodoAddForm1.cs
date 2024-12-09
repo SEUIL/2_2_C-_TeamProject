@@ -78,8 +78,15 @@ namespace TimeToDo.Forms
                     item.SubItems.Add(deadline.ToString("yyyy-MM-dd"));
 
 
-                    parentForm.AddItemToListView(item);
-                    todoForm.AddItemToListView(item);
+                    if (parentForm != null)
+                    {
+                        parentForm.AddItemToListView(item);
+                    }
+
+                    if (todoForm != null)
+                    {
+                        todoForm.AddItemToListView(item);
+                    }
 
                     MessageBox.Show("할 일이 성공적으로 추가되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

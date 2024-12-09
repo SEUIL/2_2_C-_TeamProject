@@ -1,12 +1,6 @@
 ﻿using Oracle.DataAccess.Client;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static TimeToDo.LoginForm1;
 
@@ -14,13 +8,22 @@ namespace TimeToDo.Forms
 {
     public partial class AddForm1 : MetroFramework.Forms.MetroForm
     {
-        private calenderForm1 calenderForm;
+        private calenderForm1 _calendarForm; // 캘린더 폼 참조
+        private HomeForm1 _homeForm;         // 홈 폼 참조
         private DBClass dbClass = new DBClass();
 
-        public AddForm1(calenderForm1 form)
+        // 생성자: 캘린더 폼에서 호출
+        public AddForm1(calenderForm1 calendarForm)
         {
             InitializeComponent();
-            calenderForm = form;
+            _calendarForm = calendarForm; // 캘린더 폼 참조 저장
+        }
+
+        // 생성자: 홈 폼에서 호출
+        public AddForm1(HomeForm1 homeForm)
+        {
+            InitializeComponent();
+            _homeForm = homeForm; // 홈 폼 참조 저장
         }
 
         private void btnSummit_addForm_Click(object sender, EventArgs e)
@@ -49,29 +52,22 @@ namespace TimeToDo.Forms
                     { ":Category", category },
                     { ":Time", time },
                     { ":Description", description },
-                    { ":Repeats", repeats } // 반복 여부 저장
-        };
+                    { ":Repeats", repeats }
+                };
 
-                // 삽입된 ID 가져오기
-                DBClass dbClass = new DBClass();
                 int insertedId = dbClass.ExecuteNonQueryWithReturn(insertQuery, parameters);
 
                 if (insertedId > 0)
                 {
-                    //ListView에 항목 추가
+                    // ListView에 항목 추가
                     ListViewItem item = new ListViewItem(category); // 첫 번째 열: 카테고리
                     item.SubItems.Add(time.ToString("yyyy-MM-dd")); // 두 번째 열: 날짜
                     item.SubItems.Add(description); // 세 번째 열: 설명
                     item.SubItems.Add(repeats); // 네 번째 열: 일정 반복
+                    item.Tag = insertedId; // 삽입된 ID를 태그로 저장
 
-                    //삽입된 ID를 태그로 저장
-                    item.Tag = insertedId;
-
-                    // 캘린더 폼의 ListView에 추가
-                    calenderForm.getListView1.Items.Add(item);
-
-                    // 반복 여부에 따라 일정 추가 (예: 매일, 매주, 매월, 매년)
-                    //AddRepeatingEvents(insertedId, time, repeats);
+                    // 부모 폼의 ListView에 항목 추가
+                    AddItemToParentListView(item, time);
 
                     MessageBox.Show("일정이 추가되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -89,53 +85,32 @@ namespace TimeToDo.Forms
             }
         }
 
-        /*private void AddRepeatingEvents(int originalId, DateTime originalTime, string repeats)
+        
+
+        private void AddItemToParentListView(ListViewItem item, DateTime itemDate)
         {
-            try
+            if (_calendarForm != null)
             {
-                DateTime newTime = originalTime;
-                int repeatCount = 10; // 반복 횟수 (예: 10번 반복)
+                // 캘린더 폼의 ListView에 추가
+                _calendarForm.getListView1.Items.Add(item);
+            }
+            else if (_homeForm != null)
+            {
+                // 현재 날짜 가져오기
+                DateTime today = DateTime.Today;
 
-                for (int i = 0; i < repeatCount; i++)
+                if (itemDate.Date == today)
                 {
-                    switch (repeats)
-                    {
-                        case "매일":
-                            newTime = newTime.AddDays(1); // 하루씩 추가
-                            break;
-                        case "매주":
-                            newTime = newTime.AddDays(7); // 일주일씩 추가
-                            break;
-                        case "매월":
-                            newTime = newTime.AddMonths(1); // 한 달씩 추가
-                            break;
-                        case "매년":
-                            newTime = newTime.AddYears(1); // 1년씩 추가
-                            break;
-                    }
-
-                    // 반복된 일정 DB에 삽입
-                    string insertQuery = "INSERT INTO Calendar (ID, USERSID, Category, Time, Description, Repeats) " +
-                                         "VALUES (SEQ_CALENDAR.NEXTVAL, :UserId, :Category, :Time, :Description, :Repeats)";
-
-                    var parameters = new Dictionary<string, object>
-            {
-                { ":UserId", Session.LoggedInUserId },
-                { ":Category", comboCategory_addForm.Text },
-                { ":Time", newTime },
-                { ":Description", txtDescription_addForm.Text },
-                { ":Repeats", repeats }
-            };
-
-                    DBClass dbClass = new DBClass();
-                    dbClass.ExecuteNonQuery(insertQuery, parameters);
+                    // 오늘 날짜는 getListView1에 추가
+                    _homeForm.getListView1.Items.Add(item);
+                }
+                else if (itemDate.Date > today)
+                {
+                    // 오늘 이후 날짜는 getListView2에 추가
+                    _homeForm.getListView2.Items.Add(item);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("반복 일정을 추가하는 중 오류가 발생했습니다: " + ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
-*/
+
     }
 }

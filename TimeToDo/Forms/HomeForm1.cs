@@ -13,9 +13,17 @@ namespace TimeToDo.Forms
 {
     public partial class HomeForm1 : MetroFramework.Controls.MetroUserControl
     {
+        public ListView getListView1
+        {
+            get { return listView2; } // listView1은 홈 폼에서 사용하는 ListView의 이름
+        }
+        public ListView getListView2
+        {
+            get { return listView1; } // listView1은 홈 폼에서 사용하는 ListView의 이름
+        }
+
         public HomeForm1()
         {
-            this.BackColor = Color.LightBlue;
             InitializeComponent();
         }
         private void InitializeListView()
@@ -313,7 +321,98 @@ namespace TimeToDo.Forms
             }
         }
 
+        private void LoadUpcomingEvents1()//앞으로의 일정(listView2) 불러오기기능
+        {
+            try
+            {
+                // "앞으로의 일정"을 표시하는 ListView 초기화
+                listView2.Items.Clear();
 
+                // 반복 일정에 대해 가장 가까운 날짜만 조회하는 쿼리
+                string query = @"
+                    SELECT Category, Time, Description, Repeats
+                    FROM Calendar 
+                    WHERE USERSID = :UserId 
+                    AND Time >= SYSDATE-1
+                    AND (
+                        Repeats IS NULL 
+                        OR (Repeats IS NOT NULL AND Time <= SYSDATE + INTERVAL '1' YEAR)
+                    )
+                    ORDER BY Time ASC";
+
+                var parameters = new Dictionary<string, object>
+        {
+            { ":UserId", Session.LoggedInUserId }
+        };
+
+                DBClass dbClass = new DBClass(); // DBClass 인스턴스 생성
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    ListViewItem item = new ListViewItem(row["Category"].ToString());
+                    DateTime startTime = Convert.ToDateTime(row["Time"]);
+                    string repeats = row["Repeats"].ToString();
+
+                    // 반복 여부에 따라 날짜 계산
+                    DateTime currentDate = DateTime.Now;
+
+                    // 반복이 없는 일정
+                    if (repeats == "반복없음")
+                    {
+                        item.SubItems.Add(startTime.ToString("yyyy-MM-dd")); // 날짜만 추가
+                        item.SubItems.Add(row["Description"].ToString());
+                        item.SubItems.Add("반복 없음"); // "반복 없음" 명시적으로 추가
+                    }
+                    else if (repeats == "매일")
+                    {
+                        // 매일 반복: 오늘 날짜의 일정만 표시
+                        item.SubItems.Add(startTime.ToString("yyyy-MM-dd"));
+                        item.SubItems.Add(row["Description"].ToString());
+                        item.SubItems.Add("매일");
+                    }
+                    else if (repeats == "매주")
+                    {
+                        // 매주 반복: 이번 주의 동일한 요일에 맞는 일정
+                        int daysToAdd = (int)DayOfWeek.Sunday - (int)currentDate.DayOfWeek;
+                        if (daysToAdd < 0) daysToAdd += 7; // 이번 주 일요일 이후
+
+                        DateTime nextWeekDate = currentDate.AddDays(daysToAdd);
+                        item.SubItems.Add(nextWeekDate.ToString("yyyy-MM-dd"));
+                        item.SubItems.Add(row["Description"].ToString());
+                        item.SubItems.Add("매주");
+                    }
+                    else if (repeats == "매달")
+                    {
+                        // 매월 반복: 이번 달의 같은 날짜
+                        DateTime nextMonthDate = new DateTime(currentDate.Year, currentDate.Month, startTime.Day);
+                        if (nextMonthDate >= currentDate)
+                        {
+                            item.SubItems.Add(nextMonthDate.ToString("yyyy-MM-dd"));
+                            item.SubItems.Add(row["Description"].ToString());
+                            item.SubItems.Add("매달");
+                        }
+                    }
+                    else if (repeats == "매년")
+                    {
+                        // 매년 반복: 이번 년도에 같은 날짜
+                        DateTime nextYearDate = new DateTime(currentDate.Year, startTime.Month, startTime.Day);
+                        if (nextYearDate >= currentDate)
+                        {
+                            item.SubItems.Add(nextYearDate.ToString("yyyy-MM-dd"));
+                            item.SubItems.Add(row["Description"].ToString());
+                            item.SubItems.Add("매년");
+                        }
+                    }
+
+                    listView2.Items.Add(item); // ListView에 항목 추가
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("일정을 불러오는 중 오류가 발생했습니다: " + ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -603,10 +702,181 @@ namespace TimeToDo.Forms
             todoaddForm1.ShowDialog();
 
         }
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("수정할 항목을 선택해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            // 선택된 항목 가져오기
+            ListViewItem selectedItem = listView.SelectedItems[0];
+
+            // 선택된 항목의 ID를 Tag에서 가져오기
+            if (selectedItem.Tag == null)
+            {
+                MessageBox.Show("유효하지 않은 ID입니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string todoId = selectedItem.Tag.ToString(); // 문자열로 처리
+
+            string task = selectedItem.SubItems[1].Text;
+            string category = selectedItem.SubItems[2].Text;
+            string priority = selectedItem.SubItems[3].Text;
+
+            if (!DateTime.TryParse(selectedItem.SubItems[4].Text, out DateTime todoDate))
+            {
+                MessageBox.Show("유효하지 않은 시작 날짜 형식입니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!DateTime.TryParse(selectedItem.SubItems[5].Text, out DateTime deadline))
+            {
+                MessageBox.Show("유효하지 않은 마감 날짜 형식입니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // TodoEditForm1 열기
+            TodoEditForm1 editForm = new TodoEditForm1(todoId, task, category, priority, todoDate, deadline, this);
+            editForm.ShowDialog();
+        }
         internal void AddItemToListView(ListViewItem item)
         {
             listView.Items.Add(item);
+        }
+
+        internal void UpdateListViewItem(string todoId, string task, string category, string priority, DateTime todoDate, DateTime deadline, bool isCompleted)
+        {
+            try
+            {
+                // ListView에서 특정 ID를 가진 항목 찾기
+                foreach (ListViewItem item in listView.Items)
+                {
+                    if (item.Tag != null && item.Tag.ToString() == todoId)
+                    {
+                        // 해당 항목의 데이터를 업데이트
+                        item.SubItems[1].Text = task;        // Task
+                        item.SubItems[2].Text = category;    // Category
+                        item.SubItems[3].Text = priority;    // Priority
+                        item.SubItems[4].Text = todoDate.ToString("yyyy-MM-dd"); // TodoDate
+                        item.SubItems[5].Text = deadline.ToString("yyyy-MM-dd"); // Deadline
+                        item.Checked = isCompleted;         // 완료 여부
+
+                        // 업데이트 완료 후 종료
+                        return;
+                    }
+                }
+
+                // 항목을 찾지 못한 경우
+                MessageBox.Show($"ID가 {todoId}인 항목을 찾을 수 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"항목 업데이트 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+                AddForm1 addForm1 = new AddForm1(this);
+                addForm1.ShowDialog();
+
+                
+                
+
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddForm1 addForm1 = new AddForm1(this);
+            addForm1.ShowDialog();
+
+            
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 선택된 항목이 있는지 확인
+                if (listView2.SelectedItems.Count == 0)
+                {
+                    MessageBox.Show("수정할 일정을 선택해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 선택된 항목 가져오기
+                ListViewItem selectedItem = listView2.SelectedItems[0];
+                if (selectedItem.Tag == null || !int.TryParse(selectedItem.Tag.ToString(), out int selectedId))
+                {
+                    MessageBox.Show("선택된 항목에 유효한 ID가 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string category = selectedItem.SubItems[0].Text;
+                string time = selectedItem.SubItems[1].Text;
+                string description = selectedItem.SubItems[2].Text;
+                string repeats = selectedItem.SubItems[3].Text;
+
+                // editForm1 호출
+                editForm1 editForm = new editForm1(selectedId, category, time, description, repeats);
+
+                // 수정 창을 모달로 표시
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    // 수정 후 ListView 리프레시
+                    LoadTodayEvents(); // 오늘의 일정 새로고침
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"일정 수정 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 선택된 항목이 있는지 확인
+                if (listView1.SelectedItems.Count == 0)
+                {
+                    MessageBox.Show("수정할 일정을 선택해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 선택된 항목 가져오기
+                ListViewItem selectedItem = listView1.SelectedItems[0];
+                if (selectedItem.Tag == null || !int.TryParse(selectedItem.Tag.ToString(), out int selectedId))
+                {
+                    MessageBox.Show("선택된 항목에 유효한 ID가 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string category = selectedItem.SubItems[0].Text;
+                string time = selectedItem.SubItems[1].Text;
+                string description = selectedItem.SubItems[2].Text;
+                string repeats = selectedItem.SubItems[3].Text;
+
+                // editForm1 호출
+                editForm1 editForm = new editForm1(selectedId, category, time, description, repeats);
+
+                // 수정 창을 모달로 표시
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    // 수정 후 ListView 리프레시
+                    LoadUpcomingEventsFromTomorrow(); // 오늘의 일정 새로고침
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"일정 수정 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -176,6 +176,7 @@
             this.EditButton.TabIndex = 25;
             this.EditButton.Text = "수정";
             this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
@@ -234,6 +235,7 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "수정";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -247,6 +249,7 @@
             this.button3.TabIndex = 27;
             this.button3.Text = "추가";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
@@ -291,6 +294,7 @@
             this.button5.TabIndex = 31;
             this.button5.Text = "수정";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // listView1
             // 
@@ -342,6 +346,7 @@
             this.button6.TabIndex = 30;
             this.button6.Text = "추가";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox3
             // 
