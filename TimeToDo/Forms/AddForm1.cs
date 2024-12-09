@@ -28,9 +28,9 @@ namespace TimeToDo.Forms
             try
             {
                 string category = comboCategory_addForm.Text;
-                DateTime time = date_addForm.Value;
+                DateTime time = date_detailForm.Value;
                 string description = txtDescription_addForm.Text;
-                string repeats = comboRepeats_addForm.Text;
+                string repeats = txtRepeats_detailForm.Text;
 
                 // 입력 값 검증
                 if (string.IsNullOrEmpty(category) || string.IsNullOrEmpty(description))

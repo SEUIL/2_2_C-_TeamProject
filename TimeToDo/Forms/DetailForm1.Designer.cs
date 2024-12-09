@@ -28,56 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRepeats_detailForm = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboCategory_detailForm = new System.Windows.Forms.ComboBox();
             this.btnClose_detailForm = new System.Windows.Forms.Button();
-            this.date_detailForm = new System.Windows.Forms.DateTimePicker();
-            this.txtDescription_detailForm = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnDelete_detailForm = new System.Windows.Forms.Button();
             this.btnEdit_detailForm = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescription_deatilForm = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.date_detailForm = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboCategory_detailForm = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboRepeats_detailForm = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtRepeats_detailForm
-            // 
-            this.txtRepeats_detailForm.Enabled = false;
-            this.txtRepeats_detailForm.Location = new System.Drawing.Point(169, 262);
-            this.txtRepeats_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtRepeats_detailForm.Name = "txtRepeats_detailForm";
-            this.txtRepeats_detailForm.Size = new System.Drawing.Size(305, 25);
-            this.txtRepeats_detailForm.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 13F);
-            this.label5.Location = new System.Drawing.Point(49, 266);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 22);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "반복";
-            // 
-            // comboCategory_detailForm
-            // 
-            this.comboCategory_detailForm.Enabled = false;
-            this.comboCategory_detailForm.FormattingEnabled = true;
-            this.comboCategory_detailForm.Items.AddRange(new object[] {
-            "공적 일정",
-            "사적 일정",
-            "자기 개발",
-            "취미 생활"});
-            this.comboCategory_detailForm.Location = new System.Drawing.Point(169, 110);
-            this.comboCategory_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboCategory_detailForm.Name = "comboCategory_detailForm";
-            this.comboCategory_detailForm.Size = new System.Drawing.Size(305, 23);
-            this.comboCategory_detailForm.TabIndex = 36;
             // 
             // btnClose_detailForm
             // 
-            this.btnClose_detailForm.Location = new System.Drawing.Point(9, 366);
+            this.btnClose_detailForm.Location = new System.Drawing.Point(11, 401);
             this.btnClose_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose_detailForm.Name = "btnClose_detailForm";
             this.btnClose_detailForm.Size = new System.Drawing.Size(103, 46);
@@ -86,57 +54,9 @@
             this.btnClose_detailForm.UseVisualStyleBackColor = true;
             this.btnClose_detailForm.Click += new System.EventHandler(this.btnClose_detailForm_Click);
             // 
-            // date_detailForm
-            // 
-            this.date_detailForm.Enabled = false;
-            this.date_detailForm.Location = new System.Drawing.Point(169, 160);
-            this.date_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.date_detailForm.Name = "date_detailForm";
-            this.date_detailForm.Size = new System.Drawing.Size(305, 25);
-            this.date_detailForm.TabIndex = 34;
-            // 
-            // txtDescription_detailForm
-            // 
-            this.txtDescription_detailForm.Enabled = false;
-            this.txtDescription_detailForm.Location = new System.Drawing.Point(169, 208);
-            this.txtDescription_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDescription_detailForm.Name = "txtDescription_detailForm";
-            this.txtDescription_detailForm.Size = new System.Drawing.Size(305, 25);
-            this.txtDescription_detailForm.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 13F);
-            this.label4.Location = new System.Drawing.Point(49, 211);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 22);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "일정 상세";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 13F);
-            this.label3.Location = new System.Drawing.Point(49, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 22);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "시간";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 13F);
-            this.label2.Location = new System.Drawing.Point(49, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 22);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "카테고리";
-            // 
             // btnDelete_detailForm
             // 
-            this.btnDelete_detailForm.Location = new System.Drawing.Point(265, 366);
+            this.btnDelete_detailForm.Location = new System.Drawing.Point(221, 401);
             this.btnDelete_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete_detailForm.Name = "btnDelete_detailForm";
             this.btnDelete_detailForm.Size = new System.Drawing.Size(103, 46);
@@ -147,7 +67,7 @@
             // 
             // btnEdit_detailForm
             // 
-            this.btnEdit_detailForm.Location = new System.Drawing.Point(386, 366);
+            this.btnEdit_detailForm.Location = new System.Drawing.Point(330, 401);
             this.btnEdit_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit_detailForm.Name = "btnEdit_detailForm";
             this.btnEdit_detailForm.Size = new System.Drawing.Size(103, 46);
@@ -156,22 +76,124 @@
             this.btnEdit_detailForm.UseVisualStyleBackColor = true;
             this.btnEdit_detailForm.Click += new System.EventHandler(this.btnEdit_detailForm_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label7);
+            this.flowLayoutPanel1.Controls.Add(this.comboCategory_detailForm);
+            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Controls.Add(this.date_detailForm);
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.txtDescription_deatilForm);
+            this.flowLayoutPanel1.Controls.Add(this.label8);
+            this.flowLayoutPanel1.Controls.Add(this.comboRepeats_detailForm);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 78);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(398, 316);
+            this.flowLayoutPanel1.TabIndex = 41;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(3, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 26);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "일정 상세";
+            // 
+            // txtDescription_deatilForm
+            // 
+            this.txtDescription_deatilForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtDescription_deatilForm.Location = new System.Drawing.Point(3, 176);
+            this.txtDescription_deatilForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescription_deatilForm.Name = "txtDescription_deatilForm";
+            this.txtDescription_deatilForm.Size = new System.Drawing.Size(305, 29);
+            this.txtDescription_deatilForm.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(3, 73);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label6.Size = new System.Drawing.Size(46, 36);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "시간";
+            // 
+            // date_detailForm
+            // 
+            this.date_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.date_detailForm.Location = new System.Drawing.Point(3, 113);
+            this.date_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date_detailForm.Name = "date_detailForm";
+            this.date_detailForm.Size = new System.Drawing.Size(205, 29);
+            this.date_detailForm.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label7.Size = new System.Drawing.Size(80, 36);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "카테고리";
+            // 
+            // comboCategory_detailForm
+            // 
+            this.comboCategory_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboCategory_detailForm.FormattingEnabled = true;
+            this.comboCategory_detailForm.Items.AddRange(new object[] {
+            "공적 일정",
+            "사적 일정",
+            "자기 개발",
+            "취미 생활"});
+            this.comboCategory_detailForm.Location = new System.Drawing.Point(3, 40);
+            this.comboCategory_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboCategory_detailForm.Name = "comboCategory_detailForm";
+            this.comboCategory_detailForm.Size = new System.Drawing.Size(205, 29);
+            this.comboCategory_detailForm.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(3, 209);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label8.Size = new System.Drawing.Size(85, 36);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "반복 여부";
+            // 
+            // comboRepeats_detailForm
+            // 
+            this.comboRepeats_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboRepeats_detailForm.FormattingEnabled = true;
+            this.comboRepeats_detailForm.Items.AddRange(new object[] {
+            "반복없음",
+            "매일",
+            "매주",
+            "매달",
+            "매년"});
+            this.comboRepeats_detailForm.Location = new System.Drawing.Point(3, 249);
+            this.comboRepeats_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboRepeats_detailForm.Name = "comboRepeats_detailForm";
+            this.comboRepeats_detailForm.Size = new System.Drawing.Size(205, 29);
+            this.comboRepeats_detailForm.TabIndex = 20;
+            this.comboRepeats_detailForm.Text = "매일";
+            // 
             // DetailForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 735);
+            this.ClientSize = new System.Drawing.Size(450, 469);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnEdit_detailForm);
             this.Controls.Add(this.btnDelete_detailForm);
-            this.Controls.Add(this.txtRepeats_detailForm);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboCategory_detailForm);
             this.Controls.Add(this.btnClose_detailForm);
-            this.Controls.Add(this.date_detailForm);
-            this.Controls.Add(this.txtDescription_detailForm);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Location = new System.Drawing.Point(1075, 50);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DetailForm1";
@@ -179,23 +201,24 @@
             this.Text = "일정 자세히 보기";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DetailForm1_FormClosing);
             this.Load += new System.EventHandler(this.DetailForm1_Load);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtRepeats_detailForm;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboCategory_detailForm;
         private System.Windows.Forms.Button btnClose_detailForm;
-        private System.Windows.Forms.DateTimePicker date_detailForm;
-        private System.Windows.Forms.TextBox txtDescription_detailForm;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDelete_detailForm;
         private System.Windows.Forms.Button btnEdit_detailForm;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDescription_deatilForm;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker date_detailForm;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboCategory_detailForm;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboRepeats_detailForm;
     }
 }

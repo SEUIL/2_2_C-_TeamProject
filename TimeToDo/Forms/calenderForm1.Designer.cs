@@ -51,8 +51,8 @@
             // calendar
             // 
             this.calendar.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.calendar.Location = new System.Drawing.Point(11, 40);
-            this.calendar.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.calendar.Location = new System.Drawing.Point(13, 50);
+            this.calendar.Margin = new System.Windows.Forms.Padding(11, 14, 11, 14);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 0;
             this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
@@ -64,11 +64,12 @@
             this.time,
             this.descriptionEvent,
             this.repeats});
+            this.listView1.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(11, 262);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listView1.Location = new System.Drawing.Point(13, 267);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(586, 468);
+            this.listView1.Size = new System.Drawing.Size(572, 342);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -97,10 +98,10 @@
             // 
             // addEvent
             // 
-            this.addEvent.Location = new System.Drawing.Point(489, 208);
-            this.addEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.addEvent.Location = new System.Drawing.Point(477, 210);
+            this.addEvent.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.addEvent.Name = "addEvent";
-            this.addEvent.Size = new System.Drawing.Size(100, 46);
+            this.addEvent.Size = new System.Drawing.Size(97, 47);
             this.addEvent.TabIndex = 4;
             this.addEvent.Text = "일정 추가";
             this.addEvent.UseVisualStyleBackColor = true;
@@ -108,10 +109,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(383, 208);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEdit.Location = new System.Drawing.Point(374, 210);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 46);
+            this.btnEdit.Size = new System.Drawing.Size(97, 47);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "일정 편집";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -119,10 +120,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(277, 208);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Location = new System.Drawing.Point(271, 210);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 46);
+            this.btnDelete.Size = new System.Drawing.Size(97, 47);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "일정 삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -130,10 +131,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(272, 93);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSearch.Location = new System.Drawing.Point(271, 167);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 26);
+            this.btnSearch.Size = new System.Drawing.Size(109, 32);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "일정 검색";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -141,10 +142,10 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(413, 79);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRefresh.Location = new System.Drawing.Point(395, 166);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(157, 27);
+            this.btnRefresh.Size = new System.Drawing.Size(179, 34);
             this.btnRefresh.TabIndex = 12;
             this.btnRefresh.Text = "전체 일정 불러오기";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -153,10 +154,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(639, 0);
+            this.label2.Font = new System.Drawing.Font("Noto Sans KR", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(726, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 29);
+            this.label2.Size = new System.Drawing.Size(147, 34);
             this.label2.TabIndex = 16;
             this.label2.Text = "앞으로의 일정";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -168,11 +169,12 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.listView2.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(610, 40);
-            this.listView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listView2.Location = new System.Drawing.Point(591, 50);
+            this.listView2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(384, 553);
+            this.listView2.Size = new System.Drawing.Size(425, 559);
             this.listView2.TabIndex = 17;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -200,31 +202,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(6, 10);
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(9, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 26);
-            this.label1.TabIndex = 23;
+            this.label1.Size = new System.Drawing.Size(142, 21);
+            this.label1.TabIndex = 30;
             this.label1.Text = "달력에서 날짜 선택 : ";
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(15, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 29);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "달력에서 선택";
-            // 
-            // label3
-            // 
-
-
-
             // 
             // calenderForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.label2);
@@ -235,9 +223,10 @@
             this.Controls.Add(this.addEvent);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.calendar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "calenderForm1";
-            this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
-            this.Size = new System.Drawing.Size(1074, 759);
+            this.Padding = new System.Windows.Forms.Padding(26, 94, 26, 31);
+            this.Size = new System.Drawing.Size(1030, 625);
             this.ResumeLayout(false);
             this.PerformLayout();
 

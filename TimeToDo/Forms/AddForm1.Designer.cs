@@ -30,10 +30,10 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescription_addForm = new System.Windows.Forms.TextBox();
-            this.date_addForm = new System.Windows.Forms.DateTimePicker();
+            this.date_detailForm = new System.Windows.Forms.DateTimePicker();
             this.btnSummit_addForm = new System.Windows.Forms.Button();
             this.comboCategory_addForm = new System.Windows.Forms.ComboBox();
-            this.comboRepeats_addForm = new System.Windows.Forms.ComboBox();
+            this.txtRepeats_detailForm = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,21 +61,21 @@
             this.txtDescription_addForm.Size = new System.Drawing.Size(305, 29);
             this.txtDescription_addForm.TabIndex = 14;
             // 
-            // date_addForm
+            // date_detailForm
             // 
-            this.date_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.date_addForm.Location = new System.Drawing.Point(3, 103);
-            this.date_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.date_addForm.Name = "date_addForm";
-            this.date_addForm.Size = new System.Drawing.Size(305, 29);
-            this.date_addForm.TabIndex = 16;
+            this.date_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.date_detailForm.Location = new System.Drawing.Point(3, 103);
+            this.date_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date_detailForm.Name = "date_detailForm";
+            this.date_detailForm.Size = new System.Drawing.Size(205, 29);
+            this.date_detailForm.TabIndex = 16;
             // 
             // btnSummit_addForm
             // 
             this.btnSummit_addForm.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSummit_addForm.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSummit_addForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSummit_addForm.Location = new System.Drawing.Point(231, 401);
+            this.btnSummit_addForm.Location = new System.Drawing.Point(321, 401);
             this.btnSummit_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSummit_addForm.Name = "btnSummit_addForm";
             this.btnSummit_addForm.Size = new System.Drawing.Size(103, 46);
@@ -96,25 +96,25 @@
             this.comboCategory_addForm.Location = new System.Drawing.Point(3, 176);
             this.comboCategory_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboCategory_addForm.Name = "comboCategory_addForm";
-            this.comboCategory_addForm.Size = new System.Drawing.Size(305, 29);
+            this.comboCategory_addForm.Size = new System.Drawing.Size(205, 29);
             this.comboCategory_addForm.TabIndex = 18;
             // 
-            // comboRepeats_addForm
+            // txtRepeats_detailForm
             // 
-            this.comboRepeats_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboRepeats_addForm.FormattingEnabled = true;
-            this.comboRepeats_addForm.Items.AddRange(new object[] {
+            this.txtRepeats_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtRepeats_detailForm.FormattingEnabled = true;
+            this.txtRepeats_detailForm.Items.AddRange(new object[] {
             "반복없음",
             "매일",
             "매주",
             "매달",
             "매년"});
-            this.comboRepeats_addForm.Location = new System.Drawing.Point(3, 249);
-            this.comboRepeats_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboRepeats_addForm.Name = "comboRepeats_addForm";
-            this.comboRepeats_addForm.Size = new System.Drawing.Size(305, 29);
-            this.comboRepeats_addForm.TabIndex = 20;
-            this.comboRepeats_addForm.Text = "매일";
+            this.txtRepeats_detailForm.Location = new System.Drawing.Point(3, 249);
+            this.txtRepeats_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRepeats_detailForm.Name = "txtRepeats_detailForm";
+            this.txtRepeats_detailForm.Size = new System.Drawing.Size(205, 29);
+            this.txtRepeats_detailForm.TabIndex = 20;
+            this.txtRepeats_detailForm.Text = "매일";
             // 
             // label1
             // 
@@ -153,22 +153,22 @@
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.Controls.Add(this.txtDescription_addForm);
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.date_addForm);
+            this.flowLayoutPanel1.Controls.Add(this.date_detailForm);
             this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Controls.Add(this.comboCategory_addForm);
             this.flowLayoutPanel1.Controls.Add(this.label4);
-            this.flowLayoutPanel1.Controls.Add(this.comboRepeats_addForm);
+            this.flowLayoutPanel1.Controls.Add(this.txtRepeats_detailForm);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 78);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(311, 316);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(398, 316);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
             // AddForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 735);
+            this.ClientSize = new System.Drawing.Size(450, 466);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnSummit_addForm);
             this.Location = new System.Drawing.Point(1075, 50);
@@ -187,10 +187,10 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescription_addForm;
-        private System.Windows.Forms.DateTimePicker date_addForm;
+        private System.Windows.Forms.DateTimePicker date_detailForm;
         private System.Windows.Forms.Button btnSummit_addForm;
         private System.Windows.Forms.ComboBox comboCategory_addForm;
-        private System.Windows.Forms.ComboBox comboRepeats_addForm;
+        private System.Windows.Forms.ComboBox txtRepeats_detailForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

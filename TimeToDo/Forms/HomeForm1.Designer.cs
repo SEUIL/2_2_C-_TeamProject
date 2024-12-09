@@ -50,7 +50,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomeForm1";
             this.Padding = new System.Windows.Forms.Padding(21, 60, 21, 20);
-            this.Size = new System.Drawing.Size(929, 556);
+            this.Size = new System.Drawing.Size(1030, 625);
             this.ResumeLayout(false);
             this.PerformLayout();
 
