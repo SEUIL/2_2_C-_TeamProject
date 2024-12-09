@@ -75,10 +75,7 @@ namespace TimeToDo.Forms
         {
             LoadChildControl(new HomeForm1());
         }
-        //private void CalendarBtn_Click(object sender, EventArgs e)
-        //{
-        //    LoadChildControl(new CalendarForm1());
-        //}
+        
         private void TodoBtn_Click(object sender, EventArgs e)
         {
             LoadChildControl(new TodoForm1());

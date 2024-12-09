@@ -32,6 +32,7 @@ namespace TimeToDo.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.SideMenu = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.TodoBtn = new System.Windows.Forms.Button();
             this.CalendarBtn = new System.Windows.Forms.Button();
             this.HomeBtn = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@ namespace TimeToDo.Forms
             // SideMenu
             // 
             this.SideMenu.BackColor = System.Drawing.SystemColors.GrayText;
+            this.SideMenu.Controls.Add(this.label1);
             this.SideMenu.Controls.Add(this.TodoBtn);
             this.SideMenu.Controls.Add(this.CalendarBtn);
             this.SideMenu.Controls.Add(this.HomeBtn);
@@ -54,6 +56,15 @@ namespace TimeToDo.Forms
             this.SideMenu.Name = "SideMenu";
             this.SideMenu.Size = new System.Drawing.Size(175, 586);
             this.SideMenu.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(63, 309);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // TodoBtn
             // 
@@ -148,10 +159,13 @@ namespace TimeToDo.Forms
             this.Text = "TimeManager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DesignForm1_FormClosing);
             this.SideMenu.ResumeLayout(false);
+            this.SideMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Label label1;
     }
 }
