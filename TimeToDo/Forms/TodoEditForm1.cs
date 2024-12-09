@@ -5,7 +5,7 @@ using Oracle.DataAccess.Client;
 
 namespace TimeToDo.Forms
 {
-    public partial class TodoEditForm1 : Form
+    public partial class TodoEditForm1 : MetroFramework.Forms.MetroForm
     {
         private readonly string _todoId; // 문자열형 필드 선언
                                          // 업데이트할 할 일의 ID

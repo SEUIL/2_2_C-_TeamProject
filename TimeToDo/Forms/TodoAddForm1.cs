@@ -5,7 +5,7 @@ using static TimeToDo.LoginForm1;
 
 namespace TimeToDo.Forms
 {
-    public partial class TodoAddForm1 : Form
+    public partial class TodoAddForm1 : MetroFramework.Forms.MetroForm
     {
         private TodoForm1 todoForm; // 부모 폼 참조
         private DBClass dbClass = new DBClass(); // DB 클래스 객체 초기화

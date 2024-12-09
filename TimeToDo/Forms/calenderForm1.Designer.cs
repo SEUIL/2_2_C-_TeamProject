@@ -39,7 +39,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.moveTodolist = new System.Windows.Forms.Button();
             this.username = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -54,9 +53,9 @@
             // 
             // calendar
             // 
-            this.calendar.CalendarDimensions = new System.Drawing.Size(3, 1);
-            this.calendar.Font = new System.Drawing.Font("굴림", 9F);
-            this.calendar.Location = new System.Drawing.Point(24, 105);
+            this.calendar.CalendarDimensions = new System.Drawing.Size(2, 1);
+            this.calendar.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.calendar.Location = new System.Drawing.Point(11, 68);
             this.calendar.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 0;
@@ -70,10 +69,10 @@
             this.descriptionEvent,
             this.repeats});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(20, 393);
+            this.listView1.Location = new System.Drawing.Point(11, 340);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(766, 283);
+            this.listView1.Size = new System.Drawing.Size(568, 336);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -102,7 +101,7 @@
             // 
             // addEvent
             // 
-            this.addEvent.Location = new System.Drawing.Point(20, 685);
+            this.addEvent.Location = new System.Drawing.Point(11, 684);
             this.addEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addEvent.Name = "addEvent";
             this.addEvent.Size = new System.Drawing.Size(93, 46);
@@ -113,7 +112,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(120, 685);
+            this.btnEdit.Location = new System.Drawing.Point(99, 684);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(93, 46);
@@ -124,7 +123,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(219, 685);
+            this.btnDelete.Location = new System.Drawing.Point(198, 684);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 46);
@@ -135,7 +134,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(547, 348);
+            this.btnSearch.Location = new System.Drawing.Point(339, 290);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(89, 42);
@@ -146,7 +145,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(642, 349);
+            this.btnRefresh.Location = new System.Drawing.Point(434, 290);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(145, 40);
@@ -155,21 +154,10 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // moveTodolist
-            // 
-            this.moveTodolist.Location = new System.Drawing.Point(642, 685);
-            this.moveTodolist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.moveTodolist.Name = "moveTodolist";
-            this.moveTodolist.Size = new System.Drawing.Size(145, 52);
-            this.moveTodolist.TabIndex = 13;
-            this.moveTodolist.Text = "ToDoList 이동";
-            this.moveTodolist.UseVisualStyleBackColor = true;
-            this.moveTodolist.Click += new System.EventHandler(this.moveTodolist_Click);
-            // 
             // username
             // 
             this.username.AutoSize = true;
-            this.username.Location = new System.Drawing.Point(105, 72);
+            this.username.Location = new System.Drawing.Point(548, 25);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(45, 15);
             this.username.TabIndex = 14;
@@ -179,7 +167,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(940, 68);
+            this.label2.Location = new System.Drawing.Point(730, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 36);
             this.label2.TabIndex = 16;
@@ -194,10 +182,10 @@
             this.columnHeader3,
             this.columnHeader4});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(801, 106);
+            this.listView2.Location = new System.Drawing.Point(599, 40);
             this.listView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(443, 624);
+            this.listView2.Size = new System.Drawing.Size(438, 690);
             this.listView2.TabIndex = 17;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -224,7 +212,7 @@
             // 
             // btnLogout_CalendarForm
             // 
-            this.btnLogout_CalendarForm.Location = new System.Drawing.Point(13, 65);
+            this.btnLogout_CalendarForm.Location = new System.Drawing.Point(450, 17);
             this.btnLogout_CalendarForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout_CalendarForm.Name = "btnLogout_CalendarForm";
             this.btnLogout_CalendarForm.Size = new System.Drawing.Size(78, 30);
@@ -236,8 +224,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(310, 68);
+            this.label1.Location = new System.Drawing.Point(17, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 36);
             this.label1.TabIndex = 19;
@@ -246,8 +235,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(322, 353);
+            this.label3.Location = new System.Drawing.Point(250, 296);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 36);
             this.label3.TabIndex = 20;
@@ -257,14 +247,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 746);
+            this.AutoSize = true;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogout_CalendarForm);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.username);
-            this.Controls.Add(this.moveTodolist);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
@@ -275,7 +264,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "calenderForm1";
             this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.calenderForm1_FormClosing);
+            this.Size = new System.Drawing.Size(1063, 759);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +286,6 @@
         private System.Windows.Forms.Button BtnExit;
 
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button moveTodolist;
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listView2;

@@ -46,7 +46,6 @@ namespace TimeToDo.Forms
             this.자기계발ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.취미생활ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.SearchButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -97,7 +96,7 @@ namespace TimeToDo.Forms
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(903, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1032, 29);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -188,14 +187,14 @@ namespace TimeToDo.Forms
             // 
             // BtnExit
             // 
-            this.BtnExit.BackColor = System.Drawing.Color.White;
-            this.BtnExit.Location = new System.Drawing.Point(788, 457);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(105, 22);
-            this.BtnExit.TabIndex = 13;
-            this.BtnExit.Text = "캘린더 이동";
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            //this.BtnExit.BackColor = System.Drawing.Color.White;
+            //this.BtnExit.Location = new System.Drawing.Point(788, 457);
+            //this.BtnExit.Name = "BtnExit";
+            //this.BtnExit.Size = new System.Drawing.Size(105, 22);
+            //this.BtnExit.TabIndex = 13;
+            //this.BtnExit.Text = "캘린더 이동";
+            //this.BtnExit.UseVisualStyleBackColor = false;
+            //this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // SearchButton
             // 
@@ -300,11 +299,11 @@ namespace TimeToDo.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.AddButton);
@@ -327,7 +326,6 @@ namespace TimeToDo.Forms
         private System.Windows.Forms.ColumnHeader Check;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button BtnExit;
         private ToolStripMenuItem 중요도ToolStripMenuItem1;
         private ToolStripMenuItem 완료여부ToolStripMenuItem1;
         private ToolStripMenuItem 카테고리별ToolStripMenuItem;
