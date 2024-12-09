@@ -274,13 +274,13 @@
             this.Controls.Add(this.calendar);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "calenderForm1";
-<<<<<<< HEAD
+//<<<<<<< HEAD
             this.Text = "calenderForm1";
             
-=======
+//=======
             this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
             //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.calenderForm1_FormClosing);
->>>>>>> origin/UIdesigning
+//>>>>>>> origin/UIdesigning
             this.ResumeLayout(false);
             this.PerformLayout();
 
