@@ -44,17 +44,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(3, 138);
+            this.label2.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(3, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 32);
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label2.Size = new System.Drawing.Size(80, 36);
             this.label2.TabIndex = 9;
             this.label2.Text = "카테고리";
             // 
             // txtDescription_addForm
             // 
             this.txtDescription_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtDescription_addForm.Location = new System.Drawing.Point(3, 36);
+            this.txtDescription_addForm.Location = new System.Drawing.Point(3, 30);
             this.txtDescription_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescription_addForm.Name = "txtDescription_addForm";
             this.txtDescription_addForm.Size = new System.Drawing.Size(305, 29);
@@ -63,7 +64,7 @@
             // date_addForm
             // 
             this.date_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.date_addForm.Location = new System.Drawing.Point(3, 105);
+            this.date_addForm.Location = new System.Drawing.Point(3, 103);
             this.date_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.date_addForm.Name = "date_addForm";
             this.date_addForm.Size = new System.Drawing.Size(305, 29);
@@ -92,7 +93,7 @@
             "사적 일정",
             "자기 개발",
             "취미 생활"});
-            this.comboCategory_addForm.Location = new System.Drawing.Point(3, 174);
+            this.comboCategory_addForm.Location = new System.Drawing.Point(3, 176);
             this.comboCategory_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboCategory_addForm.Name = "comboCategory_addForm";
             this.comboCategory_addForm.Size = new System.Drawing.Size(305, 29);
@@ -108,7 +109,7 @@
             "매주",
             "매달",
             "매년"});
-            this.comboRepeats_addForm.Location = new System.Drawing.Point(3, 237);
+            this.comboRepeats_addForm.Location = new System.Drawing.Point(3, 249);
             this.comboRepeats_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboRepeats_addForm.Name = "comboRepeats_addForm";
             this.comboRepeats_addForm.Size = new System.Drawing.Size(305, 29);
@@ -118,30 +119,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(3, 69);
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(3, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 32);
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label1.Size = new System.Drawing.Size(46, 36);
             this.label1.TabIndex = 21;
             this.label1.Text = "시간";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 32);
+            this.label3.Size = new System.Drawing.Size(85, 26);
             this.label3.TabIndex = 22;
             this.label3.Text = "일정 상세";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Sans KR", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(3, 201);
+            this.label4.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(3, 209);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 32);
+            this.label4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label4.Size = new System.Drawing.Size(85, 36);
             this.label4.TabIndex = 23;
             this.label4.Text = "반복 여부";
             // 
@@ -165,9 +168,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 476);
+            this.ClientSize = new System.Drawing.Size(450, 735);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnSummit_addForm);
+            this.Location = new System.Drawing.Point(1075, 50);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddForm1";
             this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);

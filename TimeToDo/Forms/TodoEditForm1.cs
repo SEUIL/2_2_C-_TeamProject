@@ -11,7 +11,7 @@ using Oracle.DataAccess.Client;
 
 namespace TimeToDo.Forms
 {
-    public partial class TodoEditForm1 : Form
+    public partial class TodoEditForm1 : MetroFramework.Forms.MetroForm
     {
         private int _todoId; // 업데이트할 할 일의 ID
         private readonly OracleConnection _oracleConnection; // Oracle 연결

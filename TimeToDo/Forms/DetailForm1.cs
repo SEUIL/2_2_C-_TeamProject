@@ -13,7 +13,7 @@ using static TimeToDo.LoginForm1;
 
 namespace TimeToDo.Forms
 {
-    public partial class DetailForm1 : Form
+    public partial class DetailForm1 : MetroFramework.Forms.MetroForm
     {
         private int selectedId;
         private string selectedCategory;
