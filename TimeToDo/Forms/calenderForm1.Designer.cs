@@ -154,9 +154,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(730, 0);
+            this.label2.Location = new System.Drawing.Point(639, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 36);
+            this.label2.Size = new System.Drawing.Size(127, 29);
             this.label2.TabIndex = 16;
             this.label2.Text = "앞으로의 일정";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -172,7 +172,7 @@
             this.listView2.Location = new System.Drawing.Point(610, 40);
             this.listView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(438, 690);
+            this.listView2.Size = new System.Drawing.Size(384, 553);
             this.listView2.TabIndex = 17;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -206,10 +206,23 @@
             this.label1.Size = new System.Drawing.Size(172, 26);
             this.label1.TabIndex = 23;
             this.label1.Text = "달력에서 날짜 선택 : ";
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(15, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 29);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "달력에서 선택";
+            // 
+            // label3
+            // 
+
+
+
             // 
             // calenderForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.label1);
@@ -222,7 +235,6 @@
             this.Controls.Add(this.addEvent);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.calendar);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "calenderForm1";
             this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
             this.Size = new System.Drawing.Size(1074, 759);

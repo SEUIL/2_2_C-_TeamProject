@@ -11,6 +11,7 @@ namespace TimeToDo.Forms
         {
             // 로그인된 사용자 이름 설정
             username.Text = $"환영합니다 {Session.LoggedInUserId}!";
+            LoadChildControl(new HomeForm1());
         }
 
 
@@ -105,6 +106,11 @@ namespace TimeToDo.Forms
 
         }
 
-       
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            LoginForm1 loginForm1 = new LoginForm1();
+            loginForm1.Show();
+            this.Hide(); 
+        }
     }
 }
