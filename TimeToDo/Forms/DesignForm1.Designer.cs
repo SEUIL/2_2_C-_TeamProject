@@ -32,13 +32,13 @@ namespace TimeToDo.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.SideMenu = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.TodoBtn = new System.Windows.Forms.Button();
             this.CalendarBtn = new System.Windows.Forms.Button();
             this.HomeBtn = new System.Windows.Forms.Button();
             this.SideCloseCheck = new System.Windows.Forms.CheckBox();
             this.Sliding = new System.Windows.Forms.Timer(this.components);
             this.childFormPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.SideMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,15 @@ namespace TimeToDo.Forms
             this.SideMenu.Name = "SideMenu";
             this.SideMenu.Size = new System.Drawing.Size(200, 733);
             this.SideMenu.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(63, 309);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // TodoBtn
             // 
@@ -135,15 +144,6 @@ namespace TimeToDo.Forms
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Size = new System.Drawing.Size(1050, 733);
             this.childFormPanel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 152);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             // 
             // DesignForm1
             // 

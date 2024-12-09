@@ -15,7 +15,7 @@ using static TimeToDo.LoginForm1;
 namespace TimeToDo
 {
 
-    public partial class calenderForm1 : MetroFramework.Forms.MetroForm
+    public partial class calenderForm1 : MetroFramework.Controls.MetroUserControl
     {
         public ListView getListView1
         {
@@ -513,6 +513,11 @@ namespace TimeToDo
             LoginForm1 loginForm1 = new LoginForm1();
             loginForm1.Show();
             this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

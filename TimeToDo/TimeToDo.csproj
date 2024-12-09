@@ -85,7 +85,7 @@
       <DependentUpon>AddForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\calenderForm1.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\calenderForm1.Designer.cs">
       <DependentUpon>calenderForm1.cs</DependentUpon>
