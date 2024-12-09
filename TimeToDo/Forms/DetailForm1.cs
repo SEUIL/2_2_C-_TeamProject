@@ -35,8 +35,8 @@ namespace TimeToDo.Forms
 
             comboCategory_detailForm.Text = selectedCategory;
             date_detailForm.Value = DateTime.Parse(selectedTime);
-            txtDescription_detailForm.Text = selectedDescription;
-            txtRepeats_detailForm.Text = selectedRepeats;
+            txtDescription_deatilForm.Text = selectedDescription;
+            comboRepeats_detailForm.Text = selectedRepeats;
 
         }
 
@@ -70,8 +70,8 @@ namespace TimeToDo.Forms
                     DataRow row = dataSet.Tables[0].Rows[0];
                     comboCategory_detailForm.Text = row["Category"].ToString();
                     date_detailForm.Value = DateTime.Parse(row["Time"].ToString());
-                    txtDescription_detailForm.Text = row["Description"].ToString();
-                    txtRepeats_detailForm.Text = row["Repeats"].ToString();
+                    txtDescription_deatilForm.Text = row["Description"].ToString();
+                    comboRepeats_detailForm.Text = row["Repeats"].ToString();
                 }
                 else
                 {

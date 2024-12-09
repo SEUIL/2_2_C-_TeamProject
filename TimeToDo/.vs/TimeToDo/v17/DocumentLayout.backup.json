@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\lg\\documents\\2_2_c-_teamproject\\timetodo\\forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\lg\\documents\\2_2_c-_teamproject\\timetodo\\forms\\detailform1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\lg\\documents\\2_2_c-_teamproject\\timetodo\\forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\lg\\documents\\2_2_c-_teamproject\\timetodo\\forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\lg\\documents\\2_2_c-_teamproject\\timetodo\\forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -70,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "calenderForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\calenderForm1.cs",
               "RelativeDocumentMoniker": "Forms\\calenderForm1.cs",
@@ -87,20 +91,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DetailForm1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\DetailForm1.Designer.cs",
+              "ToolTip": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.Designer.cs",
+              "RelativeToolTip": "Forms\\DetailForm1.Designer.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAYwI8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T19:19:25.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DetailForm1.cs",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs",
               "RelativeDocumentMoniker": "Forms\\DetailForm1.cs",
               "ToolTip": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs",
               "RelativeToolTip": "Forms\\DetailForm1.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCYAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T19:10:41.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AddForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\AddForm1.cs",
               "RelativeDocumentMoniker": "Forms\\AddForm1.cs",
@@ -112,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DesignForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DesignForm1.cs",
               "RelativeDocumentMoniker": "Forms\\DesignForm1.cs",
@@ -124,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DetailForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs",
               "RelativeDocumentMoniker": "Forms\\DetailForm1.cs",
@@ -140,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TodoSearchForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoSearchForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoSearchForm1.cs",
@@ -152,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoginForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm1.cs",
@@ -164,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TodoEditForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoEditForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoEditForm1.cs",
@@ -176,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "SearchForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\SearchForm1.cs",
               "RelativeDocumentMoniker": "Forms\\SearchForm1.cs",
@@ -188,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "SignUpForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\SignUpForm1.cs",
               "RelativeDocumentMoniker": "Forms\\SignUpForm1.cs",
@@ -200,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "HomeForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\HomeForm1.cs",
               "RelativeDocumentMoniker": "Forms\\HomeForm1.cs",
@@ -212,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "editForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\editForm1.cs",
               "RelativeDocumentMoniker": "Forms\\editForm1.cs",
@@ -224,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "TodoForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoForm1.cs",
@@ -236,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "TodoAddForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoAddForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoAddForm1.cs",
@@ -248,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DesignForm1.cs",
               "DocumentMoniker": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DesignForm1.cs",
               "RelativeDocumentMoniker": "Forms\\DesignForm1.cs",
