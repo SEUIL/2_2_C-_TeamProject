@@ -15,7 +15,7 @@ using static TimeToDo.LoginForm1;
 namespace TimeToDo
 {
 
-    public partial class calenderForm1 : MetroFramework.Forms.MetroForm
+    public partial class calenderForm1 : MetroFramework.Controls.MetroUserControl
     {
         public ListView getListView1
         {
@@ -384,11 +384,7 @@ namespace TimeToDo
             this.Hide();
         }
 
-        private void calenderForm1_FormClosing(object sender, FormClosingEventArgs e)//프로그램 종료기능
-        {
-            // 프로그램 종료
-            Application.Exit();
-        }
+        
 
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)//열 정렬기능
         {

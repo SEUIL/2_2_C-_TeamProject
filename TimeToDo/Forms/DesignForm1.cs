@@ -90,6 +90,9 @@ namespace TimeToDo.Forms
             Application.Exit(); // 애플리케이션 종료
         }
 
-       
+        private void CalendarBtn_Click(object sender, EventArgs e)
+        {
+            LoadChildControl(new calenderForm1());
+        }
     }
 }

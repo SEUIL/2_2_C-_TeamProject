@@ -263,7 +263,7 @@
             this.Controls.Add(this.calendar);
             this.Name = "calenderForm1";
             this.Text = "calenderForm1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.calenderForm1_FormClosing);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
