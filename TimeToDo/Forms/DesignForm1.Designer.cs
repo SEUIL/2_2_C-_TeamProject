@@ -38,12 +38,14 @@ namespace TimeToDo.Forms
             this.SideCloseCheck = new System.Windows.Forms.CheckBox();
             this.Sliding = new System.Windows.Forms.Timer(this.components);
             this.childFormPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SideMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideMenu
             // 
             this.SideMenu.BackColor = System.Drawing.SystemColors.GrayText;
+            this.SideMenu.Controls.Add(this.label1);
             this.SideMenu.Controls.Add(this.TodoBtn);
             this.SideMenu.Controls.Add(this.CalendarBtn);
             this.SideMenu.Controls.Add(this.HomeBtn);
@@ -134,6 +136,15 @@ namespace TimeToDo.Forms
             this.childFormPanel.Size = new System.Drawing.Size(1050, 733);
             this.childFormPanel.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
             // DesignForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -147,10 +158,13 @@ namespace TimeToDo.Forms
             this.Text = "TimeManager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DesignForm1_FormClosing);
             this.SideMenu.ResumeLayout(false);
+            this.SideMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Label label1;
     }
 }
