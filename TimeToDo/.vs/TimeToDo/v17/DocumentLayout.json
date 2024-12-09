@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\calenderform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\designform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +27,24 @@
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\designform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\detailform1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\searchform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\searchform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\loginform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\forms\\todoform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -47,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\todoform1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|c:\\users\\dlgus\\documents\\2_2_c-_teamproject\\timetodo\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\forms\\todoaddform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\todoaddform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -61,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\addform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|solutionrelative:forms\\detailform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DFB5EAC-2801-4572-A740-CAAEF8AD2FE3}|TimeToDo.csproj|C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\forms\\homeform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,36 +90,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LoginForm1.cs",
-              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm1.cs",
-              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs",
-              "RelativeToolTip": "Forms\\LoginForm1.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAgwGYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T17:19:31.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginForm1.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm1.cs",
-              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "Forms\\LoginForm1.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T17:18:25.371Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "DesignForm1.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DesignForm1.cs",
               "RelativeDocumentMoniker": "Forms\\DesignForm1.cs",
@@ -120,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DesignForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DesignForm1.cs",
               "RelativeDocumentMoniker": "Forms\\DesignForm1.cs",
@@ -132,20 +119,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "calenderForm1.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\calenderForm1.cs",
               "RelativeDocumentMoniker": "Forms\\calenderForm1.cs",
               "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\calenderForm1.cs",
               "RelativeToolTip": "Forms\\calenderForm1.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAqwCYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAANYBAAAAAAAAAAAqwPgBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T15:47:30.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "calenderForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\calenderForm1.cs",
               "RelativeDocumentMoniker": "Forms\\calenderForm1.cs",
@@ -157,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "DBClass.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\DBClass.cs",
               "RelativeDocumentMoniker": "DBClass.cs",
@@ -170,7 +157,69 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DetailForm1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\DetailForm1.cs",
+              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Forms\\DetailForm1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T18:31:48.771Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DetailForm1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\DetailForm1.Designer.cs",
+              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.Designer.cs",
+              "RelativeToolTip": "Forms\\DetailForm1.Designer.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAuwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T17:44:05.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "SearchForm1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\SearchForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\SearchForm1.cs",
+              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\SearchForm1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Forms\\SearchForm1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T17:41:23.477Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DetailForm1.cs",
+              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\DetailForm1.cs",
+              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs",
+              "RelativeToolTip": "Forms\\DetailForm1.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAqwGoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T17:42:57.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginForm1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm1.cs",
+              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Forms\\LoginForm1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T17:18:25.371Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "TodoEditForm1.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoEditForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoEditForm1.cs",
@@ -183,7 +232,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
+              "Title": "LoginForm1.cs",
+              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm1.cs",
+              "ToolTip": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\LoginForm1.cs",
+              "RelativeToolTip": "Forms\\LoginForm1.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAgwGYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T17:19:31.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "TodoEditForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoEditForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoEditForm1.cs",
@@ -195,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "TodoForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoForm1.cs",
@@ -207,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "TodoForm1.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoForm1.cs",
@@ -220,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "TodoForm1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoForm1.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\TodoForm1.Designer.cs",
@@ -233,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "TodoAddForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoAddForm1.cs",
               "RelativeDocumentMoniker": "Forms\\TodoAddForm1.cs",
@@ -244,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "TodoAddForm1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\TodoAddForm1.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\TodoAddForm1.Designer.cs",
@@ -256,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "AddForm1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\AddForm1.cs",
               "RelativeDocumentMoniker": "Forms\\AddForm1.cs",
@@ -267,18 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DetailForm1.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs",
-              "RelativeDocumentMoniker": "Forms\\DetailForm1.cs",
-              "ToolTip": "C:\\Users\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "..\\..\\..\\..\\LG\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\DetailForm1.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T18:31:48.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "HomeForm1.cs",
               "DocumentMoniker": "C:\\Users\\dlgus\\Documents\\2_2_C-_TeamProject\\TimeToDo\\Forms\\HomeForm1.cs",
               "RelativeDocumentMoniker": "Forms\\HomeForm1.cs",

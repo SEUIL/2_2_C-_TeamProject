@@ -104,13 +104,13 @@ namespace TimeToDo.Forms
         private void btnClose_detailForm_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK; // 성공적인 업데이트 표시
-            this.Close();
+            
         }
 
         private void DetailForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.DialogResult = DialogResult.OK; // 성공적인 업데이트 표시
-            this.Close();
+            
         }
     }
 }
