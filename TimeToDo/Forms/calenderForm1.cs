@@ -36,9 +36,7 @@ namespace TimeToDo
 
         private void CalendarForm1_Load(object sender, EventArgs e)//캘린더 폼 로드
         {
-            // 로그인된 사용자 이름 설정
-            username.Text = $"접속한 사용자 : {Session.LoggedInUserId}";
-
+            
             // 폼 로드 시 "앞으로의 일정"에 전체 일정 표시
             btnRefresh_Click(sender, e);
             LoadUpcomingEvents();
@@ -504,12 +502,7 @@ namespace TimeToDo
             }
         }
 
-        private void btnLogout_CalendarForm_Click(object sender, EventArgs e)
-        {
-            LoginForm1 loginForm1 = new LoginForm1();
-            loginForm1.Show();
-            this.Hide();
-        }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
