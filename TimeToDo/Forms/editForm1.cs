@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TimeToDo.Forms
 {
-    public partial class editForm1 : Form
+    public partial class editForm1 : MetroFramework.Forms.MetroForm
     {
         private int selectedId;
         private string selectedCategory;
