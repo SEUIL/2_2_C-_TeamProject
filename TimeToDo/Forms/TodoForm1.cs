@@ -85,13 +85,7 @@ namespace TimeToDo.Forms
             listView.CheckBoxes = true;
             listView.View = View.Details;
 
-            // 열 헤더 추가
             
-            listView.Columns.Add("Task", 200);
-            listView.Columns.Add("Category", 100);
-            listView.Columns.Add("Priority", 100);
-            listView.Columns.Add("Todo Date", 120);
-            listView.Columns.Add("Deadline", 120);
         }
 
 
@@ -222,32 +216,26 @@ namespace TimeToDo.Forms
             // 선택된 항목 가져오기
             ListViewItem selectedItem = listView.SelectedItems[0];
 
-            // 선택된 항목의 ID를 Tag 속성에서 가져오기
-            if (selectedItem.Tag == null || !int.TryParse(selectedItem.Tag.ToString(), out int todoId))
+            // 선택된 항목의 ID를 Tag에서 가져오기
+            if (selectedItem.Tag == null)
             {
                 MessageBox.Show("유효하지 않은 ID입니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Task, Category, Priority 추출
+            string todoId = selectedItem.Tag.ToString(); // 문자열로 처리
+
             string task = selectedItem.SubItems[1].Text;
             string category = selectedItem.SubItems[2].Text;
             string priority = selectedItem.SubItems[3].Text;
 
-            MessageBox.Show($"TodoDate 값: {selectedItem.SubItems[4].Text}, Deadline 값: {selectedItem.SubItems[5].Text}");
-
-
-            // TodoDate와 Deadline 값 검증 후 변환
-            DateTime todoDate;
-            DateTime deadline;
-
-            if (!DateTime.TryParse(selectedItem.SubItems[4].Text, out todoDate))
+            if (!DateTime.TryParse(selectedItem.SubItems[4].Text, out DateTime todoDate))
             {
                 MessageBox.Show("유효하지 않은 시작 날짜 형식입니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!DateTime.TryParse(selectedItem.SubItems[5].Text, out deadline))
+            if (!DateTime.TryParse(selectedItem.SubItems[5].Text, out DateTime deadline))
             {
                 MessageBox.Show("유효하지 않은 마감 날짜 형식입니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -257,6 +245,7 @@ namespace TimeToDo.Forms
             TodoEditForm1 editForm = new TodoEditForm1(todoId, task, category, priority, todoDate, deadline, this);
             editForm.ShowDialog();
         }
+
 
         private void 공적일정ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -743,6 +732,38 @@ catch (Exception ex)
                 MessageBox.Show($"투두리스트 데이터를 로드하는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void UpdateListViewItem(string todoId, string task, string category, string priority, DateTime todoDate, DateTime deadline, bool isCompleted)
+        {
+            try
+            {
+                // ListView에서 특정 ID를 가진 항목 찾기
+                foreach (ListViewItem item in listView.Items)
+                {
+                    if (item.Tag != null && item.Tag.ToString() == todoId)
+                    {
+                        // 데이터 갱신
+                        if (item.SubItems.Count > 1) item.SubItems[1].Text = task;
+                        if (item.SubItems.Count > 2) item.SubItems[2].Text = category;
+                        if (item.SubItems.Count > 3) item.SubItems[3].Text = priority;
+                        if (item.SubItems.Count > 4) item.SubItems[4].Text = todoDate.ToString("yyyy-MM-dd");
+                        if (item.SubItems.Count > 5) item.SubItems[5].Text = deadline.ToString("yyyy-MM-dd");
+                        item.Checked = isCompleted;
+
+                        // 항목 수정 후 종료
+                        return;
+                    }
+                }
+
+                // 항목을 찾지 못한 경우
+                MessageBox.Show($"ID가 {todoId}인 항목을 찾을 수 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"항목 업데이트 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

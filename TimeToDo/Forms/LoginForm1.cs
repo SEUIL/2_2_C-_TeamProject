@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
+using TimeToDo.Forms;
 
 namespace TimeToDo
 {
@@ -48,7 +49,7 @@ namespace TimeToDo
                 Session.LoggedInUserId = userId; // 로그인한 사용자 ID 저장
 
                 // calendarForm으로 이동
-                calenderForm1 calenderForm1 = new calenderForm1();
+                DesignForm1 calenderForm1 = new DesignForm1();
                 calenderForm1.Show();
                 this.Hide();
             }
