@@ -99,7 +99,7 @@
             // addEvent
             // 
             this.addEvent.BackColor = System.Drawing.Color.DodgerBlue;
-            this.addEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.addEvent.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addEvent.Location = new System.Drawing.Point(477, 210);
             this.addEvent.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -113,7 +113,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.SlateGray;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnEdit.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEdit.Location = new System.Drawing.Point(374, 210);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -127,7 +127,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDelete.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDelete.Location = new System.Drawing.Point(271, 210);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -141,7 +141,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSearch.Location = new System.Drawing.Point(271, 167);
+            this.btnSearch.Location = new System.Drawing.Point(275, 167);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(109, 32);
@@ -153,10 +153,10 @@
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(395, 166);
+            this.btnRefresh.Location = new System.Drawing.Point(436, 167);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(179, 34);
+            this.btnRefresh.Size = new System.Drawing.Size(138, 34);
             this.btnRefresh.TabIndex = 12;
             this.btnRefresh.Text = "전체 일정 불러오기";
             this.btnRefresh.UseVisualStyleBackColor = false;
