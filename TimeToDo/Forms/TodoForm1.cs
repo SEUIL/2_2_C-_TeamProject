@@ -774,5 +774,63 @@ catch (Exception ex)
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ListView 초기화
+                listView.Items.Clear();
+
+                // DateTimePicker1에서 선택된 날짜 가져오기
+                DateTime selectedDate = dateTimePicker1.Value;
+
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline, IS_COMPLETED 
+                     FROM Todolist 
+                     WHERE USERID = :UserId AND TodoDate >= :SelectedDate ORDER BY TodoDate ASC";
+
+                var parameters = new Dictionary<string, object>
+                {
+                    { ":UserId", Session.LoggedInUserId },
+                    { ":SelectedDate", selectedDate }
+                };
+
+                // 데이터베이스에서 데이터 가져오기
+                DBClass dbClass = new DBClass();
+                DataSet dataSet = dbClass.DB_Open(query, parameters);
+                if (dataSet.Tables[0].Rows.Count == 0)
+                {
+                    return; // 데이터가 없으면 로직 종료
+                }
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    // ListView에 항목 추가
+                    ListViewItem item = new ListViewItem(""); // ID 추가
+                    item.SubItems.Add(row["Task"] != DBNull.Value ? row["Task"].ToString() : "");
+                    item.SubItems.Add(row["Category"] != DBNull.Value ? row["Category"].ToString() : "");
+                    item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
+                    item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
+                    item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
+
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+
+                    listView.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"투두리스트 데이터를 로드하는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
