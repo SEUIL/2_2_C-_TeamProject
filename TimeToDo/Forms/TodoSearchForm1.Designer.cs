@@ -46,7 +46,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(113, 167);
+            this.dateTimePicker2.Location = new System.Drawing.Point(363, 124);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(182, 29);
@@ -54,7 +54,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 132);
+            this.dateTimePicker1.Location = new System.Drawing.Point(113, 124);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(182, 29);
@@ -65,9 +65,9 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Noto Sans KR", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(339, 75);
+            this.button1.Location = new System.Drawing.Point(620, 79);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 45);
+            this.button1.Size = new System.Drawing.Size(135, 76);
             this.button1.TabIndex = 10;
             this.button1.Text = "검색";
             this.button1.UseVisualStyleBackColor = false;
@@ -84,9 +84,9 @@
             this.columnHeader5,
             this.columnHeader6});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(29, 217);
+            this.listView2.Location = new System.Drawing.Point(29, 170);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(399, 492);
+            this.listView2.Size = new System.Drawing.Size(726, 492);
             this.listView2.TabIndex = 9;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -100,7 +100,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "할 일";
-            this.columnHeader2.Width = 80;
+            this.columnHeader2.Width = 121;
             // 
             // columnHeader3
             // 
@@ -127,7 +127,7 @@
             this.textBox1.Font = new System.Drawing.Font("Noto Sans KR Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(29, 81);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(304, 36);
+            this.textBox1.Size = new System.Drawing.Size(585, 36);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "검색어 입력...\r\n";
             // 
@@ -135,7 +135,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(25, 136);
+            this.label2.Location = new System.Drawing.Point(25, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 21);
             this.label2.TabIndex = 29;
@@ -145,7 +145,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Noto Sans KR Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(295, 137);
+            this.label1.Location = new System.Drawing.Point(296, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 30;
@@ -155,7 +155,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Noto Sans KR Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(295, 171);
+            this.label3.Location = new System.Drawing.Point(548, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 21);
             this.label3.TabIndex = 31;
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 735);
+            this.ClientSize = new System.Drawing.Size(784, 690);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -178,7 +178,6 @@
             this.Location = new System.Drawing.Point(1075, 50);
             this.Name = "TodoSearchForm1";
             this.Padding = new System.Windows.Forms.Padding(26, 105, 26, 35);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "할 일 검색";
             this.ResumeLayout(false);
             this.PerformLayout();

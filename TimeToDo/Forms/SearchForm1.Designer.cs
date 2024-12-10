@@ -50,9 +50,10 @@
             this.descriptionEvent,
             this.repeats});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 93);
+            this.listView1.Location = new System.Drawing.Point(17, 116);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(521, 279);
+            this.listView1.Size = new System.Drawing.Size(595, 348);
             this.listView1.TabIndex = 21;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -85,11 +86,11 @@
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.listView1);
             this.groupBox2.Controls.Add(this.txtSearch);
-            this.groupBox2.Location = new System.Drawing.Point(12, 11);
+            this.groupBox2.Location = new System.Drawing.Point(14, 14);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(549, 394);
+            this.groupBox2.Size = new System.Drawing.Size(627, 492);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "검색으로 찾기";
@@ -98,33 +99,35 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(192, 69);
+            this.label1.Location = new System.Drawing.Point(219, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 15);
+            this.label1.Size = new System.Drawing.Size(24, 19);
             this.label1.TabIndex = 24;
             this.label1.Text = "~";
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(216, 66);
+            this.dateTimePicker2.Location = new System.Drawing.Point(247, 82);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(174, 21);
+            this.dateTimePicker2.Size = new System.Drawing.Size(198, 25);
             this.dateTimePicker2.TabIndex = 23;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 66);
+            this.dateTimePicker1.Location = new System.Drawing.Point(17, 82);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(195, 25);
             this.dateTimePicker1.TabIndex = 22;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSearch.Location = new System.Drawing.Point(413, 27);
+            this.btnSearch.Location = new System.Drawing.Point(472, 34);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(123, 60);
+            this.btnSearch.Size = new System.Drawing.Size(141, 75);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -133,21 +136,23 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtSearch.Location = new System.Drawing.Point(15, 27);
+            this.txtSearch.Location = new System.Drawing.Point(17, 34);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(375, 26);
+            this.txtSearch.Size = new System.Drawing.Size(428, 30);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.Text = "검색어 입력...\r\n";
             // 
             // SearchForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 412);
+            this.ClientSize = new System.Drawing.Size(675, 515);
             this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SearchForm1";
-            this.Text = "SearchForm1";
+            this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
+            this.Text = "할 일 검색하기";
             this.Load += new System.EventHandler(this.SearchForm1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
