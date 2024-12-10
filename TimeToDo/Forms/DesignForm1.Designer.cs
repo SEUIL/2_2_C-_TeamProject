@@ -153,10 +153,12 @@ namespace TimeToDo.Forms
             // 
             // logoutBtn
             // 
-            this.logoutBtn.Location = new System.Drawing.Point(17, 58);
+            this.logoutBtn.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.Red;
+            this.logoutBtn.Location = new System.Drawing.Point(110, 53);
             this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(75, 22);
+            this.logoutBtn.Size = new System.Drawing.Size(75, 34);
             this.logoutBtn.TabIndex = 0;
             this.logoutBtn.Text = "로그아웃";
             this.logoutBtn.UseVisualStyleBackColor = true;
