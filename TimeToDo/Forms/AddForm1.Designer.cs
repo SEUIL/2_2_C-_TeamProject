@@ -75,7 +75,7 @@
             this.btnSummit_addForm.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSummit_addForm.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSummit_addForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSummit_addForm.Location = new System.Drawing.Point(321, 401);
+            this.btnSummit_addForm.Location = new System.Drawing.Point(234, 391);
             this.btnSummit_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSummit_addForm.Name = "btnSummit_addForm";
             this.btnSummit_addForm.Size = new System.Drawing.Size(103, 46);
@@ -161,21 +161,20 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 78);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(398, 316);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(311, 316);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
             // AddForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 466);
+            this.ClientSize = new System.Drawing.Size(363, 456);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnSummit_addForm);
             this.Location = new System.Drawing.Point(1075, 50);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddForm1";
             this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "일정 추가";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.flowLayoutPanel1.ResumeLayout(false);
