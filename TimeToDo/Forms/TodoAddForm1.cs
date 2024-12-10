@@ -9,11 +9,18 @@ namespace TimeToDo.Forms
     {
         private TodoForm1 todoForm; // 부모 폼 참조
         private DBClass dbClass = new DBClass(); // DB 클래스 객체 초기화
+        private HomeForm1 parentForm;
 
+       
         public TodoAddForm1(TodoForm1 form)
         {
             InitializeComponent();
             todoForm = form; // 부모 폼 참조 저장
+        }
+        public TodoAddForm1(HomeForm1 parent)
+        {
+            parentForm = parent; // 부모 폼 저장
+            InitializeComponent();
         }
 
         private void btnSummit_addForm_Click(object sender, EventArgs e)
@@ -71,8 +78,15 @@ namespace TimeToDo.Forms
                     item.SubItems.Add(deadline.ToString("yyyy-MM-dd"));
 
 
+                    if (parentForm != null)
+                    {
+                        parentForm.AddItemToListView(item);
+                    }
 
-                    todoForm.AddItemToListView(item);
+                    if (todoForm != null)
+                    {
+                        todoForm.AddItemToListView(item);
+                    }
 
                     MessageBox.Show("할 일이 성공적으로 추가되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

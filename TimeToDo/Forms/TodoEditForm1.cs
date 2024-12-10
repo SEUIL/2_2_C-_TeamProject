@@ -7,20 +7,34 @@ namespace TimeToDo.Forms
 {
     public partial class TodoEditForm1 : MetroFramework.Forms.MetroForm
     {
-        private readonly string _todoId; // 문자열형 필드 선언
-                                         // 업데이트할 할 일의 ID
+        private readonly string _todoId; // 업데이트할 할 일의 ID
         private readonly OracleConnection _oracleConnection; // Oracle 연결
 
-        private readonly TodoForm1 _parentForm;
+        private readonly TodoForm1 _todoForm; // TodoForm1 참조
+        private readonly HomeForm1 _homeForm; // HomeForm1 참조
 
-        public TodoEditForm1(string todoId, string task, string category, string priority, DateTime todoDate, DateTime deadline, TodoForm1 parentForm)
+        public TodoEditForm1(string todoId, string task, string category, string priority, DateTime todoDate, DateTime deadline, TodoForm1 todoForm)
         {
             InitializeComponent();
-
             _todoId = todoId;
-            _parentForm = parentForm;
+            _todoForm = todoForm;
             _oracleConnection = new OracleConnection("User Id=Calendar; Password=1234; Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))");
 
+            InitializeFields(task, category, priority, todoDate, deadline);
+        }
+
+        public TodoEditForm1(string todoId, string task, string category, string priority, DateTime todoDate, DateTime deadline, HomeForm1 homeForm)
+        {
+            InitializeComponent();
+            _todoId = todoId;
+            _homeForm = homeForm;
+            _oracleConnection = new OracleConnection("User Id=Calendar; Password=1234; Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))");
+
+            InitializeFields(task, category, priority, todoDate, deadline);
+        }
+
+        private void InitializeFields(string task, string category, string priority, DateTime todoDate, DateTime deadline)
+        {
             textBox1.Text = task;
             listBox1.SelectedItem = category;
             comboBox1.SelectedItem = priority;
@@ -28,14 +42,12 @@ namespace TimeToDo.Forms
             dateTimePicker2.Value = deadline;
         }
 
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (ValidateInput())
             {
                 try
                 {
-                    // 연결 열기
                     _oracleConnection.Open();
 
                     string updatedTask = textBox1.Text.Trim();
@@ -45,9 +57,9 @@ namespace TimeToDo.Forms
                     DateTime updatedDeadline = dateTimePicker2.Value;
 
                     string query = @"UPDATE Todolist 
-                             SET Task = :Task, Category = :Category, Priority = :Priority, 
-                                 TodoDate = :TodoDate, Deadline = :Deadline 
-                             WHERE ID = :Id";
+                                     SET Task = :Task, Category = :Category, Priority = :Priority, 
+                                         TodoDate = :TodoDate, Deadline = :Deadline 
+                                     WHERE ID = :Id";
 
                     using (OracleCommand command = new OracleCommand(query, _oracleConnection))
                     {
@@ -78,8 +90,7 @@ namespace TimeToDo.Forms
                 }
                 finally
                 {
-                    // 연결 닫기
-                    if (_oracleConnection != null && _oracleConnection.State == System.Data.ConnectionState.Open)
+                    if (_oracleConnection != null && _oracleConnection.State == ConnectionState.Open)
                     {
                         _oracleConnection.Close();
                     }
@@ -87,34 +98,17 @@ namespace TimeToDo.Forms
             }
         }
 
-
-        private int GetCompletionStatus()
-        {
-            string query = "SELECT IS_COMPLETED FROM Todolist WHERE ID = :Id";
-            using (OracleCommand command = new OracleCommand(query, _oracleConnection))
-            {
-                command.Parameters.Add(":Id", _todoId);
-
-                using (OracleDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read() && reader["IS_COMPLETED"] != DBNull.Value)
-                    {
-                        return Convert.ToInt32(reader["IS_COMPLETED"]);
-                    }
-                }
-            }
-
-            return 0; // 기본값
-        }
-
         private void RefreshParentListView(string task, string category, string priority, DateTime todoDate, DateTime deadline, int isCompleted)
         {
-            if (_parentForm != null)
+            if (_todoForm != null)
             {
-                _parentForm.UpdateListViewItem(_todoId, task, category, priority, todoDate, deadline, isCompleted == 1);
+                _todoForm.UpdateListViewItem(_todoId, task, category, priority, todoDate, deadline, isCompleted == 1);
+            }
+            else if (_homeForm != null)
+            {
+                _homeForm.UpdateListViewItem(_todoId, task, category, priority, todoDate, deadline, isCompleted == 1);
             }
         }
-
 
         private bool ValidateInput()
         {
