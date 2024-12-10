@@ -45,7 +45,7 @@
             // 
             // btnClose_detailForm
             // 
-            this.btnClose_detailForm.Location = new System.Drawing.Point(11, 401);
+            this.btnClose_detailForm.Location = new System.Drawing.Point(26, 372);
             this.btnClose_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose_detailForm.Name = "btnClose_detailForm";
             this.btnClose_detailForm.Size = new System.Drawing.Size(103, 46);
@@ -56,7 +56,7 @@
             // 
             // btnDelete_detailForm
             // 
-            this.btnDelete_detailForm.Location = new System.Drawing.Point(221, 401);
+            this.btnDelete_detailForm.Location = new System.Drawing.Point(211, 372);
             this.btnDelete_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete_detailForm.Name = "btnDelete_detailForm";
             this.btnDelete_detailForm.Size = new System.Drawing.Size(103, 46);
@@ -67,7 +67,7 @@
             // 
             // btnEdit_detailForm
             // 
-            this.btnEdit_detailForm.Location = new System.Drawing.Point(330, 401);
+            this.btnEdit_detailForm.Location = new System.Drawing.Point(321, 372);
             this.btnEdit_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit_detailForm.Name = "btnEdit_detailForm";
             this.btnEdit_detailForm.Size = new System.Drawing.Size(103, 46);
@@ -89,7 +89,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 69);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(398, 316);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(398, 296);
             this.flowLayoutPanel1.TabIndex = 41;
             // 
             // label7
@@ -144,14 +144,15 @@
             this.label1.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(3, 146);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 26);
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label1.Size = new System.Drawing.Size(85, 36);
             this.label1.TabIndex = 22;
             this.label1.Text = "일정 상세";
             // 
             // txtDescription_deatilForm
             // 
             this.txtDescription_deatilForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtDescription_deatilForm.Location = new System.Drawing.Point(3, 176);
+            this.txtDescription_deatilForm.Location = new System.Drawing.Point(3, 186);
             this.txtDescription_deatilForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescription_deatilForm.Name = "txtDescription_deatilForm";
             this.txtDescription_deatilForm.Size = new System.Drawing.Size(305, 29);
@@ -161,7 +162,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Noto Sans KR", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(3, 209);
+            this.label8.Location = new System.Drawing.Point(3, 219);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.label8.Size = new System.Drawing.Size(85, 36);
@@ -178,7 +179,7 @@
             "매주",
             "매달",
             "매년"});
-            this.comboRepeats_detailForm.Location = new System.Drawing.Point(3, 249);
+            this.comboRepeats_detailForm.Location = new System.Drawing.Point(3, 259);
             this.comboRepeats_detailForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboRepeats_detailForm.Name = "comboRepeats_detailForm";
             this.comboRepeats_detailForm.Size = new System.Drawing.Size(205, 29);
@@ -189,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 469);
+            this.ClientSize = new System.Drawing.Size(450, 443);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnEdit_detailForm);
             this.Controls.Add(this.btnDelete_detailForm);
