@@ -90,7 +90,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Noto Sans KR", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(26, 118);
+            this.dateTimePicker2.Location = new System.Drawing.Point(275, 118);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(213, 32);
@@ -99,7 +99,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(275, 118);
+            this.dateTimePicker1.Location = new System.Drawing.Point(26, 118);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(213, 32);
@@ -143,7 +143,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SearchForm1";
             this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
-            this.Text = "할 일 검색하기";
+            this.Text = "일정 검색하기";
             this.Load += new System.EventHandler(this.SearchForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
