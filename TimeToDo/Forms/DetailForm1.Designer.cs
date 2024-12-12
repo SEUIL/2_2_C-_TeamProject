@@ -53,6 +53,10 @@
             this.btnClose_detailForm.Text = "돌아가기";
             this.btnClose_detailForm.UseVisualStyleBackColor = true;
             this.btnClose_detailForm.Click += new System.EventHandler(this.btnClose_detailForm_Click);
+            this.btnClose_detailForm.BackColor = System.Drawing.Color.LightGray; // 배경색 설정
+            this.btnClose_detailForm.Font = new System.Drawing.Font("Noto Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose_detailForm.ForeColor = System.Drawing.SystemColors.ControlText; // 텍스트 색상 설정
+
             // 
             // btnDelete_detailForm
             // 
@@ -64,6 +68,10 @@
             this.btnDelete_detailForm.Text = "삭제";
             this.btnDelete_detailForm.UseVisualStyleBackColor = true;
             this.btnDelete_detailForm.Click += new System.EventHandler(this.btnDelete_detailForm_Click);
+            this.btnDelete_detailForm.BackColor = System.Drawing.Color.Red;
+            this.btnDelete_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete_detailForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+
             // 
             // btnEdit_detailForm
             // 
@@ -75,6 +83,11 @@
             this.btnEdit_detailForm.Text = "수정";
             this.btnEdit_detailForm.UseVisualStyleBackColor = true;
             this.btnEdit_detailForm.Click += new System.EventHandler(this.btnEdit_detailForm_Click);
+            this.btnEdit_detailForm.BackColor = System.Drawing.Color.SlateGray;
+            this.btnEdit_detailForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit_detailForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+
+            // btnRefresh (참고용, 전체 일정 불러오기)
             // 
             // flowLayoutPanel1
             // 

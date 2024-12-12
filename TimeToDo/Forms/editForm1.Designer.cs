@@ -43,15 +43,19 @@
             this.SuspendLayout();
             // 
             // btnSummit_addForm
-            // 
+            // btnSummit_addForm
             this.btnSummit_addForm.Location = new System.Drawing.Point(233, 401);
             this.btnSummit_addForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSummit_addForm.Name = "btnSummit_addForm";
             this.btnSummit_addForm.Size = new System.Drawing.Size(103, 46);
             this.btnSummit_addForm.TabIndex = 25;
             this.btnSummit_addForm.Text = "확인";
-            this.btnSummit_addForm.UseVisualStyleBackColor = true;
+            this.btnSummit_addForm.UseVisualStyleBackColor = false; // 스타일 변경을 위해 기본 스타일 사용 안 함
+            this.btnSummit_addForm.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSummit_addForm.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSummit_addForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSummit_addForm.Click += new System.EventHandler(this.btnSummit_addForm_Click);
+
             // 
             // label1
             // 
