@@ -110,7 +110,7 @@ namespace TimeToDo.Forms
         {
             LoginForm1 loginForm1 = new LoginForm1();
             loginForm1.Show();
-            this.Hide(); 
+            this.Close(); 
         }
     }
 }
