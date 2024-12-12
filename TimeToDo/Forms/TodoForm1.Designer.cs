@@ -32,6 +32,7 @@ namespace TimeToDo.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodoForm1));
             this.listView = new System.Windows.Forms.ListView();
             this.Check = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Task = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -214,13 +215,17 @@ namespace TimeToDo.Forms
             // 
             // SearchButton
             // 
-            this.SearchButton.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SearchButton.Location = new System.Drawing.Point(938, 64);
+            this.SearchButton.Font = new System.Drawing.Font("Noto Sans KR", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SearchButton.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.SearchButton.Image = ((System.Drawing.Image)(resources.GetObject("SearchButton.Image")));
+            this.SearchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SearchButton.Location = new System.Drawing.Point(918, 64);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(82, 53);
+            this.SearchButton.Size = new System.Drawing.Size(102, 41);
             this.SearchButton.TabIndex = 6;
-            this.SearchButton.Text = "할 일 검색";
+            this.SearchButton.Text = "검색";
+            this.SearchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 

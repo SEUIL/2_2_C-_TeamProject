@@ -48,8 +48,11 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(446, 384);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 46);
-
+            this.button1.TabIndex = 0;
+            this.button1.Text = "수정";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker2
             // 
