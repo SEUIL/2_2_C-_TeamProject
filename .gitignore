@@ -2,6 +2,8 @@
 # 빌드 아티팩트
 bin/
 obj/
+/bin/
+/obj/
 
 # 사용자 환경 관련 파일
 *.user
@@ -24,3 +26,19 @@ obj/
 *.config
 *.env
 *.htm
+
+# NuGet Packages
+*.nupkg
+packages/
+TimeToDo/fonts/
+
+!TimeToDo/notosansdemo.html
+!TimeToDo/Content/notosans.css
+TimeToDo/notosansdemo.html
+TimeToDo/Content/notosans.css
+
+# 캐시 파일
+*.AssemblyReference.cache
+*.CoreCompileInputs.cache
+*.GenerateResource.cache
+*.FileListAbsolute.txt

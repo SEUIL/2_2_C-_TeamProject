@@ -258,7 +258,7 @@ namespace TimeToDo.Forms
     DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
 
     // Query 작성 (Category가 '공적 일정'이고 선택된 날짜 이후의 항목만 가져오기)
-    string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+    string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline ,IS_COMPLETED
                      FROM Todolist 
                      WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate ORDER BY TodoDate ASC";
 
@@ -289,8 +289,15 @@ namespace TimeToDo.Forms
         item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
         item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
         item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
-
-        item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
+                    item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
 
         listView.Items.Add(item);
     }
@@ -313,7 +320,7 @@ catch (Exception ex)
                 DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
 
                 // Query 작성 (Category가 '사적 일정'이고 선택된 날짜 이후의 항목만 가져오기)
-                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline ,IS_COMPLETED
                      FROM Todolist 
                      WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate ORDER BY TodoDate ASC";
 
@@ -344,7 +351,14 @@ catch (Exception ex)
                     item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
                     item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
                     item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
-
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
                     item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
 
                     listView.Items.Add(item);
@@ -368,7 +382,7 @@ catch (Exception ex)
                 DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
 
                 // Query 작성 (Category가 '자기 개발'이고 선택된 날짜 이후의 항목만 가져오기)
-                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline ,IS_COMPLETED
                      FROM Todolist 
                      WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate ORDER BY TodoDate ASC";
 
@@ -399,7 +413,14 @@ catch (Exception ex)
                     item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
                     item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
                     item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
-
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
                     item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
 
                     listView.Items.Add(item);
@@ -423,7 +444,7 @@ catch (Exception ex)
                 DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
 
                 // Query 작성 (Category가 '취미 생활'이고 선택된 날짜 이후의 항목만 가져오기)
-                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline,IS_COMPLETED
                      FROM Todolist 
                      WHERE USERID = :UserId AND Category = :Category AND TodoDate >= :SelectedDate ORDER BY TodoDate ASC";
 
@@ -454,7 +475,14 @@ catch (Exception ex)
                     item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
                     item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
                     item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
-
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
                     item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
 
                     listView.Items.Add(item);
@@ -483,7 +511,7 @@ catch (Exception ex)
                 DateTime selectedDate = dateTimePicker1.Value.Date; // 시간 값 0시 0분으로 고정
 
                 // Query 작성 (Priority와 선택된 날짜 이후 필터링)
-                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline 
+                string query = @"SELECT ID, Task, Category, Priority, TodoDate, Deadline ,IS_COMPLETED
                      FROM Todolist 
                      WHERE USERID = :UserId AND Priority = :Priority AND TodoDate >= :SelectedDate ORDER BY TodoDate ASC";
 
@@ -514,6 +542,14 @@ catch (Exception ex)
                     item.SubItems.Add(row["Priority"] != DBNull.Value ? row["Priority"].ToString() : "");
                     item.SubItems.Add(row["TodoDate"] != DBNull.Value ? Convert.ToDateTime(row["TodoDate"]).ToString("yyyy-MM-dd") : "");
                     item.SubItems.Add(row["Deadline"] != DBNull.Value ? Convert.ToDateTime(row["Deadline"]).ToString("yyyy-MM-dd") : "");
+                    if (row["IS_COMPLETED"] != DBNull.Value && Convert.ToInt32(row["IS_COMPLETED"]) == 1)
+                    {
+                        item.Checked = true; // 완료된 항목
+                    }
+                    else
+                    {
+                        item.Checked = false; // 미완료 항목
+                    }
 
                     item.Tag = row["ID"] != DBNull.Value ? row["ID"].ToString() : null;
 
