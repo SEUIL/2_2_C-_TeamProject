@@ -187,10 +187,6 @@ namespace TimeToDo.Forms
         }
 
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -780,14 +776,9 @@ namespace TimeToDo.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
                 AddForm1 addForm1 = new AddForm1(this);
                 addForm1.ShowDialog();
 
-                
-                
-
-            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -795,8 +786,6 @@ namespace TimeToDo.Forms
             AddForm1 addForm1 = new AddForm1(this);
             addForm1.ShowDialog();
 
-            
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
